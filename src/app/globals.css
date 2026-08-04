@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f9f6;
-  --foreground: #17211c;
+  --background: #f8fafd;
+  --foreground: #162033;
   --surface: #ffffff;
-  --surface-muted: #eef3ef;
-  --border: #dbe5dd;
-  --muted: #5f6f65;
-  --brand: #176b4d;
-  --brand-strong: #0d4f38;
-  --brand-soft: #dff3e9;
-  --warning: #a65f00;
-  --danger: #b42318;
+  --surface-muted: #f1f5fb;
+  --border: #dce3ec;
+  --border-strong: #c8d2df;
+  --muted: #5f6b7a;
+  --brand: #1a73e8;
+  --brand-strong: #174ea6;
+  --brand-soft: #e8f0fe;
+  --brand-faint: #f4f8ff;
+  --success: #188038;
+  --success-soft: #e6f4ea;
+  --warning: #a15c00;
+  --warning-soft: #fef3c7;
+  --danger: #c5221f;
+  --danger-soft: #fce8e6;
   --font-app-sans:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -23,14 +29,22 @@
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-muted: var(--muted);
   --color-brand: var(--brand);
   --color-brand-strong: var(--brand-strong);
   --color-brand-soft: var(--brand-soft);
+  --color-brand-faint: var(--brand-faint);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
   --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
   --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
   --font-sans: var(--font-app-sans);
-  --shadow-card: 0 24px 70px -42px rgb(13 79 56 / 0.45);
+  --shadow-card: 0 1px 2px rgb(22 32 51 / 0.05), 0 8px 24px rgb(22 32 51 / 0.05);
+  --shadow-elevated:
+    0 2px 6px rgb(22 32 51 / 0.06), 0 24px 64px -20px rgb(23 78 166 / 0.18);
 }
 
 * {
@@ -54,10 +68,24 @@ body {
   color: var(--brand-strong);
 }
 
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
 @layer components {
   .page-container {
     width: min(100% - 2rem, 72rem);
     margin-inline: auto;
+  }
+
+  .section-label {
+    color: var(--brand-strong);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    text-transform: uppercase;
   }
 }
 
@@ -66,5 +94,11 @@ body {
     .page-container {
       width: min(100% - 3rem, 72rem);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

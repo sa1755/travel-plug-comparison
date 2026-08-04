@@ -18,6 +18,17 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
   production build.
 - [x] Commit the verified Phase 1 foundation.
 
+## Phase 1A — Visual identity refinement
+
+- [x] Approve Google-style simplicity and premium travel as the product's visual
+  direction.
+- [x] Add the design-system implementation contract and separate Travel Blue
+  branding from compatibility colours.
+- [x] Refine the global tokens, shared shell, brand mark, and static homepage.
+- [x] Document the future globe boundary without adding globe code or data.
+- [x] Pass lint, type checking, and a production build.
+- [x] Commit the visual-foundation refinement before Phase 2 begins.
+
 ## Phase 2 — Data
 
 - [ ] Define plug, country, device, severity, and comparison TypeScript models.
@@ -55,6 +66,9 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [ ] Implement `/plug/[type]` with imagery, description, technical facts, and
   countries using the plug.
 - [ ] Implement accessible global search across countries and plug types.
+- [ ] Evaluate the optional interactive globe against the validated country
+  service, accessibility fallback, and performance budget before selecting a
+  rendering library.
 - [ ] Implement `/device-checker` for all specified device profiles, with clear
   device-label caveats.
 - [ ] Add loading, empty, validation, and not-found states where applicable.

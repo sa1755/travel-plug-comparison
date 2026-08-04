@@ -101,14 +101,29 @@ behind a service without changing route components.
 
 ## Design system and accessibility
 
-The palette is defined with semantic tokens rather than repeated colour values.
-Green communicates compatible/safe guidance, amber indicates a check or caveat,
-and red indicates an incompatible or converter-required outcome. Colour is
-always paired with text and an icon.
+`DESIGN_SYSTEM.md` is the visual and interaction contract. Travel Blue identifies
+navigation, actions, and selection; it is intentionally separate from electrical
+status. Green communicates compatible/safe guidance, amber indicates a check or
+caveat, and red indicates an incompatible or converter-required outcome. Colour
+is always paired with text and an icon.
 
 Reusable UI primitives must preserve visible keyboard focus, semantic labels,
 adequate touch targets, and reduced-motion preferences. The application starts
 mobile-first and expands at content-driven breakpoints.
+
+### Future globe boundary
+
+Interactive globe exploration is optional and subordinate to the quick country
+comparison journey. It is not implemented in the foundation or data phases.
+After validated country services exist, it may be introduced as a dynamically
+loaded client island that receives serializable country summaries and emits a
+country selection. It must not own electrical compatibility rules or read raw
+JSON directly.
+
+The globe must have an equivalent keyboard-accessible list/search path, support
+reduced motion and non-WebGL environments, and load without delaying primary
+page content. Library selection is deferred until the country data shape,
+accessibility behaviour, and performance budget can be evaluated together.
 
 ## Metadata and deployment
 
