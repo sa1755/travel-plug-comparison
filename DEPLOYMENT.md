@@ -1,5 +1,12 @@
 # TravelPlug deployment
 
+Production URL: [https://travel-plug-comparison.vercel.app](https://travel-plug-comparison.vercel.app)
+
+The initial production deployment was verified on 4 August 2026. The Vercel
+project is `sana-525f/travel-plug-comparison`. Automatic GitHub deployments
+remain pending until GitHub is added as a login connection to the Vercel
+account; direct production deployment is operational.
+
 ## Requirements
 
 - Node.js 20.9 or newer

@@ -3,6 +3,8 @@
 TravelPlug helps international travellers compare socket types, voltage,
 frequency, and device compatibility between their home country and destination.
 
+**Live site:** [travel-plug-comparison.vercel.app](https://travel-plug-comparison.vercel.app)
+
 The current application includes a validated 17-country electrical catalog, a
 country comparison form, 272 statically generated comparison guides, country
 and plug reference pages, global catalog search, and an eight-profile device

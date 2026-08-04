@@ -60,3 +60,12 @@ traffic exists; local static analysis cannot substitute for field data.
 
 The final release commands and deployment verification procedure are documented
 in `DEPLOYMENT.md`.
+
+## Live verification
+
+The production deployment at `https://travel-plug-comparison.vercel.app` was
+verified on 4 August 2026. The homepage, representative country, plug,
+comparison, and device routes returned 200; an unsupported country returned
+404. The manifest and generated Open Graph image returned their expected media
+types, the canonical country URL used the production origin, `robots.txt`
+allowed production crawling, and the live sitemap contained 306 URLs.

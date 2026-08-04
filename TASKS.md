@@ -90,4 +90,4 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Document environment and Vercel deployment steps.
 - [~] Connect the GitHub repository, deploy to Vercel, verify the production URL,
   and confirm automatic deployments (requires account access).
-- [~] Commit production-readiness changes and record the live URL in `README.md`.
+- [x] Commit production-readiness changes and record the live URL in `README.md`.
