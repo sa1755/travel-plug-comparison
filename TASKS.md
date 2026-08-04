@@ -31,19 +31,20 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 
 ## Phase 2 — Data
 
-- [ ] Define plug, country, device, severity, and comparison TypeScript models.
-- [ ] Define Zod schemas and parse every version-controlled data source at its
+- [x] Define plug, country, device, severity, and comparison TypeScript models.
+- [x] Define Zod schemas and parse every version-controlled data source at its
   service boundary.
-- [ ] Add all 17 initial countries with codes, slugs, flags, sockets, nominal
+- [x] Add all 17 initial countries with codes, slugs, flags, sockets, nominal
   voltage, frequencies, and concise travel advice.
-- [ ] Add plug types A through N with slugs, descriptions, technical details,
-  image references, and country relationships.
-- [ ] Add device profiles for the eight specified device categories.
-- [ ] Implement immutable lookup, filtering, cross-reference, and static-route
+- [x] Add plug types A through O with slugs, descriptions, technical details,
+  stable future image keys, and derived country relationships. Type O extends
+  the original brief so Thailand is represented accurately.
+- [x] Add device profiles for the eight specified device categories.
+- [x] Implement immutable lookup, filtering, cross-reference, and static-route
   utilities.
-- [ ] Add integrity tests for duplicate identities, invalid references, missing
+- [x] Add integrity tests for duplicate identities, invalid references, missing
   required records, and service lookups.
-- [ ] Pass the complete Phase 2 quality gate and commit the data milestone.
+- [x] Pass the complete Phase 2 quality gate and commit the data milestone.
 
 ## Phase 3 — Main product
 

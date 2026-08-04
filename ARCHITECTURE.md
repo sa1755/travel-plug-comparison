@@ -64,10 +64,10 @@ rules must not import React or route modules.
 
 ## Data and domain model
 
-Phase 2 will establish four central concepts:
+Phase 2 establishes four central concepts:
 
-1. `Country` — stable code and slug, display identity, plug types, nominal
-   voltage, supported frequencies, and travel advice.
+1. `Country` — stable code and slug, aliases, display identity, plug types,
+   nominal voltages, supported frequencies, regional caveats, and travel advice.
 2. `Plug` — plug type, slug, description, technical details, image reference,
    and related countries.
 3. `DeviceProfile` — typical voltage behaviour and warnings, presented as
@@ -76,8 +76,24 @@ Phase 2 will establish four central concepts:
    concise recommendation and device warnings.
 
 Repository JSON is untrusted at the boundary and is parsed once through Zod.
-Services expose immutable, typed lookup functions. Cross-record checks ensure
-unique codes/slugs and valid country-to-plug references.
+Services expose deeply immutable, typed lookup functions. Cross-record checks
+ensure unique identities, complete required records, and valid country-to-plug
+references. Plug-to-country relationships are derived from country records, so
+the relationship has one source of truth.
+
+Voltages and frequencies are arrays. This prevents the model from hiding
+regional reality in places such as Brazil (127/220 V) and Japan (50/60 Hz).
+The plug catalog includes Types A–O: Type O extends the original A–N brief so
+Thailand can be represented accurately. Stable `imageKey` values reserve future
+asset identities without introducing Phase 4 artwork or broken paths.
+
+`country-service`, `plug-service`, and `device-service` own parsed catalogs,
+lookups, search, and static route parameters. `catalog-service` owns whole-set
+integrity assertions. Raw JSON must not be imported by routes or components.
+
+Electrical records and their update policy are documented in
+`src/data/README.md`. Device records are general guidance and never override the
+rating label or manufacturer instructions for a specific appliance.
 
 Comparison rules will be pure functions. Plug compatibility is based on the
 intersection of socket types; voltage guidance uses explicit tolerance rules;

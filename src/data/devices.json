@@ -1,0 +1,74 @@
+[
+  {
+    "id": "phone-charger",
+    "name": "Phone charger",
+    "category": "charger",
+    "voltageProfile": "typically-dual-voltage",
+    "highPower": false,
+    "summary": "Modern phone chargers commonly support a wide input-voltage range.",
+    "guidance": "Read the charger's input label and look for a range such as 100–240 V, 50/60 Hz. A plug adapter may still be required."
+  },
+  {
+    "id": "laptop",
+    "name": "Laptop",
+    "category": "charger",
+    "voltageProfile": "typically-dual-voltage",
+    "highPower": false,
+    "summary": "Laptop power supplies commonly accept both major voltage systems.",
+    "guidance": "Confirm the power supply input label includes the destination voltage and frequency. The detachable mains lead may need an adapter."
+  },
+  {
+    "id": "camera-charger",
+    "name": "Camera charger",
+    "category": "charger",
+    "voltageProfile": "typically-dual-voltage",
+    "highPower": false,
+    "summary": "Many camera battery chargers are designed for international voltage ranges.",
+    "guidance": "Check the exact charger's input label for the destination voltage and frequency; do not infer compatibility from the camera model."
+  },
+  {
+    "id": "hair-dryer",
+    "name": "Hair dryer",
+    "category": "personal-care",
+    "voltageProfile": "typically-single-voltage",
+    "highPower": true,
+    "summary": "Hair dryers are high-power devices and are often made for one voltage system.",
+    "guidance": "Use only at a voltage explicitly supported on the rating label. A small electronic travel converter is usually not suitable for this load."
+  },
+  {
+    "id": "hair-straightener",
+    "name": "Hair straightener",
+    "category": "personal-care",
+    "voltageProfile": "check-device-label",
+    "highPower": true,
+    "summary": "Voltage support varies significantly between hair straightener models.",
+    "guidance": "Check the rating label or manual for the full input range. Plug fit alone does not show whether the heating appliance is voltage-compatible."
+  },
+  {
+    "id": "electric-toothbrush",
+    "name": "Electric toothbrush",
+    "category": "personal-care",
+    "voltageProfile": "check-device-label",
+    "highPower": false,
+    "summary": "Electric toothbrush charging bases do not all support worldwide voltages.",
+    "guidance": "Check the charging base, not only the toothbrush, for its voltage and frequency rating. Some bases require a voltage-specific replacement."
+  },
+  {
+    "id": "gaming-console",
+    "name": "Gaming console",
+    "category": "entertainment",
+    "voltageProfile": "check-device-label",
+    "highPower": false,
+    "summary": "Power-supply design and voltage support differ between console models and revisions.",
+    "guidance": "Use the rating on the console or its external power supply. Also check regional warranty and display-system considerations before travel."
+  },
+  {
+    "id": "cpap-machine",
+    "name": "CPAP machine",
+    "category": "medical",
+    "voltageProfile": "check-manufacturer-guidance",
+    "highPower": false,
+    "summary": "CPAP power requirements must be confirmed for the exact machine and accessories.",
+    "guidance": "Follow the manufacturer's travel guidance and rating label, including humidifier and battery requirements. Arrange a reliable backup for essential use."
+  }
+]
