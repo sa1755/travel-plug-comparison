@@ -78,7 +78,7 @@ const inheritedStandards = {
   MP: "GU",
   SJ: "NO",
 };
-const excludedCodes = new Set(["AQ", "TF", "BV", "HM", "GS", "UM"]);
+const excludedCodes = new Set(["AQ", "TF", "BV", "HM", "GS", "UM", "IL"]);
 
 const findRow = (country) => {
   const names = [country.name.common, country.name.official, ...country.altSpellings].map(normalize);

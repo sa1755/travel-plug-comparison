@@ -94,7 +94,7 @@
     "type": "H",
     "slug": "type-h",
     "name": "Type H",
-    "description": "Israel's grounded three-pin system uses round pins in its modern form and has a distinctive arrangement.",
+    "description": "The grounded Type H system uses round pins in its modern form and has a distinctive three-pin arrangement.",
     "pinCounts": [3],
     "pinShape": "round",
     "grounding": "grounded",

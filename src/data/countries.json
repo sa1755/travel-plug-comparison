@@ -3064,35 +3064,6 @@
     "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Israel",
-    "slug": "israel",
-    "code": "IL",
-    "numericCode": "376",
-    "flag": "🇮🇱",
-    "aliases": [
-      "IL",
-      "State of Israel",
-      "Medīnat Yisrā'el"
-    ],
-    "region": "Asia",
-    "capital": "Jerusalem",
-    "coordinates": [
-      31.47,
-      35.13
-    ],
-    "voltages": [
-      230
-    ],
-    "frequencies": [
-      50
-    ],
-    "plugTypes": [
-      "C",
-      "H"
-    ],
-    "travelAdvice": "Type C, Type H sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
-  },
-  {
     "name": "Italy",
     "slug": "italy",
     "code": "IT",

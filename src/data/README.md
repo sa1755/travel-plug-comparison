@@ -4,7 +4,7 @@ The version-controlled JSON files are application inputs, not executable source.
 They are parsed through Zod in `src/services` before the application consumes
 them.
 
-The catalog contains 243 inhabited countries and territories. The reproducible
+The catalog contains 242 inhabited countries and territories. The reproducible
 country generator merges World Standards electrical data with ISO country
 identity data. The city layer is derived from GeoNames `cities5000` and includes
 only capitals or cities with at least 100,000 residents (GeoNames CC BY 4.0).

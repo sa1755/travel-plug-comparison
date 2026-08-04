@@ -95,7 +95,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
           <label className="globe-search">
             <Search aria-hidden="true" />
             <span className="sr-only">Search countries</span>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search 243 locations" autoFocus />
+            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search 242 locations" autoFocus />
           </label>
           <p className="globe-hint">Spin, hover, or use this accessible list. City dots cover capitals and cities over 100,000 people.</p>
           <div className="globe-country-list" role="list">

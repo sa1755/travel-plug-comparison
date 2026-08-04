@@ -97,7 +97,7 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Approve the warm mid-century identity and plug-first hierarchy.
 - [x] Replace the content-heavy homepage with the immediate two-location journey.
 - [x] Add explicit location, approximate fallback, and local Change/Forget memory.
-- [x] Expand the validated catalog from 17 to 243 inhabited locations.
+- [x] Expand the validated catalog from 17 to 242 inhabited locations.
 - [x] Add a dynamically loaded globe with major-city labels and list fallback.
 - [x] Bound static generation while preserving every valid comparison URL.
 - [x] Pass lint, type checking, tests, and a production build.

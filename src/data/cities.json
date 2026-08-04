@@ -5274,15 +5274,6 @@
     "isCapital": false
   },
   {
-    "id": "281184",
-    "name": "Jerusalem",
-    "countryCode": "IL",
-    "lat": 31.76904,
-    "lng": 35.21633,
-    "population": 971800,
-    "isCapital": false
-  },
-  {
     "id": "1274746",
     "name": "Chandigarh",
     "countryCode": "IN",
@@ -12330,15 +12321,6 @@
     "isCapital": false
   },
   {
-    "id": "293397",
-    "name": "Tel Aviv",
-    "countryCode": "IL",
-    "lat": 32.08088,
-    "lng": 34.78057,
-    "population": 432892,
-    "isCapital": false
-  },
-  {
     "id": "216281",
     "name": "Goma",
     "countryCode": "CD",
@@ -13370,15 +13352,6 @@
     "countryCode": "AE",
     "lat": 25.27143,
     "lng": 55.30207,
-    "population": 400000,
-    "isCapital": false
-  },
-  {
-    "id": "7498240",
-    "name": "West Jerusalem",
-    "countryCode": "IL",
-    "lat": 31.78199,
-    "lng": 35.21961,
     "population": 400000,
     "isCapital": false
   },
@@ -18828,15 +18801,6 @@
     "isCapital": false
   },
   {
-    "id": "294801",
-    "name": "Haifa",
-    "countryCode": "IL",
-    "lat": 32.81303,
-    "lng": 34.99928,
-    "population": 285316,
-    "isCapital": false
-  },
-  {
     "id": "2624652",
     "name": "Århus",
     "countryCode": "DK",
@@ -20871,15 +20835,6 @@
     "isCapital": false
   },
   {
-    "id": "293703",
-    "name": "Rishon LeTsiyyon",
-    "countryCode": "IL",
-    "lat": 31.97102,
-    "lng": 34.78939,
-    "population": 258535,
-    "isCapital": false
-  },
-  {
     "id": "1862462",
     "name": "Hiratsuka",
     "countryCode": "JP",
@@ -21372,15 +21327,6 @@
     "lat": -23.60389,
     "lng": -46.91917,
     "population": 253608,
-    "isCapital": false
-  },
-  {
-    "id": "293918",
-    "name": "Petaẖ Tiqva",
-    "countryCode": "IL",
-    "lat": 32.08707,
-    "lng": 34.88747,
-    "population": 253529,
     "isCapital": false
   },
   {
@@ -23886,15 +23832,6 @@
     "isCapital": false
   },
   {
-    "id": "294071",
-    "name": "Netanya",
-    "countryCode": "IL",
-    "lat": 32.33291,
-    "lng": 34.85992,
-    "population": 228204,
-    "isCapital": false
-  },
-  {
     "id": "3124964",
     "name": "Ciudad Lineal",
     "countryCode": "ES",
@@ -24099,15 +24036,6 @@
     "lat": 48.51716,
     "lng": 34.60617,
     "population": 226845,
-    "isCapital": false
-  },
-  {
-    "id": "295629",
-    "name": "Ashdod",
-    "countryCode": "IL",
-    "lat": 31.79213,
-    "lng": 34.64966,
-    "population": 226838,
     "isCapital": false
   },
   {
@@ -25593,15 +25521,6 @@
     "lat": 6.8485,
     "lng": 3.64633,
     "population": 214558,
-    "isCapital": false
-  },
-  {
-    "id": "295514",
-    "name": "Bnei Brak",
-    "countryCode": "IL",
-    "lat": 32.08074,
-    "lng": 34.8338,
-    "population": 214444,
     "isCapital": false
   },
   {
@@ -28134,15 +28053,6 @@
     "isCapital": false
   },
   {
-    "id": "294751",
-    "name": "H̱olon",
-    "countryCode": "IL",
-    "lat": 32.01034,
-    "lng": 34.77918,
-    "population": 196282,
-    "isCapital": false
-  },
-  {
     "id": "976361",
     "name": "Middelburg",
     "countryCode": "ZA",
@@ -29526,15 +29436,6 @@
     "lat": 22.14681,
     "lng": -80.4481,
     "population": 186644,
-    "isCapital": false
-  },
-  {
-    "id": "295530",
-    "name": "Beersheba",
-    "countryCode": "IL",
-    "lat": 31.25181,
-    "lng": 34.7913,
-    "population": 186600,
     "isCapital": false
   },
   {
@@ -32073,15 +31974,6 @@
     "lat": 6.55504,
     "lng": 3.34363,
     "population": 170870,
-    "isCapital": false
-  },
-  {
-    "id": "293788",
-    "name": "Ramat Gan",
-    "countryCode": "IL",
-    "lat": 32.08227,
-    "lng": 34.81065,
-    "population": 170822,
     "isCapital": false
   },
   {
@@ -36549,15 +36441,6 @@
     "isCapital": false
   },
   {
-    "id": "293725",
-    "name": "Reẖovot",
-    "countryCode": "IL",
-    "lat": 31.89421,
-    "lng": 34.81199,
-    "population": 149392,
-    "isCapital": false
-  },
-  {
     "id": "1621884",
     "name": "Watampone",
     "countryCode": "ID",
@@ -37950,15 +37833,6 @@
     "lat": 43.04812,
     "lng": -76.14742,
     "population": 144142,
-    "isCapital": false
-  },
-  {
-    "id": "295620",
-    "name": "Ashkelon",
-    "countryCode": "IL",
-    "lat": 31.66926,
-    "lng": 34.57149,
-    "population": 144073,
     "isCapital": false
   },
   {
@@ -42831,15 +42705,6 @@
     "isCapital": false
   },
   {
-    "id": "295548",
-    "name": "Bat Yam",
-    "countryCode": "IL",
-    "lat": 32.02379,
-    "lng": 34.75185,
-    "population": 129012,
-    "isCapital": false
-  },
-  {
     "id": "3979844",
     "name": "Zacatecas",
     "countryCode": "MX",
@@ -44439,15 +44304,6 @@
     "lat": 7.22889,
     "lng": 124.25778,
     "population": 124965,
-    "isCapital": false
-  },
-  {
-    "id": "295432",
-    "name": "Bet Shemesh",
-    "countryCode": "IL",
-    "lat": 31.73072,
-    "lng": 34.99293,
-    "population": 124957,
     "isCapital": false
   },
   {
@@ -50562,15 +50418,6 @@
     "isCapital": false
   },
   {
-    "id": "294514",
-    "name": "Kfar Saba",
-    "countryCode": "IL",
-    "lat": 32.175,
-    "lng": 34.90694,
-    "population": 110456,
-    "isCapital": false
-  },
-  {
     "id": "1857470",
     "name": "Matsutō",
     "countryCode": "JP",
@@ -55958,15 +55805,6 @@
     "countryCode": "ID",
     "lat": -6.85,
     "lng": 107.91667,
-    "population": 100000,
-    "isCapital": false
-  },
-  {
-    "id": "293253",
-    "name": "Jaffa",
-    "countryCode": "IL",
-    "lat": 32.05043,
-    "lng": 34.75224,
     "population": 100000,
     "isCapital": false
   },

@@ -144,7 +144,7 @@ only in the browser to resolve a country polygon and are never transmitted.
 When browser location fails, a same-origin endpoint can return Vercel's
 country-only request header as an approximate fallback.
 
-All 243 country routes and four featured comparisons are prerendered. Other
+All 242 country routes and four featured comparisons are prerendered. Other
 valid comparison URLs render on demand, avoiding 58,806 build-time pages while
 keeping every journey shareable. Unknown and same-country routes resolve as not
 found.

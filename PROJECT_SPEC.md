@@ -75,7 +75,7 @@ The website is designed for:
 The homepage begins with an explicit “Use my location” option and a manual home
 country selector. It immediately shows the home plug type beside the selected
 destination plug type, followed by one concise “Bring…” recommendation. The
-catalog covers 243 inhabited countries and territories and all plug types A–O.
+catalog covers 242 inhabited countries and territories and all plug types A–O.
 
 An optional full-screen globe supports visual destination selection, country
 hover labels, and city labels limited to capitals or cities of 100,000+ people.

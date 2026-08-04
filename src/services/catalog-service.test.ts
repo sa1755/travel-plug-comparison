@@ -28,7 +28,7 @@ describe("catalog integrity", () => {
   it("contains every required record and valid cross-reference", () => {
     expect(getCatalogIntegrityIssues()).toEqual([]);
     expect(() => assertCatalogIntegrity()).not.toThrow();
-    expect(getCountries()).toHaveLength(243);
+    expect(getCountries()).toHaveLength(242);
     expect(getPlugs().map((plug) => plug.type)).toEqual(PLUG_TYPES);
     expect(getDeviceProfiles()).toHaveLength(8);
   });
@@ -72,7 +72,7 @@ describe("country service", () => {
 
   it("generates stable country route params", () => {
     const params = getCountryStaticParams();
-    expect(params).toHaveLength(243);
+    expect(params).toHaveLength(242);
     expect(params).toContainEqual({ country: "south-africa" });
   });
 
