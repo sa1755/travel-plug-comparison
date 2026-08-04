@@ -1,5 +1,11 @@
 # Interactive globe evaluation
 
+> 2026-08-04 update: the worldwide country service now satisfies the data gate.
+> The globe is implemented as a dynamically loaded secondary explorer using
+> `react-globe.gl`, Natural Earth geography through `world-atlas`, and GeoNames
+> capitals/cities over 100,000. The country search/list remains the accessible
+> equivalent and automatic rotation respects reduced motion.
+
 ## Phase 4 decision
 
 The interactive globe is deferred. No rendering library has been selected and

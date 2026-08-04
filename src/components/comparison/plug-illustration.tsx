@@ -35,7 +35,7 @@ export function PlugIllustration({ type, className = "size-44" }: PlugIllustrati
       aria-label={`Simplified Type ${type} plug diagram`}
       className={className}
     >
-      <circle cx="50" cy="50" r="43" fill="var(--brand-faint)" />
+      <circle cx="50" cy="50" r="43" fill="color-mix(in srgb, var(--terracotta) 12%, var(--surface))" />
       <circle cx="50" cy="50" r="34" fill="var(--surface)" stroke="var(--border-strong)" />
       {type === "F" ? (
         <path d="M18 37h8M18 63h8M74 37h8M74 63h8" stroke="var(--brand)" strokeWidth="4" />
@@ -50,7 +50,7 @@ export function PlugIllustration({ type, className = "size-44" }: PlugIllustrati
             width="7"
             height="18"
             rx="2"
-            fill={index === 2 ? "var(--brand)" : "var(--foreground)"}
+            fill={index === 2 ? "var(--terracotta)" : "var(--foreground)"}
             transform={type === "I" && index < 2 ? `rotate(${index === 0 ? -28 : 28} ${x} ${y})` : undefined}
           />
         ) : (
@@ -59,11 +59,11 @@ export function PlugIllustration({ type, className = "size-44" }: PlugIllustrati
             cx={x}
             cy={y}
             r={type === "M" ? 6 : 5}
-            fill={index === 2 ? "var(--brand)" : "var(--foreground)"}
+            fill={index === 2 ? "var(--terracotta)" : "var(--foreground)"}
           />
         ),
       )}
-      <text x="50" y="93" textAnchor="middle" fontSize="8" fontWeight="700" fill="var(--brand-strong)">
+      <text x="50" y="93" textAnchor="middle" fontSize="8" fontWeight="700" fill="var(--olive)">
         TYPE {type}
       </text>
     </svg>

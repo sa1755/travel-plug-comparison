@@ -138,10 +138,15 @@ enter the browser bundle. The device checker receives immutable country and
 device records, validates its three selections, and delegates all findings to
 the same pure comparison engine as route pages.
 
-The comparison form is the smallest client boundary. It uses React Hook Form for
-field state and the shared Zod schema for route-safe validation. The selected
-slugs become the URL source of truth. All 17 × 16 directed comparison routes are
-prerendered; same-country and unknown routes are excluded and resolve as not
+The plug-first journey is the primary client boundary. It remembers only the
+chosen home-country slug in local storage. Precise browser coordinates are used
+only in the browser to resolve a country polygon and are never transmitted.
+When browser location fails, a same-origin endpoint can return Vercel's
+country-only request header as an approximate fallback.
+
+All 243 country routes and four featured comparisons are prerendered. Other
+valid comparison URLs render on demand, avoiding 58,806 build-time pages while
+keeping every journey shareable. Unknown and same-country routes resolve as not
 found.
 
 ## Design system and accessibility
@@ -156,22 +161,20 @@ Reusable UI primitives must preserve visible keyboard focus, semantic labels,
 adequate touch targets, and reduced-motion preferences. The application starts
 mobile-first and expands at content-driven breakpoints.
 
-### Future globe boundary
+### Interactive globe boundary
 
 Interactive globe exploration is optional and subordinate to the quick country
-comparison journey. It is not implemented in the foundation or data phases.
-After validated country services exist, it may be introduced as a dynamically
-loaded client island that receives serializable country summaries and emits a
-country selection. It must not own electrical compatibility rules or read raw
-JSON directly.
+comparison journey. The React/WebGL island is dynamically imported only when
+opened. It receives serializable country summaries and emits a destination slug;
+it never owns electrical compatibility rules.
 
 The globe must have an equivalent keyboard-accessible list/search path, support
 reduced motion and non-WebGL environments, and load without delaying primary
 page content. Library selection is deferred until the country data shape,
 accessibility behaviour, and performance budget can be evaluated together.
-The Phase 4 assessment and explicit implementation gates are recorded in
-`GLOBE_EVALUATION.md`; its current decision is to defer the globe and library
-selection while retaining global search as the equivalent accessible path.
+Country polygons come from Natural Earth via `world-atlas`. GeoNames supplies
+capitals and cities with population 100,000+, with attribution in the UI. The
+sidebar search/list is the equivalent keyboard and non-WebGL path.
 
 ## Metadata and deployment
 

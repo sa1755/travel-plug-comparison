@@ -91,3 +91,13 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [~] Connect the GitHub repository, deploy to Vercel, verify the production URL,
   and confirm automatic deployments (requires account access).
 - [x] Commit production-readiness changes and record the live URL in `README.md`.
+
+## Phase 6 — Worldwide plug-first redesign
+
+- [x] Approve the warm mid-century identity and plug-first hierarchy.
+- [x] Replace the content-heavy homepage with the immediate two-location journey.
+- [x] Add explicit location, approximate fallback, and local Change/Forget memory.
+- [x] Expand the validated catalog from 17 to 243 inhabited locations.
+- [x] Add a dynamically loaded globe with major-city labels and list fallback.
+- [x] Bound static generation while preserving every valid comparison URL.
+- [x] Pass lint, type checking, tests, and a production build.

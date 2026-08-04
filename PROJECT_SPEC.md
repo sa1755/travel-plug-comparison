@@ -70,6 +70,19 @@ The website is designed for:
 
 # Core User Journey
 
+## Approved 2026 product direction
+
+The homepage begins with an explicit “Use my location” option and a manual home
+country selector. It immediately shows the home plug type beside the selected
+destination plug type, followed by one concise “Bring…” recommendation. The
+catalog covers 243 inhabited countries and territories and all plug types A–O.
+
+An optional full-screen globe supports visual destination selection, country
+hover labels, and city labels limited to capitals or cities of 100,000+ people.
+Search/list selection remains equivalent and accessible. The visual identity is
+warm, sleek mid-century modern: cream, walnut, terracotta, olive, and blue actions.
+The UI targets WCAG 2.2 AA and applies the eight golden interface-design rules.
+
 ## Step 1
 
 User visits the homepage.

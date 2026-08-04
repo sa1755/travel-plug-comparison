@@ -51,6 +51,13 @@ export const countrySchema = z
     name: z.string().min(2),
     slug: slugSchema,
     code: z.string().regex(/^[A-Z]{2}$/, "Expected an ISO 3166-1 alpha-2 code"),
+    numericCode: z.string().regex(/^\d{3}$/, "Expected an ISO 3166-1 numeric code"),
+    region: z.string().min(1),
+    capital: z.string().min(1),
+    coordinates: z.tuple([
+      z.number().min(-90).max(90),
+      z.number().min(-180).max(180),
+    ]),
     flag: z.string().min(1),
     aliases: z.array(z.string().min(1)).default([]),
     voltages: z.array(z.number().int().min(50).max(300)).min(1),

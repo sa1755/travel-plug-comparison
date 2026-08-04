@@ -62,12 +62,19 @@ export function getCountryStaticParams(): readonly { country: string }[] {
   return countries.map((country) => ({ country: country.slug }));
 }
 
+const featuredComparisons = [
+  { from: "united-kingdom", to: "japan" },
+  { from: "united-states", to: "france" },
+  { from: "australia", to: "thailand" },
+  { from: "india", to: "singapore" },
+] as const;
+
 export function getComparisonStaticParams(): readonly { from: string; to: string }[] {
-  return countries.flatMap((origin) =>
-    countries
-      .filter((destination) => destination.code !== origin.code)
-      .map((destination) => ({ from: origin.slug, to: destination.slug })),
-  );
+  return featuredComparisons;
+}
+
+export function getComparisonRouteCount(): number {
+  return countries.length * (countries.length - 1);
 }
 
 export function getCountriesWithCompatiblePower(

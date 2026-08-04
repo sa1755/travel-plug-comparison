@@ -70,12 +70,12 @@ try {
   await expectRoute({ path: "/device-checker", includes: ["Will your device work when you travel", "/device-checker"] });
   const sitemap = await expectRoute({ path: "/sitemap.xml", contentType: "application/xml" });
   const urlCount = (sitemap.match(/<url>/g) ?? []).length;
-  if (urlCount !== 306) throw new Error(`/sitemap.xml: expected 306 URLs, received ${urlCount}`);
+  if (urlCount !== 264) throw new Error(`/sitemap.xml: expected 264 URLs, received ${urlCount}`);
   await expectRoute({ path: "/robots.txt", includes: ["Sitemap:"] });
   await expectRoute({ path: "/manifest.webmanifest", includes: ["TravelPlug"] });
   await expectRoute({ path: "/opengraph-image", contentType: "image/png" });
   await expectRoute({ path: "/country/atlantis", status: 404, includes: ["Guide not found"] });
-  console.log("Phase 5 HTTP smoke tests passed (10 routes, 306 sitemap URLs). ");
+  console.log("HTTP smoke tests passed (10 routes, 264 sitemap URLs). ");
 } finally {
   await stopServer();
 }

@@ -1,194 +1,7266 @@
 [
   {
+    "name": "Afghanistan",
+    "slug": "afghanistan",
+    "code": "AF",
+    "numericCode": "004",
+    "flag": "🇦🇫",
+    "aliases": [
+      "AF",
+      "Afġānistān",
+      "Islamic Republic of Afghanistan"
+    ],
+    "region": "Asia",
+    "capital": "Kabul",
+    "coordinates": [
+      33,
+      65
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Åland Islands",
+    "slug": "aland-islands",
+    "code": "AX",
+    "numericCode": "248",
+    "flag": "🇦🇽",
+    "aliases": [
+      "AX",
+      "Aaland",
+      "Aland",
+      "Ahvenanmaa"
+    ],
+    "region": "Europe",
+    "capital": "Mariehamn",
+    "coordinates": [
+      60.116667,
+      19.9
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Albania",
+    "slug": "albania",
+    "code": "AL",
+    "numericCode": "008",
+    "flag": "🇦🇱",
+    "aliases": [
+      "AL",
+      "Shqipëri",
+      "Shqipëria",
+      "Shqipnia",
+      "Republic of Albania"
+    ],
+    "region": "Europe",
+    "capital": "Tirana",
+    "coordinates": [
+      41,
+      20
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Algeria",
+    "slug": "algeria",
+    "code": "DZ",
+    "numericCode": "012",
+    "flag": "🇩🇿",
+    "aliases": [
+      "DZ",
+      "Dzayer",
+      "Algérie",
+      "People's Democratic Republic of Algeria"
+    ],
+    "region": "Africa",
+    "capital": "Algiers",
+    "coordinates": [
+      28,
+      3
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "American Samoa",
+    "slug": "american-samoa",
+    "code": "AS",
+    "numericCode": "016",
+    "flag": "🇦🇸",
+    "aliases": [
+      "AS",
+      "Amerika Sāmoa",
+      "Amelika Sāmoa",
+      "Sāmoa Amelika"
+    ],
+    "region": "Oceania",
+    "capital": "Pago Pago",
+    "coordinates": [
+      -14.33333333,
+      -170
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Andorra",
+    "slug": "andorra",
+    "code": "AD",
+    "numericCode": "020",
+    "flag": "🇦🇩",
+    "aliases": [
+      "AD",
+      "Principality of Andorra",
+      "Principat d'Andorra"
+    ],
+    "region": "Europe",
+    "capital": "Andorra la Vella",
+    "coordinates": [
+      42.5,
+      1.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Angola",
+    "slug": "angola",
+    "code": "AO",
+    "numericCode": "024",
+    "flag": "🇦🇴",
+    "aliases": [
+      "AO",
+      "República de Angola",
+      "ʁɛpublika de an'ɡɔla",
+      "Republic of Angola"
+    ],
+    "region": "Africa",
+    "capital": "Luanda",
+    "coordinates": [
+      -12.5,
+      18.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Anguilla",
+    "slug": "anguilla",
+    "code": "AI",
+    "numericCode": "660",
+    "flag": "🇦🇮",
+    "aliases": [
+      "AI"
+    ],
+    "region": "Americas",
+    "capital": "The Valley",
+    "coordinates": [
+      18.25,
+      -63.16666666
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "slug": "antigua-and-barbuda",
+    "code": "AG",
+    "numericCode": "028",
+    "flag": "🇦🇬",
+    "aliases": [
+      "AG"
+    ],
+    "region": "Americas",
+    "capital": "Saint John's",
+    "coordinates": [
+      17.05,
+      -61.8
+    ],
+    "voltages": [
+      110,
+      220
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "powerNote": "The local supply can vary by region. Confirm it at your accommodation before connecting a device.",
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 or 220 V and 60 Hz before use."
+  },
+  {
+    "name": "Argentina",
+    "slug": "argentina",
+    "code": "AR",
+    "numericCode": "032",
+    "flag": "🇦🇷",
+    "aliases": [
+      "AR",
+      "Argentine Republic",
+      "República Argentina"
+    ],
+    "region": "Americas",
+    "capital": "Buenos Aires",
+    "coordinates": [
+      -34,
+      -64
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Armenia",
+    "slug": "armenia",
+    "code": "AM",
+    "numericCode": "051",
+    "flag": "🇦🇲",
+    "aliases": [
+      "AM",
+      "Hayastan",
+      "Republic of Armenia",
+      "Հայաստանի Հանրապետություն"
+    ],
+    "region": "Asia",
+    "capital": "Yerevan",
+    "coordinates": [
+      40,
+      45
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Aruba",
+    "slug": "aruba",
+    "code": "AW",
+    "numericCode": "533",
+    "flag": "🇦🇼",
+    "aliases": [
+      "AW"
+    ],
+    "region": "Americas",
+    "capital": "Oranjestad",
+    "coordinates": [
+      12.5,
+      -69.96666666
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Australia",
+    "slug": "australia",
+    "code": "AU",
+    "numericCode": "036",
+    "flag": "🇦🇺",
+    "aliases": [
+      "AU",
+      "Commonwealth of Australia"
+    ],
+    "region": "Oceania",
+    "capital": "Canberra",
+    "coordinates": [
+      -27,
+      133
+    ],
+    "voltages": [
+      230,
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "powerNote": "The nominal supply is 230 V, although 240 V may still appear in labels and older references.",
+    "travelAdvice": "Type I sockets are standard. Check the input range on devices brought from lower-voltage countries."
+  },
+  {
+    "name": "Austria",
+    "slug": "austria",
+    "code": "AT",
+    "numericCode": "040",
+    "flag": "🇦🇹",
+    "aliases": [
+      "AT",
+      "Osterreich",
+      "Oesterreich",
+      "Republic of Austria"
+    ],
+    "region": "Europe",
+    "capital": "Vienna",
+    "coordinates": [
+      47.33333333,
+      13.33333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Azerbaijan",
+    "slug": "azerbaijan",
+    "code": "AZ",
+    "numericCode": "031",
+    "flag": "🇦🇿",
+    "aliases": [
+      "AZ",
+      "Republic of Azerbaijan",
+      "Azərbaycan Respublikası"
+    ],
+    "region": "Asia",
+    "capital": "Baku",
+    "coordinates": [
+      40.5,
+      47.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Bahamas",
+    "slug": "bahamas",
+    "code": "BS",
+    "numericCode": "044",
+    "flag": "🇧🇸",
+    "aliases": [
+      "BS",
+      "Commonwealth of the Bahamas"
+    ],
+    "region": "Americas",
+    "capital": "Nassau",
+    "coordinates": [
+      24.25,
+      -76
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Bahrain",
+    "slug": "bahrain",
+    "code": "BH",
+    "numericCode": "048",
+    "flag": "🇧🇭",
+    "aliases": [
+      "BH",
+      "Kingdom of Bahrain",
+      "Mamlakat al-Baḥrayn"
+    ],
+    "region": "Asia",
+    "capital": "Manama",
+    "coordinates": [
+      26,
+      50.55
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Bangladesh",
+    "slug": "bangladesh",
+    "code": "BD",
+    "numericCode": "050",
+    "flag": "🇧🇩",
+    "aliases": [
+      "BD",
+      "People's Republic of Bangladesh",
+      "Gônôprôjatôntri Bangladesh"
+    ],
+    "region": "Asia",
+    "capital": "Dhaka",
+    "coordinates": [
+      24,
+      90
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "C",
+      "D",
+      "M",
+      "G",
+      "B",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type A, Type C, Type D, Type M, Type G, Type B, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Barbados",
+    "slug": "barbados",
+    "code": "BB",
+    "numericCode": "052",
+    "flag": "🇧🇧",
+    "aliases": [
+      "BB"
+    ],
+    "region": "Americas",
+    "capital": "Bridgetown",
+    "coordinates": [
+      13.16666666,
+      -59.53333333
+    ],
+    "voltages": [
+      115
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 115 V and 50 Hz before use."
+  },
+  {
+    "name": "Belarus",
+    "slug": "belarus",
+    "code": "BY",
+    "numericCode": "112",
+    "flag": "🇧🇾",
+    "aliases": [
+      "BY",
+      "Bielaruś",
+      "Republic of Belarus",
+      "Белоруссия",
+      "Республика Белоруссия"
+    ],
+    "region": "Europe",
+    "capital": "Minsk",
+    "coordinates": [
+      53,
+      28
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Belgium",
+    "slug": "belgium",
+    "code": "BE",
+    "numericCode": "056",
+    "flag": "🇧🇪",
+    "aliases": [
+      "BE",
+      "België",
+      "Belgie",
+      "Belgien",
+      "Belgique",
+      "Kingdom of Belgium",
+      "Koninkrijk België",
+      "Royaume de Belgique",
+      "Königreich Belgien"
+    ],
+    "region": "Europe",
+    "capital": "Brussels",
+    "coordinates": [
+      50.83333333,
+      4
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Belize",
+    "slug": "belize",
+    "code": "BZ",
+    "numericCode": "084",
+    "flag": "🇧🇿",
+    "aliases": [
+      "BZ"
+    ],
+    "region": "Americas",
+    "capital": "Belmopan",
+    "coordinates": [
+      17.25,
+      -88.75
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Benin",
+    "slug": "benin",
+    "code": "BJ",
+    "numericCode": "204",
+    "flag": "🇧🇯",
+    "aliases": [
+      "BJ",
+      "Republic of Benin",
+      "République du Bénin"
+    ],
+    "region": "Africa",
+    "capital": "Porto-Novo",
+    "coordinates": [
+      9.5,
+      2.25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Bermuda",
+    "slug": "bermuda",
+    "code": "BM",
+    "numericCode": "060",
+    "flag": "🇧🇲",
+    "aliases": [
+      "BM",
+      "The Islands of Bermuda",
+      "The Bermudas",
+      "Somers Isles"
+    ],
+    "region": "Americas",
+    "capital": "Hamilton",
+    "coordinates": [
+      32.33333333,
+      -64.75
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Bhutan",
+    "slug": "bhutan",
+    "code": "BT",
+    "numericCode": "064",
+    "flag": "🇧🇹",
+    "aliases": [
+      "BT",
+      "Kingdom of Bhutan"
+    ],
+    "region": "Asia",
+    "capital": "Thimphu",
+    "coordinates": [
+      27.5,
+      90.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "M",
+      "A",
+      "B",
+      "E",
+      "F",
+      "G",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type M, Type A, Type B, Type E, Type F, Type G, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Bolivia",
+    "slug": "bolivia",
+    "code": "BO",
+    "numericCode": "068",
+    "flag": "🇧🇴",
+    "aliases": [
+      "BO",
+      "Buliwya",
+      "Wuliwya",
+      "Bolivia, Plurinational State of",
+      "Plurinational State of Bolivia",
+      "Estado Plurinacional de Bolivia",
+      "Buliwya Mamallaqta",
+      "Wuliwya Suyu",
+      "Tetã Volívia"
+    ],
+    "region": "Americas",
+    "capital": "Sucre",
+    "coordinates": [
+      -17,
+      -65
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C"
+    ],
+    "travelAdvice": "Type A, Type B, Type C sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "slug": "bosnia-and-herzegovina",
+    "code": "BA",
+    "numericCode": "070",
+    "flag": "🇧🇦",
+    "aliases": [
+      "BA",
+      "Bosnia-Herzegovina",
+      "Босна и Херцеговина"
+    ],
+    "region": "Europe",
+    "capital": "Sarajevo",
+    "coordinates": [
+      44,
+      18
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Botswana",
+    "slug": "botswana",
+    "code": "BW",
+    "numericCode": "072",
+    "flag": "🇧🇼",
+    "aliases": [
+      "BW",
+      "Republic of Botswana",
+      "Lefatshe la Botswana"
+    ],
+    "region": "Africa",
+    "capital": "Gaborone",
+    "coordinates": [
+      -22,
+      24
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "M"
+    ],
+    "travelAdvice": "Type M sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Brazil",
+    "slug": "brazil",
+    "code": "BR",
+    "numericCode": "076",
+    "flag": "🇧🇷",
+    "aliases": [
+      "BR",
+      "Brasil",
+      "Federative Republic of Brazil",
+      "República Federativa do Brasil"
+    ],
+    "region": "Americas",
+    "capital": "Brasília",
+    "coordinates": [
+      -10,
+      -55
+    ],
+    "voltages": [
+      127,
+      220
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "C",
+      "N"
+    ],
+    "powerNote": "The local supply may be 127 V or 220 V and can vary by location. Confirm it at the property before use.",
+    "travelAdvice": "Type N is the national standard and Type C is also used. Always confirm the local voltage and device label."
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "slug": "british-indian-ocean-territory",
+    "code": "IO",
+    "numericCode": "086",
+    "flag": "🇮🇴",
+    "aliases": [
+      "IO"
+    ],
+    "region": "Africa",
+    "capital": "Diego Garcia",
+    "coordinates": [
+      -6,
+      71.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "British Virgin Islands",
+    "slug": "british-virgin-islands",
+    "code": "VG",
+    "numericCode": "092",
+    "flag": "🇻🇬",
+    "aliases": [
+      "VG",
+      "Virgin Islands, British",
+      "Virgin Islands"
+    ],
+    "region": "Americas",
+    "capital": "Road Town",
+    "coordinates": [
+      18.431383,
+      -64.62305
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Brunei",
+    "slug": "brunei",
+    "code": "BN",
+    "numericCode": "096",
+    "flag": "🇧🇳",
+    "aliases": [
+      "BN",
+      "Brunei Darussalam",
+      "Nation of Brunei",
+      "the Abode of Peace",
+      "Nation of Brunei, Abode of Peace"
+    ],
+    "region": "Asia",
+    "capital": "Bandar Seri Begawan",
+    "coordinates": [
+      4.5,
+      114.66666666
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Bulgaria",
+    "slug": "bulgaria",
+    "code": "BG",
+    "numericCode": "100",
+    "flag": "🇧🇬",
+    "aliases": [
+      "BG",
+      "Republic of Bulgaria",
+      "Република България"
+    ],
+    "region": "Europe",
+    "capital": "Sofia",
+    "coordinates": [
+      43,
+      25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Burkina Faso",
+    "slug": "burkina-faso",
+    "code": "BF",
+    "numericCode": "854",
+    "flag": "🇧🇫",
+    "aliases": [
+      "BF"
+    ],
+    "region": "Africa",
+    "capital": "Ouagadougou",
+    "coordinates": [
+      13,
+      -2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Burundi",
+    "slug": "burundi",
+    "code": "BI",
+    "numericCode": "108",
+    "flag": "🇧🇮",
+    "aliases": [
+      "BI",
+      "Republic of Burundi",
+      "Republika y'Uburundi",
+      "République du Burundi"
+    ],
+    "region": "Africa",
+    "capital": "Gitega",
+    "coordinates": [
+      -3.5,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Cambodia",
+    "slug": "cambodia",
+    "code": "KH",
+    "numericCode": "116",
+    "flag": "🇰🇭",
+    "aliases": [
+      "KH",
+      "Kingdom of Cambodia"
+    ],
+    "region": "Asia",
+    "capital": "Phnom Penh",
+    "coordinates": [
+      13,
+      105
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C",
+      "F",
+      "G",
+      "D",
+      "E",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type A, Type B, Type C, Type F, Type G, Type D, Type E, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Cameroon",
+    "slug": "cameroon",
+    "code": "CM",
+    "numericCode": "120",
+    "flag": "🇨🇲",
+    "aliases": [
+      "CM",
+      "Republic of Cameroon",
+      "République du Cameroun"
+    ],
+    "region": "Africa",
+    "capital": "Yaoundé",
+    "coordinates": [
+      6,
+      12
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Canada",
+    "slug": "canada",
+    "code": "CA",
+    "numericCode": "124",
+    "flag": "🇨🇦",
+    "aliases": [
+      "CA"
+    ],
+    "region": "Americas",
+    "capital": "Ottawa",
+    "coordinates": [
+      60,
+      -95
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Types A and B are standard. Confirm that imported appliances support a 120 V, 60 Hz supply."
+  },
+  {
+    "name": "Cape Verde",
+    "slug": "cape-verde",
+    "code": "CV",
+    "numericCode": "132",
+    "flag": "🇨🇻",
+    "aliases": [
+      "CV",
+      "Republic of Cabo Verde",
+      "República de Cabo Verde"
+    ],
+    "region": "Africa",
+    "capital": "Praia",
+    "coordinates": [
+      16,
+      -24
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Caribbean Netherlands",
+    "slug": "caribbean-netherlands",
+    "code": "BQ",
+    "numericCode": "535",
+    "flag": "🇧🇶",
+    "aliases": [
+      "BES islands",
+      "Bonaire Sint Eustatius and Saba",
+      "Bonaire, Sint Eustatius and Saba"
+    ],
+    "region": "Americas",
+    "capital": "Kralendijk",
+    "coordinates": [
+      12.18,
+      -68.25
+    ],
+    "voltages": [
+      127,
+      220
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C",
+      "F"
+    ],
+    "powerNote": "The local supply can vary by region. Confirm it at your accommodation before connecting a device.",
+    "travelAdvice": "Type A, Type B, Type C, Type F sockets are commonly listed. Check that each device supports 127 or 220 V and 50 Hz before use."
+  },
+  {
+    "name": "Cayman Islands",
+    "slug": "cayman-islands",
+    "code": "KY",
+    "numericCode": "136",
+    "flag": "🇰🇾",
+    "aliases": [
+      "KY"
+    ],
+    "region": "Americas",
+    "capital": "George Town",
+    "coordinates": [
+      19.5,
+      -80.5
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Central African Republic",
+    "slug": "central-african-republic",
+    "code": "CF",
+    "numericCode": "140",
+    "flag": "🇨🇫",
+    "aliases": [
+      "CF",
+      "République centrafricaine"
+    ],
+    "region": "Africa",
+    "capital": "Bangui",
+    "coordinates": [
+      7,
+      21
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Chad",
+    "slug": "chad",
+    "code": "TD",
+    "numericCode": "148",
+    "flag": "🇹🇩",
+    "aliases": [
+      "TD",
+      "Tchad",
+      "Republic of Chad",
+      "République du Tchad"
+    ],
+    "region": "Africa",
+    "capital": "N'Djamena",
+    "coordinates": [
+      15,
+      19
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type E, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Chile",
+    "slug": "chile",
+    "code": "CL",
+    "numericCode": "152",
+    "flag": "🇨🇱",
+    "aliases": [
+      "CL",
+      "Republic of Chile",
+      "República de Chile"
+    ],
+    "region": "Americas",
+    "capital": "Santiago",
+    "coordinates": [
+      -30,
+      -71
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "China",
+    "slug": "china",
+    "code": "CN",
+    "numericCode": "156",
+    "flag": "🇨🇳",
+    "aliases": [
+      "CN",
+      "Zhōngguó",
+      "Zhongguo",
+      "Zhonghua",
+      "People's Republic of China",
+      "中华人民共和国",
+      "Zhōnghuá Rénmín Gònghéguó",
+      "PRC"
+    ],
+    "region": "Asia",
+    "capital": "Beijing",
+    "coordinates": [
+      35,
+      105
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "I",
+      "G"
+    ],
+    "powerNote": "This record covers mainland China; Hong Kong and Macau use different socket systems.",
+    "travelAdvice": "Types A and I are commonly listed for mainland China. Do not assume a plug fitting means the voltage is safe."
+  },
+  {
+    "name": "Christmas Island",
+    "slug": "christmas-island",
+    "code": "CX",
+    "numericCode": "162",
+    "flag": "🇨🇽",
+    "aliases": [
+      "CX",
+      "Territory of Christmas Island"
+    ],
+    "region": "Oceania",
+    "capital": "Flying Fish Cove",
+    "coordinates": [
+      -10.5,
+      105.66666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "slug": "cocos-keeling-islands",
+    "code": "CC",
+    "numericCode": "166",
+    "flag": "🇨🇨",
+    "aliases": [
+      "CC",
+      "Keeling Islands",
+      "Cocos Islands",
+      "Territory of the Cocos (Keeling) Islands"
+    ],
+    "region": "Oceania",
+    "capital": "West Island",
+    "coordinates": [
+      -12.5,
+      96.83333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Colombia",
+    "slug": "colombia",
+    "code": "CO",
+    "numericCode": "170",
+    "flag": "🇨🇴",
+    "aliases": [
+      "CO",
+      "Republic of Colombia",
+      "República de Colombia"
+    ],
+    "region": "Americas",
+    "capital": "Bogotá",
+    "coordinates": [
+      4,
+      -72
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Comoros",
+    "slug": "comoros",
+    "code": "KM",
+    "numericCode": "174",
+    "flag": "🇰🇲",
+    "aliases": [
+      "KM",
+      "Union of the Comoros",
+      "Union des Comores",
+      "Udzima wa Komori",
+      "al-Ittiḥād al-Qumurī"
+    ],
+    "region": "Africa",
+    "capital": "Moroni",
+    "coordinates": [
+      -12.16666666,
+      44.25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Cook Islands",
+    "slug": "cook-islands",
+    "code": "CK",
+    "numericCode": "184",
+    "flag": "🇨🇰",
+    "aliases": [
+      "CK",
+      "Kūki 'Āirani"
+    ],
+    "region": "Oceania",
+    "capital": "Avarua",
+    "coordinates": [
+      -21.23333333,
+      -159.76666666
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Costa Rica",
+    "slug": "costa-rica",
+    "code": "CR",
+    "numericCode": "188",
+    "flag": "🇨🇷",
+    "aliases": [
+      "CR",
+      "Republic of Costa Rica",
+      "República de Costa Rica"
+    ],
+    "region": "Americas",
+    "capital": "San José",
+    "coordinates": [
+      10,
+      -84
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Croatia",
+    "slug": "croatia",
+    "code": "HR",
+    "numericCode": "191",
+    "flag": "🇭🇷",
+    "aliases": [
+      "HR",
+      "Hrvatska",
+      "Republic of Croatia",
+      "Republika Hrvatska"
+    ],
+    "region": "Europe",
+    "capital": "Zagreb",
+    "coordinates": [
+      45.16666666,
+      15.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Cuba",
+    "slug": "cuba",
+    "code": "CU",
+    "numericCode": "192",
+    "flag": "🇨🇺",
+    "aliases": [
+      "CU",
+      "Republic of Cuba",
+      "República de Cuba"
+    ],
+    "region": "Americas",
+    "capital": "Havana",
+    "coordinates": [
+      21.5,
+      -80
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Curaçao",
+    "slug": "curacao",
+    "code": "CW",
+    "numericCode": "531",
+    "flag": "🇨🇼",
+    "aliases": [
+      "CW",
+      "Curacao",
+      "Kòrsou",
+      "Country of Curaçao",
+      "Land Curaçao",
+      "Pais Kòrsou"
+    ],
+    "region": "Americas",
+    "capital": "Willemstad",
+    "coordinates": [
+      12.116667,
+      -68.933333
+    ],
+    "voltages": [
+      127
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 127 V and 50 Hz before use."
+  },
+  {
+    "name": "Cyprus",
+    "slug": "cyprus",
+    "code": "CY",
+    "numericCode": "196",
+    "flag": "🇨🇾",
+    "aliases": [
+      "CY",
+      "Kýpros",
+      "Kıbrıs",
+      "Republic of Cyprus",
+      "Κυπριακή Δημοκρατία",
+      "Kıbrıs Cumhuriyeti"
+    ],
+    "region": "Europe",
+    "capital": "Nicosia",
+    "coordinates": [
+      35,
+      33
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Czechia",
+    "slug": "czechia",
+    "code": "CZ",
+    "numericCode": "203",
+    "flag": "🇨🇿",
+    "aliases": [
+      "CZ",
+      "Česká republika",
+      "Česko",
+      "Czech Republic"
+    ],
+    "region": "Europe",
+    "capital": "Prague",
+    "coordinates": [
+      49.75,
+      15.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Denmark",
+    "slug": "denmark",
+    "code": "DK",
+    "numericCode": "208",
+    "flag": "🇩🇰",
+    "aliases": [
+      "DK",
+      "Danmark",
+      "Kingdom of Denmark",
+      "Kongeriget Danmark"
+    ],
+    "region": "Europe",
+    "capital": "Copenhagen",
+    "coordinates": [
+      56,
+      10
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "K"
+    ],
+    "travelAdvice": "Type C, Type F, Type K sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Djibouti",
+    "slug": "djibouti",
+    "code": "DJ",
+    "numericCode": "262",
+    "flag": "🇩🇯",
+    "aliases": [
+      "DJ",
+      "Jabuuti",
+      "Gabuuti",
+      "Republic of Djibouti",
+      "République de Djibouti",
+      "Gabuutih Ummuuno",
+      "Jamhuuriyadda Jabuuti"
+    ],
+    "region": "Africa",
+    "capital": "Djibouti",
+    "coordinates": [
+      11.5,
+      43
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Dominica",
+    "slug": "dominica",
+    "code": "DM",
+    "numericCode": "212",
+    "flag": "🇩🇲",
+    "aliases": [
+      "DM",
+      "Dominique",
+      "Wai‘tu kubuli",
+      "Commonwealth of Dominica"
+    ],
+    "region": "Americas",
+    "capital": "Roseau",
+    "coordinates": [
+      15.41666666,
+      -61.33333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Dominican Republic",
+    "slug": "dominican-republic",
+    "code": "DO",
+    "numericCode": "214",
+    "flag": "🇩🇴",
+    "aliases": [
+      "DO"
+    ],
+    "region": "Americas",
+    "capital": "Santo Domingo",
+    "coordinates": [
+      19,
+      -70.66666666
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "DR Congo",
+    "slug": "dr-congo",
+    "code": "CD",
+    "numericCode": "180",
+    "flag": "🇨🇩",
+    "aliases": [
+      "CD",
+      "Congo-Kinshasa",
+      "Congo, the Democratic Republic of the",
+      "Democratic Republic of Congo",
+      "DRC",
+      "Democratic Republic of the Congo"
+    ],
+    "region": "Africa",
+    "capital": "Kinshasa",
+    "coordinates": [
+      0,
+      25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Ecuador",
+    "slug": "ecuador",
+    "code": "EC",
+    "numericCode": "218",
+    "flag": "🇪🇨",
+    "aliases": [
+      "EC",
+      "Republic of Ecuador",
+      "República del Ecuador"
+    ],
+    "region": "Americas",
+    "capital": "Quito",
+    "coordinates": [
+      -2,
+      -77.5
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Egypt",
+    "slug": "egypt",
+    "code": "EG",
+    "numericCode": "818",
+    "flag": "🇪🇬",
+    "aliases": [
+      "EG",
+      "Arab Republic of Egypt"
+    ],
+    "region": "Africa",
+    "capital": "Cairo",
+    "coordinates": [
+      27,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "El Salvador",
+    "slug": "el-salvador",
+    "code": "SV",
+    "numericCode": "222",
+    "flag": "🇸🇻",
+    "aliases": [
+      "SV",
+      "Republic of El Salvador",
+      "República de El Salvador"
+    ],
+    "region": "Americas",
+    "capital": "San Salvador",
+    "coordinates": [
+      13.83333333,
+      -88.91666666
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Equatorial Guinea",
+    "slug": "equatorial-guinea",
+    "code": "GQ",
+    "numericCode": "226",
+    "flag": "🇬🇶",
+    "aliases": [
+      "GQ",
+      "Republic of Equatorial Guinea",
+      "República de Guinea Ecuatorial",
+      "République de Guinée équatoriale",
+      "República da Guiné Equatorial"
+    ],
+    "region": "Africa",
+    "capital": "Malabo",
+    "coordinates": [
+      2,
+      10
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Eritrea",
+    "slug": "eritrea",
+    "code": "ER",
+    "numericCode": "232",
+    "flag": "🇪🇷",
+    "aliases": [
+      "ER",
+      "State of Eritrea",
+      "ሃገረ ኤርትራ",
+      "Dawlat Iritriyá",
+      "ʾErtrā",
+      "Iritriyā"
+    ],
+    "region": "Africa",
+    "capital": "Asmara",
+    "coordinates": [
+      15,
+      39
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type E, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Estonia",
+    "slug": "estonia",
+    "code": "EE",
+    "numericCode": "233",
+    "flag": "🇪🇪",
+    "aliases": [
+      "EE",
+      "Eesti",
+      "Republic of Estonia",
+      "Eesti Vabariik"
+    ],
+    "region": "Europe",
+    "capital": "Tallinn",
+    "coordinates": [
+      59,
+      26
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Eswatini",
+    "slug": "eswatini",
+    "code": "SZ",
+    "numericCode": "748",
+    "flag": "🇸🇿",
+    "aliases": [
+      "SZ",
+      "Swaziland",
+      "weSwatini",
+      "Swatini",
+      "Ngwane",
+      "Kingdom of Eswatini",
+      "Umbuso weSwatini"
+    ],
+    "region": "Africa",
+    "capital": "Lobamba",
+    "coordinates": [
+      -26.5,
+      31.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "M",
+      "N"
+    ],
+    "travelAdvice": "Type C, Type M, Type N sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Ethiopia",
+    "slug": "ethiopia",
+    "code": "ET",
+    "numericCode": "231",
+    "flag": "🇪🇹",
+    "aliases": [
+      "ET",
+      "ʾĪtyōṗṗyā",
+      "Federal Democratic Republic of Ethiopia",
+      "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ"
+    ],
+    "region": "Africa",
+    "capital": "Addis Ababa",
+    "coordinates": [
+      8,
+      38
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "G"
+    ],
+    "travelAdvice": "Type C, Type F, Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Falkland Islands",
+    "slug": "falkland-islands",
+    "code": "FK",
+    "numericCode": "238",
+    "flag": "🇫🇰",
+    "aliases": [
+      "FK",
+      "Islas Malvinas",
+      "Falkland Islands (Malvinas)"
+    ],
+    "region": "Americas",
+    "capital": "Stanley",
+    "coordinates": [
+      -51.75,
+      -59
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Faroe Islands",
+    "slug": "faroe-islands",
+    "code": "FO",
+    "numericCode": "234",
+    "flag": "🇫🇴",
+    "aliases": [
+      "FO",
+      "Føroyar",
+      "Færøerne",
+      "Faeroe Islands"
+    ],
+    "region": "Europe",
+    "capital": "Tórshavn",
+    "coordinates": [
+      62,
+      -7
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "K"
+    ],
+    "travelAdvice": "Type C, Type F, Type K sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Fiji",
+    "slug": "fiji",
+    "code": "FJ",
+    "numericCode": "242",
+    "flag": "🇫🇯",
+    "aliases": [
+      "FJ",
+      "Viti",
+      "Republic of Fiji",
+      "Matanitu ko Viti",
+      "Fijī Gaṇarājya"
+    ],
+    "region": "Oceania",
+    "capital": "Suva",
+    "coordinates": [
+      -18,
+      175
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Finland",
+    "slug": "finland",
+    "code": "FI",
+    "numericCode": "246",
+    "flag": "🇫🇮",
+    "aliases": [
+      "FI",
+      "Suomi",
+      "Republic of Finland",
+      "Suomen tasavalta",
+      "Republiken Finland"
+    ],
+    "region": "Europe",
+    "capital": "Helsinki",
+    "coordinates": [
+      64,
+      26
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "France",
+    "slug": "france",
+    "code": "FR",
+    "numericCode": "250",
+    "flag": "🇫🇷",
+    "aliases": [
+      "FR",
+      "French Republic",
+      "République française"
+    ],
+    "region": "Europe",
+    "capital": "Paris",
+    "coordinates": [
+      46,
+      2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Types C and E are used. Grounded devices need an adapter that correctly connects the Type E earth contact."
+  },
+  {
+    "name": "French Guiana",
+    "slug": "french-guiana",
+    "code": "GF",
+    "numericCode": "254",
+    "flag": "🇬🇫",
+    "aliases": [
+      "GF",
+      "Guiana",
+      "Guyane"
+    ],
+    "region": "Americas",
+    "capital": "Cayenne",
+    "coordinates": [
+      4,
+      -53
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "French Polynesia",
+    "slug": "french-polynesia",
+    "code": "PF",
+    "numericCode": "258",
+    "flag": "🇵🇫",
+    "aliases": [
+      "PF",
+      "Polynésie française",
+      "Pōrīnetia Farāni"
+    ],
+    "region": "Oceania",
+    "capital": "Papeetē",
+    "coordinates": [
+      -15,
+      -140
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Gabon",
+    "slug": "gabon",
+    "code": "GA",
+    "numericCode": "266",
+    "flag": "🇬🇦",
+    "aliases": [
+      "GA",
+      "Gabonese Republic",
+      "République Gabonaise"
+    ],
+    "region": "Africa",
+    "capital": "Libreville",
+    "coordinates": [
+      -1,
+      11.75
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Gambia",
+    "slug": "gambia",
+    "code": "GM",
+    "numericCode": "270",
+    "flag": "🇬🇲",
+    "aliases": [
+      "GM",
+      "Republic of the Gambia"
+    ],
+    "region": "Africa",
+    "capital": "Banjul",
+    "coordinates": [
+      13.46666666,
+      -16.56666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia",
+    "code": "GE",
+    "numericCode": "268",
+    "flag": "🇬🇪",
+    "aliases": [
+      "GE",
+      "Sakartvelo"
+    ],
+    "region": "Asia",
+    "capital": "Tbilisi",
+    "coordinates": [
+      42,
+      43.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Germany",
+    "slug": "germany",
+    "code": "DE",
+    "numericCode": "276",
+    "flag": "🇩🇪",
+    "aliases": [
+      "DE",
+      "Federal Republic of Germany",
+      "Bundesrepublik Deutschland",
+      "Deutschland"
+    ],
+    "region": "Europe",
+    "capital": "Berlin",
+    "coordinates": [
+      51,
+      9
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Types C and F are used. Grounded appliances require a compatible grounded connection, not only a two-pin fit."
+  },
+  {
+    "name": "Ghana",
+    "slug": "ghana",
+    "code": "GH",
+    "numericCode": "288",
+    "flag": "🇬🇭",
+    "aliases": [
+      "GH",
+      "Republic of Ghana"
+    ],
+    "region": "Africa",
+    "capital": "Accra",
+    "coordinates": [
+      8,
+      -2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type G, Type A, Type B, Type C, Type D, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Gibraltar",
+    "slug": "gibraltar",
+    "code": "GI",
+    "numericCode": "292",
+    "flag": "🇬🇮",
+    "aliases": [
+      "GI"
+    ],
+    "region": "Europe",
+    "capital": "Gibraltar",
+    "coordinates": [
+      36.13333333,
+      -5.35
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Greece",
+    "slug": "greece",
+    "code": "GR",
+    "numericCode": "300",
+    "flag": "🇬🇷",
+    "aliases": [
+      "GR",
+      "Elláda",
+      "Hellenic Republic",
+      "Ελληνική Δημοκρατία"
+    ],
+    "region": "Europe",
+    "capital": "Athens",
+    "coordinates": [
+      39,
+      22
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Greenland",
+    "slug": "greenland",
+    "code": "GL",
+    "numericCode": "304",
+    "flag": "🇬🇱",
+    "aliases": [
+      "GL",
+      "Grønland"
+    ],
+    "region": "Americas",
+    "capital": "Nuuk",
+    "coordinates": [
+      72,
+      -40
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "K"
+    ],
+    "travelAdvice": "Type C, Type F, Type K sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Grenada",
+    "slug": "grenada",
+    "code": "GD",
+    "numericCode": "308",
+    "flag": "🇬🇩",
+    "aliases": [
+      "GD"
+    ],
+    "region": "Americas",
+    "capital": "St. George's",
+    "coordinates": [
+      12.11666666,
+      -61.66666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Guadeloupe",
+    "slug": "guadeloupe",
+    "code": "GP",
+    "numericCode": "312",
+    "flag": "🇬🇵",
+    "aliases": [
+      "GP",
+      "Gwadloup"
+    ],
+    "region": "Americas",
+    "capital": "Basse-Terre",
+    "coordinates": [
+      16.25,
+      -61.583333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Guam",
+    "slug": "guam",
+    "code": "GU",
+    "numericCode": "316",
+    "flag": "🇬🇺",
+    "aliases": [
+      "GU",
+      "Guåhån"
+    ],
+    "region": "Oceania",
+    "capital": "Hagåtña",
+    "coordinates": [
+      13.46666666,
+      144.78333333
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Guatemala",
+    "slug": "guatemala",
+    "code": "GT",
+    "numericCode": "320",
+    "flag": "🇬🇹",
+    "aliases": [
+      "GT",
+      "Republic of Guatemala"
+    ],
+    "region": "Americas",
+    "capital": "Guatemala City",
+    "coordinates": [
+      15.5,
+      -90.25
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Guernsey",
+    "slug": "guernsey",
+    "code": "GG",
+    "numericCode": "831",
+    "flag": "🇬🇬",
+    "aliases": [
+      "GG",
+      "Bailiwick of Guernsey",
+      "Bailliage de Guernesey"
+    ],
+    "region": "Europe",
+    "capital": "St. Peter Port",
+    "coordinates": [
+      49.46666666,
+      -2.58333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Guinea",
+    "slug": "guinea",
+    "code": "GN",
+    "numericCode": "324",
+    "flag": "🇬🇳",
+    "aliases": [
+      "GN",
+      "Republic of Guinea",
+      "République de Guinée"
+    ],
+    "region": "Africa",
+    "capital": "Conakry",
+    "coordinates": [
+      11,
+      -10
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Guinea-Bissau",
+    "slug": "guinea-bissau",
+    "code": "GW",
+    "numericCode": "624",
+    "flag": "🇬🇼",
+    "aliases": [
+      "GW",
+      "Republic of Guinea-Bissau",
+      "República da Guiné-Bissau"
+    ],
+    "region": "Africa",
+    "capital": "Bissau",
+    "coordinates": [
+      12,
+      -15
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Guyana",
+    "slug": "guyana",
+    "code": "GY",
+    "numericCode": "328",
+    "flag": "🇬🇾",
+    "aliases": [
+      "GY",
+      "Co-operative Republic of Guyana"
+    ],
+    "region": "Americas",
+    "capital": "Georgetown",
+    "coordinates": [
+      5,
+      -59
+    ],
+    "voltages": [
+      110,
+      220
+    ],
+    "frequencies": [
+      50,
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "powerNote": "The local supply can vary by region. Confirm it at your accommodation before connecting a device.",
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 or 220 V and 50 or 60 Hz before use."
+  },
+  {
+    "name": "Haiti",
+    "slug": "haiti",
+    "code": "HT",
+    "numericCode": "332",
+    "flag": "🇭🇹",
+    "aliases": [
+      "HT",
+      "Republic of Haiti",
+      "République d'Haïti",
+      "Repiblik Ayiti"
+    ],
+    "region": "Americas",
+    "capital": "Port-au-Prince",
+    "coordinates": [
+      19,
+      -72.41666666
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Honduras",
+    "slug": "honduras",
+    "code": "HN",
+    "numericCode": "340",
+    "flag": "🇭🇳",
+    "aliases": [
+      "HN",
+      "Republic of Honduras",
+      "República de Honduras"
+    ],
+    "region": "Americas",
+    "capital": "Tegucigalpa",
+    "coordinates": [
+      15,
+      -86.5
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Hong Kong",
+    "slug": "hong-kong",
+    "code": "HK",
+    "numericCode": "344",
+    "flag": "🇭🇰",
+    "aliases": [
+      "HK",
+      "Hong Kong Special Administrative Region of the People's Republic of China"
+    ],
+    "region": "Asia",
+    "capital": "City of Victoria",
+    "coordinates": [
+      22.267,
+      114.188
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G",
+      "A",
+      "I"
+    ],
+    "travelAdvice": "Type G, Type A, Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Hungary",
+    "slug": "hungary",
+    "code": "HU",
+    "numericCode": "348",
+    "flag": "🇭🇺",
+    "aliases": [
+      "HU"
+    ],
+    "region": "Europe",
+    "capital": "Budapest",
+    "coordinates": [
+      47,
+      20
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Iceland",
+    "slug": "iceland",
+    "code": "IS",
+    "numericCode": "352",
+    "flag": "🇮🇸",
+    "aliases": [
+      "IS",
+      "Island",
+      "Republic of Iceland",
+      "Lýðveldið Ísland"
+    ],
+    "region": "Europe",
+    "capital": "Reykjavik",
+    "coordinates": [
+      65,
+      -18
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "India",
+    "slug": "india",
+    "code": "IN",
+    "numericCode": "356",
+    "flag": "🇮🇳",
+    "aliases": [
+      "IN",
+      "Bhārat",
+      "Republic of India",
+      "Bharat Ganrajya",
+      "இந்தியா"
+    ],
+    "region": "Asia",
+    "capital": "New Delhi",
+    "coordinates": [
+      20,
+      77
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "D",
+      "M"
+    ],
+    "travelAdvice": "Types D and M are used, with Type M associated with higher-current appliances. Use a suitable grounded adapter."
+  },
+  {
+    "name": "Indonesia",
+    "slug": "indonesia",
+    "code": "ID",
+    "numericCode": "360",
+    "flag": "🇮🇩",
+    "aliases": [
+      "ID",
+      "Republic of Indonesia",
+      "Republik Indonesia"
+    ],
+    "region": "Asia",
+    "capital": "Jakarta",
+    "coordinates": [
+      -5,
+      120
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Iran",
+    "slug": "iran",
+    "code": "IR",
+    "numericCode": "364",
+    "flag": "🇮🇷",
+    "aliases": [
+      "IR",
+      "Islamic Republic of Iran",
+      "Iran, Islamic Republic of",
+      "Jomhuri-ye Eslāmi-ye Irān"
+    ],
+    "region": "Asia",
+    "capital": "Tehran",
+    "coordinates": [
+      32,
+      53
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Iraq",
+    "slug": "iraq",
+    "code": "IQ",
+    "numericCode": "368",
+    "flag": "🇮🇶",
+    "aliases": [
+      "IQ",
+      "Republic of Iraq",
+      "Jumhūriyyat al-‘Irāq"
+    ],
+    "region": "Asia",
+    "capital": "Baghdad",
+    "coordinates": [
+      33,
+      44
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "G",
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type G, Type A, Type B, Type D, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Ireland",
+    "slug": "ireland",
+    "code": "IE",
+    "numericCode": "372",
+    "flag": "🇮🇪",
+    "aliases": [
+      "IE",
+      "Éire",
+      "Republic of Ireland",
+      "Poblacht na hÉireann"
+    ],
+    "region": "Europe",
+    "capital": "Dublin",
+    "coordinates": [
+      53,
+      -8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Isle of Man",
+    "slug": "isle-of-man",
+    "code": "IM",
+    "numericCode": "833",
+    "flag": "🇮🇲",
+    "aliases": [
+      "IM",
+      "Ellan Vannin",
+      "Mann",
+      "Mannin"
+    ],
+    "region": "Europe",
+    "capital": "Douglas",
+    "coordinates": [
+      54.25,
+      -4.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Israel",
+    "slug": "israel",
+    "code": "IL",
+    "numericCode": "376",
+    "flag": "🇮🇱",
+    "aliases": [
+      "IL",
+      "State of Israel",
+      "Medīnat Yisrā'el"
+    ],
+    "region": "Asia",
+    "capital": "Jerusalem",
+    "coordinates": [
+      31.47,
+      35.13
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "H"
+    ],
+    "travelAdvice": "Type C, Type H sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Italy",
+    "slug": "italy",
+    "code": "IT",
+    "numericCode": "380",
+    "flag": "🇮🇹",
+    "aliases": [
+      "IT",
+      "Italian Republic",
+      "Repubblica italiana",
+      "Italia"
+    ],
+    "region": "Europe",
+    "capital": "Rome",
+    "coordinates": [
+      42.83333333,
+      12.83333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Types C, F, and L are used. Socket availability varies, so a versatile grounded adapter is useful."
+  },
+  {
+    "name": "Ivory Coast",
+    "slug": "ivory-coast",
+    "code": "CI",
+    "numericCode": "384",
+    "flag": "🇨🇮",
+    "aliases": [
+      "CI",
+      "Côte d'Ivoire",
+      "Cote d'Ivoire",
+      "Republic of Côte d'Ivoire",
+      "République de Côte d'Ivoire"
+    ],
+    "region": "Africa",
+    "capital": "Yamoussoukro",
+    "coordinates": [
+      8,
+      -5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Jamaica",
+    "slug": "jamaica",
+    "code": "JM",
+    "numericCode": "388",
+    "flag": "🇯🇲",
+    "aliases": [
+      "JM"
+    ],
+    "region": "Americas",
+    "capital": "Kingston",
+    "coordinates": [
+      18.25,
+      -77.5
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 50 Hz before use."
+  },
+  {
+    "name": "Japan",
+    "slug": "japan",
+    "code": "JP",
+    "numericCode": "392",
+    "flag": "🇯🇵",
+    "aliases": [
+      "JP",
+      "Nippon",
+      "Nihon"
+    ],
+    "region": "Asia",
+    "capital": "Tokyo",
+    "coordinates": [
+      36,
+      138
+    ],
+    "voltages": [
+      100
+    ],
+    "frequencies": [
+      50,
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "powerNote": "Eastern Japan generally uses 50 Hz and western Japan generally uses 60 Hz.",
+    "travelAdvice": "Most sockets accept Type A, while grounded Type B availability varies. Check devices for 100 V support."
+  },
+  {
+    "name": "Jersey",
+    "slug": "jersey",
+    "code": "JE",
+    "numericCode": "832",
+    "flag": "🇯🇪",
+    "aliases": [
+      "JE",
+      "Bailiwick of Jersey",
+      "Bailliage de Jersey",
+      "Bailliage dé Jèrri"
+    ],
+    "region": "Europe",
+    "capital": "Saint Helier",
+    "coordinates": [
+      49.25,
+      -2.16666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Jordan",
+    "slug": "jordan",
+    "code": "JO",
+    "numericCode": "400",
+    "flag": "🇯🇴",
+    "aliases": [
+      "JO",
+      "Hashemite Kingdom of Jordan",
+      "al-Mamlakah al-Urdunīyah al-Hāshimīyah"
+    ],
+    "region": "Asia",
+    "capital": "Amman",
+    "coordinates": [
+      31,
+      36
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "G",
+      "A"
+    ],
+    "travelAdvice": "Type C, Type F, Type G, Type A sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Kazakhstan",
+    "slug": "kazakhstan",
+    "code": "KZ",
+    "numericCode": "398",
+    "flag": "🇰🇿",
+    "aliases": [
+      "KZ",
+      "Qazaqstan",
+      "Казахстан",
+      "Republic of Kazakhstan",
+      "Қазақстан Республикасы",
+      "Qazaqstan Respublïkası",
+      "Республика Казахстан",
+      "Respublika Kazakhstan"
+    ],
+    "region": "Asia",
+    "capital": "Astana",
+    "coordinates": [
+      48,
+      68
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Kenya",
+    "slug": "kenya",
+    "code": "KE",
+    "numericCode": "404",
+    "flag": "🇰🇪",
+    "aliases": [
+      "KE",
+      "Republic of Kenya",
+      "Jamhuri ya Kenya"
+    ],
+    "region": "Africa",
+    "capital": "Nairobi",
+    "coordinates": [
+      1,
+      38
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Kiribati",
+    "slug": "kiribati",
+    "code": "KI",
+    "numericCode": "296",
+    "flag": "🇰🇮",
+    "aliases": [
+      "KI",
+      "Republic of Kiribati",
+      "Ribaberiki Kiribati",
+      "Independent and Sovereign Republic of Kiribati"
+    ],
+    "region": "Oceania",
+    "capital": "South Tarawa",
+    "coordinates": [
+      1.41666666,
+      173
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Kosovo",
+    "slug": "kosovo",
+    "code": "XK",
+    "numericCode": "983",
+    "flag": "🇽🇰",
+    "aliases": [
+      "XK",
+      "Република Косово",
+      "Republic of Kosovo"
+    ],
+    "region": "Europe",
+    "capital": "Pristina",
+    "coordinates": [
+      42.666667,
+      21.166667
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Kuwait",
+    "slug": "kuwait",
+    "code": "KW",
+    "numericCode": "414",
+    "flag": "🇰🇼",
+    "aliases": [
+      "KW",
+      "State of Kuwait",
+      "Dawlat al-Kuwait"
+    ],
+    "region": "Asia",
+    "capital": "Kuwait City",
+    "coordinates": [
+      29.5,
+      45.75
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Kyrgyzstan",
+    "slug": "kyrgyzstan",
+    "code": "KG",
+    "numericCode": "417",
+    "flag": "🇰🇬",
+    "aliases": [
+      "KG",
+      "Киргизия",
+      "Kyrgyz Republic",
+      "Кыргыз Республикасы",
+      "Kyrgyz Respublikasy"
+    ],
+    "region": "Asia",
+    "capital": "Bishkek",
+    "coordinates": [
+      41,
+      75
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Laos",
+    "slug": "laos",
+    "code": "LA",
+    "numericCode": "418",
+    "flag": "🇱🇦",
+    "aliases": [
+      "LA",
+      "Lao",
+      "Lao People's Democratic Republic",
+      "Sathalanalat Paxathipatai Paxaxon Lao"
+    ],
+    "region": "Asia",
+    "capital": "Vientiane",
+    "coordinates": [
+      18,
+      105
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C"
+    ],
+    "travelAdvice": "Type A, Type B, Type C sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Latvia",
+    "slug": "latvia",
+    "code": "LV",
+    "numericCode": "428",
+    "flag": "🇱🇻",
+    "aliases": [
+      "LV",
+      "Republic of Latvia",
+      "Latvijas Republika"
+    ],
+    "region": "Europe",
+    "capital": "Riga",
+    "coordinates": [
+      57,
+      25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Lebanon",
+    "slug": "lebanon",
+    "code": "LB",
+    "numericCode": "422",
+    "flag": "🇱🇧",
+    "aliases": [
+      "LB",
+      "Lebanese Republic",
+      "Al-Jumhūrīyah Al-Libnānīyah"
+    ],
+    "region": "Asia",
+    "capital": "Beirut",
+    "coordinates": [
+      33.83333333,
+      35.83333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "A"
+    ],
+    "travelAdvice": "Type C, Type F, Type A sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Lesotho",
+    "slug": "lesotho",
+    "code": "LS",
+    "numericCode": "426",
+    "flag": "🇱🇸",
+    "aliases": [
+      "LS",
+      "Kingdom of Lesotho",
+      "Muso oa Lesotho"
+    ],
+    "region": "Africa",
+    "capital": "Maseru",
+    "coordinates": [
+      -29.5,
+      28.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "M"
+    ],
+    "travelAdvice": "Type M sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Liberia",
+    "slug": "liberia",
+    "code": "LR",
+    "numericCode": "430",
+    "flag": "🇱🇷",
+    "aliases": [
+      "LR",
+      "Republic of Liberia"
+    ],
+    "region": "Africa",
+    "capital": "Monrovia",
+    "coordinates": [
+      6.5,
+      -9.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "F",
+      "G",
+      "A",
+      "B",
+      "E",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type F, Type G, Type A, Type B, Type E, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Libya",
+    "slug": "libya",
+    "code": "LY",
+    "numericCode": "434",
+    "flag": "🇱🇾",
+    "aliases": [
+      "LY",
+      "State of Libya",
+      "Dawlat Libya"
+    ],
+    "region": "Africa",
+    "capital": "Tripoli",
+    "coordinates": [
+      25,
+      17
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type F, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Liechtenstein",
+    "slug": "liechtenstein",
+    "code": "LI",
+    "numericCode": "438",
+    "flag": "🇱🇮",
+    "aliases": [
+      "LI",
+      "Principality of Liechtenstein",
+      "Fürstentum Liechtenstein"
+    ],
+    "region": "Europe",
+    "capital": "Vaduz",
+    "coordinates": [
+      47.26666666,
+      9.53333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "J"
+    ],
+    "travelAdvice": "Type C, Type J sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Lithuania",
+    "slug": "lithuania",
+    "code": "LT",
+    "numericCode": "440",
+    "flag": "🇱🇹",
+    "aliases": [
+      "LT",
+      "Republic of Lithuania",
+      "Lietuvos Respublika"
+    ],
+    "region": "Europe",
+    "capital": "Vilnius",
+    "coordinates": [
+      56,
+      24
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Luxembourg",
+    "slug": "luxembourg",
+    "code": "LU",
+    "numericCode": "442",
+    "flag": "🇱🇺",
+    "aliases": [
+      "LU",
+      "Grand Duchy of Luxembourg",
+      "Grand-Duché de Luxembourg",
+      "Großherzogtum Luxemburg",
+      "Groussherzogtum Lëtzebuerg"
+    ],
+    "region": "Europe",
+    "capital": "Luxembourg",
+    "coordinates": [
+      49.75,
+      6.16666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Macau",
+    "slug": "macau",
+    "code": "MO",
+    "numericCode": "446",
+    "flag": "🇲🇴",
+    "aliases": [
+      "MO",
+      "澳门",
+      "Macao",
+      "Macao Special Administrative Region of the People's Republic of China",
+      "中華人民共和國澳門特別行政區",
+      "Região Administrativa Especial de Macau da República Popular da China"
+    ],
+    "region": "Asia",
+    "capital": "Macau",
+    "coordinates": [
+      22.16666666,
+      113.55
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G",
+      "A",
+      "I"
+    ],
+    "travelAdvice": "Type G, Type A, Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Madagascar",
+    "slug": "madagascar",
+    "code": "MG",
+    "numericCode": "450",
+    "flag": "🇲🇬",
+    "aliases": [
+      "MG",
+      "Republic of Madagascar",
+      "Repoblikan'i Madagasikara",
+      "République de Madagascar"
+    ],
+    "region": "Africa",
+    "capital": "Antananarivo",
+    "coordinates": [
+      -20,
+      47
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Malawi",
+    "slug": "malawi",
+    "code": "MW",
+    "numericCode": "454",
+    "flag": "🇲🇼",
+    "aliases": [
+      "MW",
+      "Republic of Malawi"
+    ],
+    "region": "Africa",
+    "capital": "Lilongwe",
+    "coordinates": [
+      -13.5,
+      34
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Malaysia",
+    "slug": "malaysia",
+    "code": "MY",
+    "numericCode": "458",
+    "flag": "🇲🇾",
+    "aliases": [
+      "MY"
+    ],
+    "region": "Asia",
+    "capital": "Kuala Lumpur",
+    "coordinates": [
+      2.5,
+      112.5
+    ],
+    "voltages": [
+      230,
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "powerNote": "The local supply can vary by region. Confirm it at your accommodation before connecting a device.",
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 or 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Maldives",
+    "slug": "maldives",
+    "code": "MV",
+    "numericCode": "462",
+    "flag": "🇲🇻",
+    "aliases": [
+      "MV",
+      "Maldive Islands",
+      "Republic of the Maldives",
+      "Dhivehi Raajjeyge Jumhooriyya"
+    ],
+    "region": "Asia",
+    "capital": "Malé",
+    "coordinates": [
+      3.25,
+      73
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "G",
+      "A",
+      "B",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type G, Type A, Type B, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mali",
+    "slug": "mali",
+    "code": "ML",
+    "numericCode": "466",
+    "flag": "🇲🇱",
+    "aliases": [
+      "ML",
+      "Republic of Mali",
+      "République du Mali"
+    ],
+    "region": "Africa",
+    "capital": "Bamako",
+    "coordinates": [
+      17,
+      -4
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Malta",
+    "slug": "malta",
+    "code": "MT",
+    "numericCode": "470",
+    "flag": "🇲🇹",
+    "aliases": [
+      "MT",
+      "Republic of Malta",
+      "Repubblika ta' Malta"
+    ],
+    "region": "Europe",
+    "capital": "Valletta",
+    "coordinates": [
+      35.83333333,
+      14.58333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Marshall Islands",
+    "slug": "marshall-islands",
+    "code": "MH",
+    "numericCode": "584",
+    "flag": "🇲🇭",
+    "aliases": [
+      "MH",
+      "Republic of the Marshall Islands",
+      "Aolepān Aorōkin M̧ajeļ"
+    ],
+    "region": "Oceania",
+    "capital": "Majuro",
+    "coordinates": [
+      9,
+      168
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Martinique",
+    "slug": "martinique",
+    "code": "MQ",
+    "numericCode": "474",
+    "flag": "🇲🇶",
+    "aliases": [
+      "MQ"
+    ],
+    "region": "Americas",
+    "capital": "Fort-de-France",
+    "coordinates": [
+      14.666667,
+      -61
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mauritania",
+    "slug": "mauritania",
+    "code": "MR",
+    "numericCode": "478",
+    "flag": "🇲🇷",
+    "aliases": [
+      "MR",
+      "Islamic Republic of Mauritania",
+      "al-Jumhūriyyah al-ʾIslāmiyyah al-Mūrītāniyyah"
+    ],
+    "region": "Africa",
+    "capital": "Nouakchott",
+    "coordinates": [
+      20,
+      -12
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mauritius",
+    "slug": "mauritius",
+    "code": "MU",
+    "numericCode": "480",
+    "flag": "🇲🇺",
+    "aliases": [
+      "MU",
+      "Republic of Mauritius",
+      "République de Maurice"
+    ],
+    "region": "Africa",
+    "capital": "Port Louis",
+    "coordinates": [
+      -20.28333333,
+      57.55
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "G"
+    ],
+    "travelAdvice": "Type C, Type E, Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mayotte",
+    "slug": "mayotte",
+    "code": "YT",
+    "numericCode": "175",
+    "flag": "🇾🇹",
+    "aliases": [
+      "YT",
+      "Department of Mayotte",
+      "Département de Mayotte"
+    ],
+    "region": "Africa",
+    "capital": "Mamoudzou",
+    "coordinates": [
+      -12.83333333,
+      45.16666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mexico",
+    "slug": "mexico",
+    "code": "MX",
+    "numericCode": "484",
+    "flag": "🇲🇽",
+    "aliases": [
+      "MX",
+      "Mexicanos",
+      "United Mexican States",
+      "Estados Unidos Mexicanos"
+    ],
+    "region": "Americas",
+    "capital": "Mexico City",
+    "coordinates": [
+      23,
+      -102
+    ],
+    "voltages": [
+      127
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 127 V and 60 Hz before use."
+  },
+  {
+    "name": "Moldova",
+    "slug": "moldova",
+    "code": "MD",
+    "numericCode": "498",
+    "flag": "🇲🇩",
+    "aliases": [
+      "MD",
+      "Moldova, Republic of",
+      "Republic of Moldova",
+      "Republica Moldova"
+    ],
+    "region": "Europe",
+    "capital": "Chișinău",
+    "coordinates": [
+      47,
+      29
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Monaco",
+    "slug": "monaco",
+    "code": "MC",
+    "numericCode": "492",
+    "flag": "🇲🇨",
+    "aliases": [
+      "MC",
+      "Principality of Monaco",
+      "Principauté de Monaco"
+    ],
+    "region": "Europe",
+    "capital": "Monaco",
+    "coordinates": [
+      43.73333333,
+      7.4
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mongolia",
+    "slug": "mongolia",
+    "code": "MN",
+    "numericCode": "496",
+    "flag": "🇲🇳",
+    "aliases": [
+      "MN"
+    ],
+    "region": "Asia",
+    "capital": "Ulan Bator",
+    "coordinates": [
+      46,
+      105
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "A",
+      "B",
+      "D",
+      "E",
+      "G",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type F, Type A, Type B, Type D, Type E, Type G, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Montenegro",
+    "slug": "montenegro",
+    "code": "ME",
+    "numericCode": "499",
+    "flag": "🇲🇪",
+    "aliases": [
+      "ME",
+      "Crna Gora"
+    ],
+    "region": "Europe",
+    "capital": "Podgorica",
+    "coordinates": [
+      42.5,
+      19.3
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Montserrat",
+    "slug": "montserrat",
+    "code": "MS",
+    "numericCode": "500",
+    "flag": "🇲🇸",
+    "aliases": [
+      "MS"
+    ],
+    "region": "Americas",
+    "capital": "Plymouth",
+    "coordinates": [
+      16.75,
+      -62.2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "G"
+    ],
+    "travelAdvice": "Type A, Type B, Type G sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Morocco",
+    "slug": "morocco",
+    "code": "MA",
+    "numericCode": "504",
+    "flag": "🇲🇦",
+    "aliases": [
+      "MA",
+      "Kingdom of Morocco",
+      "Al-Mamlakah al-Maġribiyah"
+    ],
+    "region": "Africa",
+    "capital": "Rabat",
+    "coordinates": [
+      32,
+      -5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Mozambique",
+    "slug": "mozambique",
+    "code": "MZ",
+    "numericCode": "508",
+    "flag": "🇲🇿",
+    "aliases": [
+      "MZ",
+      "Republic of Mozambique",
+      "República de Moçambique"
+    ],
+    "region": "Africa",
+    "capital": "Maputo",
+    "coordinates": [
+      -18.25,
+      35
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "M",
+      "N"
+    ],
+    "travelAdvice": "Type C, Type F, Type M, Type N sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Myanmar",
+    "slug": "myanmar",
+    "code": "MM",
+    "numericCode": "104",
+    "flag": "🇲🇲",
+    "aliases": [
+      "MM",
+      "Burma",
+      "Republic of the Union of Myanmar",
+      "Pyidaunzu Thanmăda Myăma Nainngandaw"
+    ],
+    "region": "Asia",
+    "capital": "Naypyidaw",
+    "coordinates": [
+      22,
+      98
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type A, Type B, Type C, Type D, Type E, Type F, Type G, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Namibia",
+    "slug": "namibia",
+    "code": "NA",
+    "numericCode": "516",
+    "flag": "🇳🇦",
+    "aliases": [
+      "NA",
+      "Namibië",
+      "Republic of Namibia"
+    ],
+    "region": "Africa",
+    "capital": "Windhoek",
+    "coordinates": [
+      -22,
+      17
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "M",
+      "N"
+    ],
+    "travelAdvice": "Type C, Type M, Type N sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Nauru",
+    "slug": "nauru",
+    "code": "NR",
+    "numericCode": "520",
+    "flag": "🇳🇷",
+    "aliases": [
+      "NR",
+      "Naoero",
+      "Pleasant Island",
+      "Republic of Nauru",
+      "Ripublik Naoero"
+    ],
+    "region": "Oceania",
+    "capital": "Yaren",
+    "coordinates": [
+      -0.53333333,
+      166.91666666
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Nepal",
+    "slug": "nepal",
+    "code": "NP",
+    "numericCode": "524",
+    "flag": "🇳🇵",
+    "aliases": [
+      "NP",
+      "Federal Democratic Republic of Nepal",
+      "Loktāntrik Ganatantra Nepāl"
+    ],
+    "region": "Asia",
+    "capital": "Kathmandu",
+    "coordinates": [
+      28,
+      84
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "M",
+      "A",
+      "B",
+      "E",
+      "F",
+      "G",
+      "J",
+      "K",
+      "L",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type M, Type A, Type B, Type E, Type F, Type G, Type J, Type K, Type L, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Netherlands",
+    "slug": "netherlands",
+    "code": "NL",
+    "numericCode": "528",
+    "flag": "🇳🇱",
+    "aliases": [
+      "NL",
+      "Holland",
+      "Nederland",
+      "The Netherlands",
+      "Kingdom of the Netherlands"
+    ],
+    "region": "Europe",
+    "capital": "Amsterdam",
+    "coordinates": [
+      52.5,
+      5.75
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "New Caledonia",
+    "slug": "new-caledonia",
+    "code": "NC",
+    "numericCode": "540",
+    "flag": "🇳🇨",
+    "aliases": [
+      "NC"
+    ],
+    "region": "Oceania",
+    "capital": "Nouméa",
+    "coordinates": [
+      -21.5,
+      165.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "New Zealand",
+    "slug": "new-zealand",
+    "code": "NZ",
+    "numericCode": "554",
+    "flag": "🇳🇿",
+    "aliases": [
+      "NZ",
+      "Aotearoa"
+    ],
+    "region": "Oceania",
+    "capital": "Wellington",
+    "coordinates": [
+      -41,
+      174
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are standard. Verify voltage support as well as plug fit before using a device."
+  },
+  {
+    "name": "Nicaragua",
+    "slug": "nicaragua",
+    "code": "NI",
+    "numericCode": "558",
+    "flag": "🇳🇮",
+    "aliases": [
+      "NI",
+      "Republic of Nicaragua",
+      "República de Nicaragua"
+    ],
+    "region": "Americas",
+    "capital": "Managua",
+    "coordinates": [
+      13,
+      -85
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Niger",
+    "slug": "niger",
+    "code": "NE",
+    "numericCode": "562",
+    "flag": "🇳🇪",
+    "aliases": [
+      "NE",
+      "Nijar",
+      "Republic of Niger"
+    ],
+    "region": "Africa",
+    "capital": "Niamey",
+    "coordinates": [
+      16,
+      8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Nigeria",
+    "slug": "nigeria",
+    "code": "NG",
+    "numericCode": "566",
+    "flag": "🇳🇬",
+    "aliases": [
+      "NG",
+      "Nijeriya",
+      "Naíjíríà",
+      "Federal Republic of Nigeria"
+    ],
+    "region": "Africa",
+    "capital": "Abuja",
+    "coordinates": [
+      10,
+      8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type G, Type A, Type B, Type C, Type D, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Niue",
+    "slug": "niue",
+    "code": "NU",
+    "numericCode": "570",
+    "flag": "🇳🇺",
+    "aliases": [
+      "NU"
+    ],
+    "region": "Oceania",
+    "capital": "Alofi",
+    "coordinates": [
+      -19.03333333,
+      -169.86666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Norfolk Island",
+    "slug": "norfolk-island",
+    "code": "NF",
+    "numericCode": "574",
+    "flag": "🇳🇫",
+    "aliases": [
+      "NF",
+      "Territory of Norfolk Island",
+      "Teratri of Norf'k Ailen"
+    ],
+    "region": "Oceania",
+    "capital": "Kingston",
+    "coordinates": [
+      -29.03333333,
+      167.95
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "North Korea",
+    "slug": "north-korea",
+    "code": "KP",
+    "numericCode": "408",
+    "flag": "🇰🇵",
+    "aliases": [
+      "KP",
+      "Democratic People's Republic of Korea",
+      "DPRK",
+      "조선민주주의인민공화국",
+      "Chosŏn Minjujuŭi Inmin Konghwaguk",
+      "Korea, Democratic People's Republic of",
+      "북한",
+      "북조선"
+    ],
+    "region": "Asia",
+    "capital": "Pyongyang",
+    "coordinates": [
+      40,
+      127
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "North Macedonia",
+    "slug": "north-macedonia",
+    "code": "MK",
+    "numericCode": "807",
+    "flag": "🇲🇰",
+    "aliases": [
+      "MK",
+      "The former Yugoslav Republic of Macedonia",
+      "Republic of North Macedonia",
+      "Macedonia, The Former Yugoslav Republic of",
+      "Република Северна Македонија",
+      "Macedonia"
+    ],
+    "region": "Europe",
+    "capital": "Skopje",
+    "coordinates": [
+      41.83333333,
+      22
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "slug": "northern-mariana-islands",
+    "code": "MP",
+    "numericCode": "580",
+    "flag": "🇲🇵",
+    "aliases": [
+      "MP",
+      "Commonwealth of the Northern Mariana Islands",
+      "Sankattan Siha Na Islas Mariånas"
+    ],
+    "region": "Oceania",
+    "capital": "Saipan",
+    "coordinates": [
+      15.2,
+      145.75
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Norway",
+    "slug": "norway",
+    "code": "NO",
+    "numericCode": "578",
+    "flag": "🇳🇴",
+    "aliases": [
+      "NO",
+      "Norge",
+      "Noreg",
+      "Kingdom of Norway",
+      "Kongeriket Norge",
+      "Kongeriket Noreg"
+    ],
+    "region": "Europe",
+    "capital": "Oslo",
+    "coordinates": [
+      62,
+      10
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Oman",
+    "slug": "oman",
+    "code": "OM",
+    "numericCode": "512",
+    "flag": "🇴🇲",
+    "aliases": [
+      "OM",
+      "Sultanate of Oman",
+      "Salṭanat ʻUmān"
+    ],
+    "region": "Asia",
+    "capital": "Muscat",
+    "coordinates": [
+      21,
+      57
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Pakistan",
+    "slug": "pakistan",
+    "code": "PK",
+    "numericCode": "586",
+    "flag": "🇵🇰",
+    "aliases": [
+      "PK",
+      "Pākistān",
+      "Islamic Republic of Pakistan",
+      "Islāmī Jumhūriya'eh Pākistān"
+    ],
+    "region": "Asia",
+    "capital": "Islamabad",
+    "coordinates": [
+      30,
+      70
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "A",
+      "B",
+      "E",
+      "F",
+      "G",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type A, Type B, Type E, Type F, Type G, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Palau",
+    "slug": "palau",
+    "code": "PW",
+    "numericCode": "585",
+    "flag": "🇵🇼",
+    "aliases": [
+      "PW",
+      "Republic of Palau",
+      "Beluu er a Belau"
+    ],
+    "region": "Oceania",
+    "capital": "Ngerulmud",
+    "coordinates": [
+      7.5,
+      134.5
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Palestine",
+    "slug": "palestine",
+    "code": "PS",
+    "numericCode": "275",
+    "flag": "🇵🇸",
+    "aliases": [
+      "PS",
+      "Palestine, State of",
+      "State of Palestine",
+      "Dawlat Filasṭin"
+    ],
+    "region": "Asia",
+    "capital": "Ramallah",
+    "coordinates": [
+      31.9,
+      35.2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "H"
+    ],
+    "travelAdvice": "Type C, Type H sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Panama",
+    "slug": "panama",
+    "code": "PA",
+    "numericCode": "591",
+    "flag": "🇵🇦",
+    "aliases": [
+      "PA",
+      "Republic of Panama",
+      "República de Panamá"
+    ],
+    "region": "Americas",
+    "capital": "Panama City",
+    "coordinates": [
+      9,
+      -80
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Papua New Guinea",
+    "slug": "papua-new-guinea",
+    "code": "PG",
+    "numericCode": "598",
+    "flag": "🇵🇬",
+    "aliases": [
+      "PG",
+      "Independent State of Papua New Guinea",
+      "Independen Stet bilong Papua Niugini"
+    ],
+    "region": "Oceania",
+    "capital": "Port Moresby",
+    "coordinates": [
+      -6,
+      147
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Paraguay",
+    "slug": "paraguay",
+    "code": "PY",
+    "numericCode": "600",
+    "flag": "🇵🇾",
+    "aliases": [
+      "PY",
+      "Republic of Paraguay",
+      "República del Paraguay",
+      "Tetã Paraguái"
+    ],
+    "region": "Americas",
+    "capital": "Asunción",
+    "coordinates": [
+      -23,
+      -58
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C",
+      "N"
+    ],
+    "travelAdvice": "Type A, Type B, Type C, Type N sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Peru",
+    "slug": "peru",
+    "code": "PE",
+    "numericCode": "604",
+    "flag": "🇵🇪",
+    "aliases": [
+      "PE",
+      "Republic of Peru",
+      "República del Perú"
+    ],
+    "region": "Americas",
+    "capital": "Lima",
+    "coordinates": [
+      -10,
+      -76
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C"
+    ],
+    "travelAdvice": "Type A, Type B, Type C sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Philippines",
+    "slug": "philippines",
+    "code": "PH",
+    "numericCode": "608",
+    "flag": "🇵🇭",
+    "aliases": [
+      "PH",
+      "Republic of the Philippines",
+      "Repúblika ng Pilipinas"
+    ],
+    "region": "Asia",
+    "capital": "Manila",
+    "coordinates": [
+      13,
+      122
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C"
+    ],
+    "travelAdvice": "Type A, Type B, Type C sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Pitcairn Islands",
+    "slug": "pitcairn-islands",
+    "code": "PN",
+    "numericCode": "612",
+    "flag": "🇵🇳",
+    "aliases": [
+      "PN",
+      "Pitcairn",
+      "Pitcairn Henderson Ducie and Oeno Islands",
+      "Pitcairn Group of Islands"
+    ],
+    "region": "Oceania",
+    "capital": "Adamstown",
+    "coordinates": [
+      -25.06666666,
+      -130.1
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Poland",
+    "slug": "poland",
+    "code": "PL",
+    "numericCode": "616",
+    "flag": "🇵🇱",
+    "aliases": [
+      "PL",
+      "Republic of Poland",
+      "Rzeczpospolita Polska"
+    ],
+    "region": "Europe",
+    "capital": "Warsaw",
+    "coordinates": [
+      52,
+      20
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Portugal",
+    "slug": "portugal",
+    "code": "PT",
+    "numericCode": "620",
+    "flag": "🇵🇹",
+    "aliases": [
+      "PT",
+      "Portuguesa",
+      "Portuguese Republic",
+      "República Portuguesa"
+    ],
+    "region": "Europe",
+    "capital": "Lisbon",
+    "coordinates": [
+      39.5,
+      -8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Puerto Rico",
+    "slug": "puerto-rico",
+    "code": "PR",
+    "numericCode": "630",
+    "flag": "🇵🇷",
+    "aliases": [
+      "PR",
+      "Commonwealth of Puerto Rico",
+      "Estado Libre Asociado de Puerto Rico"
+    ],
+    "region": "Americas",
+    "capital": "San Juan",
+    "coordinates": [
+      18.25,
+      -66.5
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Qatar",
+    "slug": "qatar",
+    "code": "QA",
+    "numericCode": "634",
+    "flag": "🇶🇦",
+    "aliases": [
+      "QA",
+      "State of Qatar",
+      "Dawlat Qaṭar"
+    ],
+    "region": "Asia",
+    "capital": "Doha",
+    "coordinates": [
+      25.5,
+      51.25
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Republic of the Congo",
+    "slug": "republic-of-the-congo",
+    "code": "CG",
+    "numericCode": "178",
+    "flag": "🇨🇬",
+    "aliases": [
+      "CG",
+      "Congo",
+      "Congo-Brazzaville"
+    ],
+    "region": "Africa",
+    "capital": "Brazzaville",
+    "coordinates": [
+      -1,
+      15
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Réunion",
+    "slug": "reunion",
+    "code": "RE",
+    "numericCode": "638",
+    "flag": "🇷🇪",
+    "aliases": [
+      "RE",
+      "Reunion",
+      "Réunion Island"
+    ],
+    "region": "Africa",
+    "capital": "Saint-Denis",
+    "coordinates": [
+      -21.15,
+      55.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Romania",
+    "slug": "romania",
+    "code": "RO",
+    "numericCode": "642",
+    "flag": "🇷🇴",
+    "aliases": [
+      "RO",
+      "Rumania",
+      "Roumania",
+      "România"
+    ],
+    "region": "Europe",
+    "capital": "Bucharest",
+    "coordinates": [
+      46,
+      25
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Russia",
+    "slug": "russia",
+    "code": "RU",
+    "numericCode": "643",
+    "flag": "🇷🇺",
+    "aliases": [
+      "RU",
+      "Russian Federation",
+      "Российская Федерация"
+    ],
+    "region": "Europe",
+    "capital": "Moscow",
+    "coordinates": [
+      60,
+      100
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Rwanda",
+    "slug": "rwanda",
+    "code": "RW",
+    "numericCode": "646",
+    "flag": "🇷🇼",
+    "aliases": [
+      "RW",
+      "Republic of Rwanda",
+      "Repubulika y'u Rwanda",
+      "République du Rwanda"
+    ],
+    "region": "Africa",
+    "capital": "Kigali",
+    "coordinates": [
+      -2,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "F",
+      "G"
+    ],
+    "travelAdvice": "Type C, Type E, Type F, Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Saint Barthélemy",
+    "slug": "saint-barthelemy",
+    "code": "BL",
+    "numericCode": "652",
+    "flag": "🇧🇱",
+    "aliases": [
+      "BL",
+      "St. Barthelemy",
+      "Collectivity of Saint Barthélemy",
+      "Collectivité de Saint-Barthélemy"
+    ],
+    "region": "Americas",
+    "capital": "Gustavia",
+    "coordinates": [
+      18.5,
+      -63.41666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "slug": "saint-helena-ascension-and-tristan-da-cunha",
+    "code": "SH",
+    "numericCode": "654",
+    "flag": "🇸🇭",
+    "aliases": [
+      "Saint Helena",
+      "St. Helena, Ascension and Tristan da Cunha"
+    ],
+    "region": "Africa",
+    "capital": "Jamestown",
+    "coordinates": [
+      -15.95,
+      -5.72
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "slug": "saint-kitts-and-nevis",
+    "code": "KN",
+    "numericCode": "659",
+    "flag": "🇰🇳",
+    "aliases": [
+      "KN",
+      "Federation of Saint Christopher and Nevis"
+    ],
+    "region": "Americas",
+    "capital": "Basseterre",
+    "coordinates": [
+      17.33333333,
+      -62.75
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "G"
+    ],
+    "travelAdvice": "Type A, Type B, Type G sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Saint Lucia",
+    "slug": "saint-lucia",
+    "code": "LC",
+    "numericCode": "662",
+    "flag": "🇱🇨",
+    "aliases": [
+      "LC"
+    ],
+    "region": "Americas",
+    "capital": "Castries",
+    "coordinates": [
+      13.88333333,
+      -60.96666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Saint Martin",
+    "slug": "saint-martin",
+    "code": "MF",
+    "numericCode": "663",
+    "flag": "🇲🇫",
+    "aliases": [
+      "MF",
+      "Collectivity of Saint Martin",
+      "Collectivité de Saint-Martin",
+      "Saint Martin (French part)"
+    ],
+    "region": "Americas",
+    "capital": "Marigot",
+    "coordinates": [
+      18.08333333,
+      -63.95
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "slug": "saint-pierre-and-miquelon",
+    "code": "PM",
+    "numericCode": "666",
+    "flag": "🇵🇲",
+    "aliases": [
+      "PM",
+      "Collectivité territoriale de Saint-Pierre-et-Miquelon"
+    ],
+    "region": "Americas",
+    "capital": "Saint-Pierre",
+    "coordinates": [
+      46.83333333,
+      -56.33333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "slug": "saint-vincent-and-the-grenadines",
+    "code": "VC",
+    "numericCode": "670",
+    "flag": "🇻🇨",
+    "aliases": [
+      "VC"
+    ],
+    "region": "Americas",
+    "capital": "Kingstown",
+    "coordinates": [
+      13.25,
+      -61.2
+    ],
+    "voltages": [
+      230,
+      110
+    ],
+    "frequencies": [
+      50,
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "G"
+    ],
+    "powerNote": "The local supply can vary by region. Confirm it at your accommodation before connecting a device.",
+    "travelAdvice": "Type A, Type B, Type G sockets are commonly listed. Check that each device supports 230 or 110 V and 50 or 60 Hz before use."
+  },
+  {
+    "name": "Samoa",
+    "slug": "samoa",
+    "code": "WS",
+    "numericCode": "882",
+    "flag": "🇼🇸",
+    "aliases": [
+      "WS",
+      "Independent State of Samoa",
+      "Malo Saʻoloto Tutoʻatasi o Sāmoa"
+    ],
+    "region": "Oceania",
+    "capital": "Apia",
+    "coordinates": [
+      -13.58333333,
+      -172.33333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "San Marino",
+    "slug": "san-marino",
+    "code": "SM",
+    "numericCode": "674",
+    "flag": "🇸🇲",
+    "aliases": [
+      "SM",
+      "Republic of San Marino",
+      "Repubblica di San Marino",
+      "Most Serene Republic of San Marino"
+    ],
+    "region": "Europe",
+    "capital": "City of San Marino",
+    "coordinates": [
+      43.76666666,
+      12.41666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type F, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "São Tomé and Príncipe",
+    "slug": "sao-tome-and-principe",
+    "code": "ST",
+    "numericCode": "678",
+    "flag": "🇸🇹",
+    "aliases": [
+      "ST",
+      "Democratic Republic of São Tomé and Príncipe",
+      "Sao Tome and Principe",
+      "República Democrática de São Tomé e Príncipe"
+    ],
+    "region": "Africa",
+    "capital": "São Tomé",
+    "coordinates": [
+      1,
+      7
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Saudi Arabia",
+    "slug": "saudi-arabia",
+    "code": "SA",
+    "numericCode": "682",
+    "flag": "🇸🇦",
+    "aliases": [
+      "Saudi",
+      "SA",
+      "Kingdom of Saudi Arabia",
+      "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah"
+    ],
+    "region": "Asia",
+    "capital": "Riyadh",
+    "coordinates": [
+      25,
+      45
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "Senegal",
+    "slug": "senegal",
+    "code": "SN",
+    "numericCode": "686",
+    "flag": "🇸🇳",
+    "aliases": [
+      "SN",
+      "Republic of Senegal",
+      "République du Sénégal"
+    ],
+    "region": "Africa",
+    "capital": "Dakar",
+    "coordinates": [
+      14,
+      -14
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Serbia",
+    "slug": "serbia",
+    "code": "RS",
+    "numericCode": "688",
+    "flag": "🇷🇸",
+    "aliases": [
+      "RS",
+      "Srbija",
+      "Republika Srbija",
+      "Србија",
+      "Република Србија",
+      "Republic of Serbia"
+    ],
+    "region": "Europe",
+    "capital": "Belgrade",
+    "coordinates": [
+      44,
+      21
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Seychelles",
+    "slug": "seychelles",
+    "code": "SC",
+    "numericCode": "690",
+    "flag": "🇸🇨",
+    "aliases": [
+      "SC",
+      "Republic of Seychelles",
+      "Repiblik Sesel",
+      "République des Seychelles"
+    ],
+    "region": "Africa",
+    "capital": "Victoria",
+    "coordinates": [
+      -4.58333333,
+      55.66666666
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Sierra Leone",
+    "slug": "sierra-leone",
+    "code": "SL",
+    "numericCode": "694",
+    "flag": "🇸🇱",
+    "aliases": [
+      "SL",
+      "Republic of Sierra Leone"
+    ],
+    "region": "Africa",
+    "capital": "Freetown",
+    "coordinates": [
+      8.5,
+      -11.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Singapore",
+    "slug": "singapore",
+    "code": "SG",
+    "numericCode": "702",
+    "flag": "🇸🇬",
+    "aliases": [
+      "SG",
+      "Singapura",
+      "Republik Singapura",
+      "新加坡共和国",
+      "Republic of Singapore"
+    ],
+    "region": "Asia",
+    "capital": "Singapore",
+    "coordinates": [
+      1.36666666,
+      103.8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are standard. Check device voltage labels before use, especially for high-powered appliances."
+  },
+  {
+    "name": "Sint Maarten",
+    "slug": "sint-maarten",
+    "code": "SX",
+    "numericCode": "534",
+    "flag": "🇸🇽",
+    "aliases": [
+      "SX",
+      "Sint Maarten (Dutch part)"
+    ],
+    "region": "Americas",
+    "capital": "Philipsburg",
+    "coordinates": [
+      18.033333,
+      -63.05
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Slovakia",
+    "slug": "slovakia",
+    "code": "SK",
+    "numericCode": "703",
+    "flag": "🇸🇰",
+    "aliases": [
+      "SK",
+      "Slovak Republic",
+      "Slovenská republika"
+    ],
+    "region": "Europe",
+    "capital": "Bratislava",
+    "coordinates": [
+      48.66666666,
+      19.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Slovenia",
+    "slug": "slovenia",
+    "code": "SI",
+    "numericCode": "705",
+    "flag": "🇸🇮",
+    "aliases": [
+      "SI",
+      "Republic of Slovenia",
+      "Republika Slovenija"
+    ],
+    "region": "Europe",
+    "capital": "Ljubljana",
+    "coordinates": [
+      46.11666666,
+      14.81666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Solomon Islands",
+    "slug": "solomon-islands",
+    "code": "SB",
+    "numericCode": "090",
+    "flag": "🇸🇧",
+    "aliases": [
+      "SB"
+    ],
+    "region": "Oceania",
+    "capital": "Honiara",
+    "coordinates": [
+      -8,
+      159
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Somalia",
+    "slug": "somalia",
+    "code": "SO",
+    "numericCode": "706",
+    "flag": "🇸🇴",
+    "aliases": [
+      "SO",
+      "aṣ-Ṣūmāl",
+      "Federal Republic of Somalia",
+      "Jamhuuriyadda Federaalka Soomaaliya",
+      "Jumhūriyyat aṣ-Ṣūmāl al-Fiderāliyya"
+    ],
+    "region": "Africa",
+    "capital": "Mogadishu",
+    "coordinates": [
+      10,
+      49
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "G",
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "I",
+      "O",
+      "J",
+      "K",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type G, Type A, Type B, Type D, Type E, Type F, Type I, Type O, Type J, Type K, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "South Africa",
+    "slug": "south-africa",
+    "code": "ZA",
+    "numericCode": "710",
+    "flag": "🇿🇦",
+    "aliases": [
+      "ZA",
+      "RSA",
+      "Suid-Afrika",
+      "Republic of South Africa"
+    ],
+    "region": "Africa",
+    "capital": "Pretoria",
+    "coordinates": [
+      -29,
+      24
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "M",
+      "N"
+    ],
+    "powerNote": "Type N is being adopted alongside the established Type M system; socket availability can vary.",
+    "travelAdvice": "Types C, M, and N may be encountered. Confirm the available socket and use a properly rated grounded adapter."
+  },
+  {
+    "name": "South Korea",
+    "slug": "south-korea",
+    "code": "KR",
+    "numericCode": "410",
+    "flag": "🇰🇷",
+    "aliases": [
+      "KR",
+      "Korea, Republic of",
+      "Republic of Korea",
+      "남한",
+      "남조선"
+    ],
+    "region": "Asia",
+    "capital": "Seoul",
+    "coordinates": [
+      37,
+      127.5
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 60 Hz before use."
+  },
+  {
+    "name": "South Sudan",
+    "slug": "south-sudan",
+    "code": "SS",
+    "numericCode": "728",
+    "flag": "🇸🇸",
+    "aliases": [
+      "SS",
+      "Republic of South Sudan"
+    ],
+    "region": "Africa",
+    "capital": "Juba",
+    "coordinates": [
+      7,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "G",
+      "A",
+      "B",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type G, Type A, Type B, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Spain",
+    "slug": "spain",
+    "code": "ES",
+    "numericCode": "724",
+    "flag": "🇪🇸",
+    "aliases": [
+      "ES",
+      "Kingdom of Spain",
+      "Reino de España",
+      "España"
+    ],
+    "region": "Europe",
+    "capital": "Madrid",
+    "coordinates": [
+      40,
+      -4
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Types C and F are used. Check voltage compatibility before connecting devices from 100–120 V countries."
+  },
+  {
+    "name": "Sri Lanka",
+    "slug": "sri-lanka",
+    "code": "LK",
+    "numericCode": "144",
+    "flag": "🇱🇰",
+    "aliases": [
+      "LK",
+      "ilaṅkai",
+      "Democratic Socialist Republic of Sri Lanka"
+    ],
+    "region": "Asia",
+    "capital": "Colombo",
+    "coordinates": [
+      7,
+      81
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Sudan",
+    "slug": "sudan",
+    "code": "SD",
+    "numericCode": "729",
+    "flag": "🇸🇩",
+    "aliases": [
+      "SD",
+      "Republic of the Sudan",
+      "Jumhūrīyat as-Sūdān"
+    ],
+    "region": "Africa",
+    "capital": "Khartoum",
+    "coordinates": [
+      15,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "G",
+      "A",
+      "B",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type G, Type A, Type B, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Suriname",
+    "slug": "suriname",
+    "code": "SR",
+    "numericCode": "740",
+    "flag": "🇸🇷",
+    "aliases": [
+      "SR",
+      "Sarnam",
+      "Sranangron",
+      "Republic of Suriname",
+      "Republiek Suriname"
+    ],
+    "region": "Americas",
+    "capital": "Paramaribo",
+    "coordinates": [
+      4,
+      -56
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "slug": "svalbard-and-jan-mayen",
+    "code": "SJ",
+    "numericCode": "744",
+    "flag": "🇸🇯",
+    "aliases": [
+      "SJ",
+      "Svalbard and Jan Mayen Islands",
+      "Svalbard og Jan Mayen"
+    ],
+    "region": "Europe",
+    "capital": "Longyearbyen",
+    "coordinates": [
+      78,
+      20
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Sweden",
+    "slug": "sweden",
+    "code": "SE",
+    "numericCode": "752",
+    "flag": "🇸🇪",
+    "aliases": [
+      "SE",
+      "Kingdom of Sweden",
+      "Konungariket Sverige"
+    ],
+    "region": "Europe",
+    "capital": "Stockholm",
+    "coordinates": [
+      62,
+      15
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Switzerland",
+    "slug": "switzerland",
+    "code": "CH",
+    "numericCode": "756",
+    "flag": "🇨🇭",
+    "aliases": [
+      "CH",
+      "Swiss Confederation",
+      "Schweiz",
+      "Suisse",
+      "Svizzera",
+      "Svizra"
+    ],
+    "region": "Europe",
+    "capital": "Bern",
+    "coordinates": [
+      47,
+      8
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "J"
+    ],
+    "travelAdvice": "Type C, Type J sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Syria",
+    "slug": "syria",
+    "code": "SY",
+    "numericCode": "760",
+    "flag": "🇸🇾",
+    "aliases": [
+      "SY",
+      "Syrian Arab Republic",
+      "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah"
+    ],
+    "region": "Asia",
+    "capital": "Damascus",
+    "coordinates": [
+      35,
+      38
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type E, Type F, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Taiwan",
+    "slug": "taiwan",
+    "code": "TW",
+    "numericCode": "158",
+    "flag": "🇹🇼",
+    "aliases": [
+      "TW",
+      "Táiwān",
+      "Republic of China",
+      "中華民國",
+      "Zhōnghuá Mínguó",
+      "Chinese Taipei",
+      "Republic of China (Taiwan)"
+    ],
+    "region": "Asia",
+    "capital": "Taipei",
+    "coordinates": [
+      23.5,
+      121
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
+  },
+  {
+    "name": "Tajikistan",
+    "slug": "tajikistan",
+    "code": "TJ",
+    "numericCode": "762",
+    "flag": "🇹🇯",
+    "aliases": [
+      "TJ",
+      "Toçikiston",
+      "Republic of Tajikistan",
+      "Ҷумҳурии Тоҷикистон",
+      "Çumhuriyi Toçikiston"
+    ],
+    "region": "Asia",
+    "capital": "Dushanbe",
+    "coordinates": [
+      39,
+      71
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Tanzania",
+    "slug": "tanzania",
+    "code": "TZ",
+    "numericCode": "834",
+    "flag": "🇹🇿",
+    "aliases": [
+      "TZ",
+      "Tanzania, United Republic of",
+      "United Republic of Tanzania",
+      "Jamhuri ya Muungano wa Tanzania"
+    ],
+    "region": "Africa",
+    "capital": "Dodoma",
+    "coordinates": [
+      -6,
+      35
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Thailand",
+    "slug": "thailand",
+    "code": "TH",
+    "numericCode": "764",
+    "flag": "🇹🇭",
+    "aliases": [
+      "TH",
+      "Prathet",
+      "Thai",
+      "Kingdom of Thailand",
+      "ราชอาณาจักรไทย",
+      "Ratcha Anachak Thai"
+    ],
+    "region": "Asia",
+    "capital": "Bangkok",
+    "coordinates": [
+      15,
+      100
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C",
+      "O"
+    ],
+    "travelAdvice": "Several socket types are in use, including Thailand's Type O. Carry an adapter matched to your accommodation."
+  },
+  {
+    "name": "Timor-Leste",
+    "slug": "timor-leste",
+    "code": "TL",
+    "numericCode": "626",
+    "flag": "🇹🇱",
+    "aliases": [
+      "TL",
+      "East Timor",
+      "Timor",
+      "Democratic Republic of Timor-Leste",
+      "República Democrática de Timor-Leste",
+      "Repúblika Demokrátika Timór-Leste",
+      "Timór Lorosa'e",
+      "Timor Lorosae"
+    ],
+    "region": "Asia",
+    "capital": "Dili",
+    "coordinates": [
+      -8.83333333,
+      125.91666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E",
+      "F",
+      "I"
+    ],
+    "travelAdvice": "Type C, Type E, Type F, Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Togo",
+    "slug": "togo",
+    "code": "TG",
+    "numericCode": "768",
+    "flag": "🇹🇬",
+    "aliases": [
+      "TG",
+      "Togolese",
+      "Togolese Republic",
+      "République Togolaise"
+    ],
+    "region": "Africa",
+    "capital": "Lomé",
+    "coordinates": [
+      8,
+      1.16666666
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Tokelau",
+    "slug": "tokelau",
+    "code": "TK",
+    "numericCode": "772",
+    "flag": "🇹🇰",
+    "aliases": [
+      "TK"
+    ],
+    "region": "Oceania",
+    "capital": "Fakaofo",
+    "coordinates": [
+      -9,
+      -172
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Tonga",
+    "slug": "tonga",
+    "code": "TO",
+    "numericCode": "776",
+    "flag": "🇹🇴",
+    "aliases": [
+      "TO",
+      "Kingdom of Tonga"
+    ],
+    "region": "Oceania",
+    "capital": "Nuku'alofa",
+    "coordinates": [
+      -20,
+      -175
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "slug": "trinidad-and-tobago",
+    "code": "TT",
+    "numericCode": "780",
+    "flag": "🇹🇹",
+    "aliases": [
+      "TT",
+      "Republic of Trinidad and Tobago"
+    ],
+    "region": "Americas",
+    "capital": "Port of Spain",
+    "coordinates": [
+      11,
+      -61
+    ],
+    "voltages": [
+      115
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 115 V and 60 Hz before use."
+  },
+  {
+    "name": "Tunisia",
+    "slug": "tunisia",
+    "code": "TN",
+    "numericCode": "788",
+    "flag": "🇹🇳",
+    "aliases": [
+      "TN",
+      "Republic of Tunisia",
+      "al-Jumhūriyyah at-Tūnisiyyah",
+      "Tunisian Republic"
+    ],
+    "region": "Africa",
+    "capital": "Tunis",
+    "coordinates": [
+      34,
+      9
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Türkiye",
+    "slug": "turkiye",
+    "code": "TR",
+    "numericCode": "792",
+    "flag": "🇹🇷",
+    "aliases": [
+      "TR",
+      "Turkiye",
+      "Republic of Turkey",
+      "Türkiye Cumhuriyeti",
+      "Republic of Türkiye"
+    ],
+    "region": "Asia",
+    "capital": "Ankara",
+    "coordinates": [
+      39,
+      35
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Turkmenistan",
+    "slug": "turkmenistan",
+    "code": "TM",
+    "numericCode": "795",
+    "flag": "🇹🇲",
+    "aliases": [
+      "TM"
+    ],
+    "region": "Asia",
+    "capital": "Ashgabat",
+    "coordinates": [
+      40,
+      60
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "slug": "turks-and-caicos-islands",
+    "code": "TC",
+    "numericCode": "796",
+    "flag": "🇹🇨",
+    "aliases": [
+      "TC"
+    ],
+    "region": "Americas",
+    "capital": "Cockburn Town",
+    "coordinates": [
+      21.75,
+      -71.58333333
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
+  },
+  {
+    "name": "Tuvalu",
+    "slug": "tuvalu",
+    "code": "TV",
+    "numericCode": "798",
+    "flag": "🇹🇻",
+    "aliases": [
+      "TV"
+    ],
+    "region": "Oceania",
+    "capital": "Funafuti",
+    "coordinates": [
+      -8,
+      178
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "Uganda",
+    "slug": "uganda",
+    "code": "UG",
+    "numericCode": "800",
+    "flag": "🇺🇬",
+    "aliases": [
+      "UG",
+      "Republic of Uganda",
+      "Jamhuri ya Uganda"
+    ],
+    "region": "Africa",
+    "capital": "Kampala",
+    "coordinates": [
+      1,
+      32
+    ],
+    "voltages": [
+      240
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 240 V and 50 Hz before use."
+  },
+  {
+    "name": "Ukraine",
+    "slug": "ukraine",
+    "code": "UA",
+    "numericCode": "804",
+    "flag": "🇺🇦",
+    "aliases": [
+      "UA",
+      "Ukrayina"
+    ],
+    "region": "Europe",
+    "capital": "Kyiv",
+    "coordinates": [
+      49,
+      32
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
+  },
+  {
+    "name": "United Arab Emirates",
+    "slug": "united-arab-emirates",
+    "code": "AE",
+    "numericCode": "784",
+    "flag": "🇦🇪",
+    "aliases": [
+      "AE",
+      "UAE",
+      "Emirates"
+    ],
+    "region": "Asia",
+    "capital": "Abu Dhabi",
+    "coordinates": [
+      24,
+      54
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are standard. Devices from 100–120 V regions need an input rating that includes 230 V."
+  },
+  {
     "name": "United Kingdom",
     "slug": "united-kingdom",
     "code": "GB",
+    "numericCode": "826",
     "flag": "🇬🇧",
-    "aliases": ["UK", "Great Britain", "Britain"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["G"],
+    "aliases": [
+      "GB",
+      "UK",
+      "Great Britain",
+      "United Kingdom of Great Britain and Northern Ireland",
+      "Britain"
+    ],
+    "region": "Europe",
+    "capital": "London",
+    "coordinates": [
+      54,
+      -2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
     "travelAdvice": "Type G sockets are standard. Check every device label for 230 V support before connecting it."
   },
   {
     "name": "United States",
     "slug": "united-states",
     "code": "US",
+    "numericCode": "840",
     "flag": "🇺🇸",
-    "aliases": ["USA", "US", "United States of America"],
-    "voltages": [120],
-    "frequencies": [60],
-    "plugTypes": ["A", "B"],
+    "aliases": [
+      "US",
+      "USA",
+      "United States of America"
+    ],
+    "region": "Americas",
+    "capital": "Washington D.C.",
+    "coordinates": [
+      38,
+      -97
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
     "travelAdvice": "Types A and B are standard. Devices from 220–240 V regions must explicitly support 120 V."
   },
   {
-    "name": "Canada",
-    "slug": "canada",
-    "code": "CA",
-    "flag": "🇨🇦",
-    "aliases": [],
-    "voltages": [120],
-    "frequencies": [60],
-    "plugTypes": ["A", "B"],
-    "travelAdvice": "Types A and B are standard. Confirm that imported appliances support a 120 V, 60 Hz supply."
+    "name": "United States Virgin Islands",
+    "slug": "united-states-virgin-islands",
+    "code": "VI",
+    "numericCode": "850",
+    "flag": "🇻🇮",
+    "aliases": [
+      "VI",
+      "Virgin Islands, U.S.",
+      "Virgin Islands of the United States"
+    ],
+    "region": "Americas",
+    "capital": "Charlotte Amalie",
+    "coordinates": [
+      18.35,
+      -64.933333
+    ],
+    "voltages": [
+      110
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 110 V and 60 Hz before use."
   },
   {
-    "name": "Australia",
-    "slug": "australia",
-    "code": "AU",
-    "flag": "🇦🇺",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["I"],
-    "powerNote": "The nominal supply is 230 V, although 240 V may still appear in labels and older references.",
-    "travelAdvice": "Type I sockets are standard. Check the input range on devices brought from lower-voltage countries."
+    "name": "Uruguay",
+    "slug": "uruguay",
+    "code": "UY",
+    "numericCode": "858",
+    "flag": "🇺🇾",
+    "aliases": [
+      "UY",
+      "Oriental Republic of Uruguay",
+      "República Oriental del Uruguay"
+    ],
+    "region": "Americas",
+    "capital": "Montevideo",
+    "coordinates": [
+      -33,
+      -56
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type F, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "New Zealand",
-    "slug": "new-zealand",
-    "code": "NZ",
-    "flag": "🇳🇿",
-    "aliases": ["Aotearoa"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["I"],
-    "travelAdvice": "Type I sockets are standard. Verify voltage support as well as plug fit before using a device."
+    "name": "Uzbekistan",
+    "slug": "uzbekistan",
+    "code": "UZ",
+    "numericCode": "860",
+    "flag": "🇺🇿",
+    "aliases": [
+      "UZ",
+      "Republic of Uzbekistan",
+      "O‘zbekiston Respublikasi",
+      "Ўзбекистон Республикаси"
+    ],
+    "region": "Asia",
+    "capital": "Tashkent",
+    "coordinates": [
+      41,
+      64
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F"
+    ],
+    "travelAdvice": "Type C, Type F sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Japan",
-    "slug": "japan",
-    "code": "JP",
-    "flag": "🇯🇵",
-    "aliases": [],
-    "voltages": [100],
-    "frequencies": [50, 60],
-    "plugTypes": ["A", "B"],
-    "powerNote": "Eastern Japan generally uses 50 Hz and western Japan generally uses 60 Hz.",
-    "travelAdvice": "Most sockets accept Type A, while grounded Type B availability varies. Check devices for 100 V support."
+    "name": "Vanuatu",
+    "slug": "vanuatu",
+    "code": "VU",
+    "numericCode": "548",
+    "flag": "🇻🇺",
+    "aliases": [
+      "VU",
+      "Republic of Vanuatu",
+      "Ripablik blong Vanuatu",
+      "République de Vanuatu"
+    ],
+    "region": "Oceania",
+    "capital": "Port Vila",
+    "coordinates": [
+      -16,
+      167
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "I"
+    ],
+    "travelAdvice": "Type I sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "China",
-    "slug": "china",
-    "code": "CN",
-    "flag": "🇨🇳",
-    "aliases": ["People's Republic of China", "PRC"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["A", "I"],
-    "powerNote": "This record covers mainland China; Hong Kong and Macau use different socket systems.",
-    "travelAdvice": "Types A and I are commonly listed for mainland China. Do not assume a plug fitting means the voltage is safe."
+    "name": "Vatican City",
+    "slug": "vatican-city",
+    "code": "VA",
+    "numericCode": "336",
+    "flag": "🇻🇦",
+    "aliases": [
+      "VA",
+      "Holy See (Vatican City State)",
+      "Vatican City State",
+      "Vatican",
+      "Stato della Città del Vaticano"
+    ],
+    "region": "Europe",
+    "capital": "Vatican City",
+    "coordinates": [
+      41.9,
+      12.45
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "F",
+      "L"
+    ],
+    "travelAdvice": "Type C, Type F, Type L sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "India",
-    "slug": "india",
-    "code": "IN",
-    "flag": "🇮🇳",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["D", "M"],
-    "travelAdvice": "Types D and M are used, with Type M associated with higher-current appliances. Use a suitable grounded adapter."
+    "name": "Venezuela",
+    "slug": "venezuela",
+    "code": "VE",
+    "numericCode": "862",
+    "flag": "🇻🇪",
+    "aliases": [
+      "VE",
+      "Bolivarian Republic of Venezuela",
+      "Venezuela, Bolivarian Republic of",
+      "República Bolivariana de Venezuela"
+    ],
+    "region": "Americas",
+    "capital": "Caracas",
+    "coordinates": [
+      8,
+      -66
+    ],
+    "voltages": [
+      120
+    ],
+    "frequencies": [
+      60
+    ],
+    "plugTypes": [
+      "A",
+      "B"
+    ],
+    "travelAdvice": "Type A, Type B sockets are commonly listed. Check that each device supports 120 V and 60 Hz before use."
   },
   {
-    "name": "Thailand",
-    "slug": "thailand",
-    "code": "TH",
-    "flag": "🇹🇭",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["A", "B", "C", "O"],
-    "travelAdvice": "Several socket types are in use, including Thailand's Type O. Carry an adapter matched to your accommodation."
+    "name": "Vietnam",
+    "slug": "vietnam",
+    "code": "VN",
+    "numericCode": "704",
+    "flag": "🇻🇳",
+    "aliases": [
+      "VN",
+      "Socialist Republic of Vietnam",
+      "Cộng hòa Xã hội chủ nghĩa Việt Nam",
+      "Viet Nam"
+    ],
+    "region": "Asia",
+    "capital": "Hanoi",
+    "coordinates": [
+      16.16666666,
+      107.83333333
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "A",
+      "B",
+      "C"
+    ],
+    "travelAdvice": "Type A, Type B, Type C sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Singapore",
-    "slug": "singapore",
-    "code": "SG",
-    "flag": "🇸🇬",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["G"],
-    "travelAdvice": "Type G sockets are standard. Check device voltage labels before use, especially for high-powered appliances."
+    "name": "Wallis and Futuna",
+    "slug": "wallis-and-futuna",
+    "code": "WF",
+    "numericCode": "876",
+    "flag": "🇼🇫",
+    "aliases": [
+      "WF",
+      "Territory of the Wallis and Futuna Islands",
+      "Territoire des îles Wallis et Futuna"
+    ],
+    "region": "Oceania",
+    "capital": "Mata-Utu",
+    "coordinates": [
+      -13.3,
+      -176.2
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "France",
-    "slug": "france",
-    "code": "FR",
-    "flag": "🇫🇷",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["C", "E"],
-    "travelAdvice": "Types C and E are used. Grounded devices need an adapter that correctly connects the Type E earth contact."
+    "name": "Western Sahara",
+    "slug": "western-sahara",
+    "code": "EH",
+    "numericCode": "732",
+    "flag": "🇪🇭",
+    "aliases": [
+      "EH",
+      "Taneẓroft Tutrimt",
+      "Sahrawi Arab Democratic Republic"
+    ],
+    "region": "Africa",
+    "capital": "El Aaiún",
+    "coordinates": [
+      24.5,
+      -13
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "E"
+    ],
+    "travelAdvice": "Type C, Type E sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Germany",
-    "slug": "germany",
-    "code": "DE",
-    "flag": "🇩🇪",
-    "aliases": ["Deutschland"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["C", "F"],
-    "travelAdvice": "Types C and F are used. Grounded appliances require a compatible grounded connection, not only a two-pin fit."
+    "name": "Yemen",
+    "slug": "yemen",
+    "code": "YE",
+    "numericCode": "887",
+    "flag": "🇾🇪",
+    "aliases": [
+      "YE",
+      "Yemeni Republic",
+      "al-Jumhūriyyah al-Yamaniyyah",
+      "Republic of Yemen"
+    ],
+    "region": "Asia",
+    "capital": "Sana'a",
+    "coordinates": [
+      15,
+      48
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "C",
+      "D",
+      "G",
+      "A",
+      "B",
+      "E",
+      "F",
+      "I",
+      "O"
+    ],
+    "travelAdvice": "Type C, Type D, Type G, Type A, Type B, Type E, Type F, Type I, Type O sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Spain",
-    "slug": "spain",
-    "code": "ES",
-    "flag": "🇪🇸",
-    "aliases": ["España"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["C", "F"],
-    "travelAdvice": "Types C and F are used. Check voltage compatibility before connecting devices from 100–120 V countries."
+    "name": "Zambia",
+    "slug": "zambia",
+    "code": "ZM",
+    "numericCode": "894",
+    "flag": "🇿🇲",
+    "aliases": [
+      "ZM",
+      "Republic of Zambia"
+    ],
+    "region": "Africa",
+    "capital": "Lusaka",
+    "coordinates": [
+      -15,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   },
   {
-    "name": "Italy",
-    "slug": "italy",
-    "code": "IT",
-    "flag": "🇮🇹",
-    "aliases": ["Italia"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["C", "F", "L"],
-    "travelAdvice": "Types C, F, and L are used. Socket availability varies, so a versatile grounded adapter is useful."
-  },
-  {
-    "name": "Brazil",
-    "slug": "brazil",
-    "code": "BR",
-    "flag": "🇧🇷",
-    "aliases": ["Brasil"],
-    "voltages": [127, 220],
-    "frequencies": [60],
-    "plugTypes": ["C", "N"],
-    "powerNote": "The local supply may be 127 V or 220 V and can vary by location. Confirm it at the property before use.",
-    "travelAdvice": "Type N is the national standard and Type C is also used. Always confirm the local voltage and device label."
-  },
-  {
-    "name": "United Arab Emirates",
-    "slug": "united-arab-emirates",
-    "code": "AE",
-    "flag": "🇦🇪",
-    "aliases": ["UAE", "Emirates"],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["G"],
-    "travelAdvice": "Type G sockets are standard. Devices from 100–120 V regions need an input rating that includes 230 V."
-  },
-  {
-    "name": "South Africa",
-    "slug": "south-africa",
-    "code": "ZA",
-    "flag": "🇿🇦",
-    "aliases": [],
-    "voltages": [230],
-    "frequencies": [50],
-    "plugTypes": ["C", "M", "N"],
-    "powerNote": "Type N is being adopted alongside the established Type M system; socket availability can vary.",
-    "travelAdvice": "Types C, M, and N may be encountered. Confirm the available socket and use a properly rated grounded adapter."
+    "name": "Zimbabwe",
+    "slug": "zimbabwe",
+    "code": "ZW",
+    "numericCode": "716",
+    "flag": "🇿🇼",
+    "aliases": [
+      "ZW",
+      "Republic of Zimbabwe"
+    ],
+    "region": "Africa",
+    "capital": "Harare",
+    "coordinates": [
+      -20,
+      30
+    ],
+    "voltages": [
+      230
+    ],
+    "frequencies": [
+      50
+    ],
+    "plugTypes": [
+      "G"
+    ],
+    "travelAdvice": "Type G sockets are commonly listed. Check that each device supports 230 V and 50 Hz before use."
   }
 ]

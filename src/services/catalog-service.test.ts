@@ -28,7 +28,7 @@ describe("catalog integrity", () => {
   it("contains every required record and valid cross-reference", () => {
     expect(getCatalogIntegrityIssues()).toEqual([]);
     expect(() => assertCatalogIntegrity()).not.toThrow();
-    expect(getCountries()).toHaveLength(17);
+    expect(getCountries()).toHaveLength(243);
     expect(getPlugs().map((plug) => plug.type)).toEqual(PLUG_TYPES);
     expect(getDeviceProfiles()).toHaveLength(8);
   });
@@ -60,11 +60,9 @@ describe("country service", () => {
 
   it("searches names and aliases without accents", () => {
     expect(searchCountries("espana").map((country) => country.code)).toEqual(["ES"]);
-    expect(searchCountries("united").map((country) => country.code)).toEqual([
-      "GB",
-      "US",
-      "AE",
-    ]);
+    expect(searchCountries("united").map((country) => country.code)).toEqual(
+      expect.arrayContaining(["GB", "US", "AE"]),
+    );
     expect(searchCountries("   ")).toEqual([]);
   });
 
@@ -74,13 +72,13 @@ describe("country service", () => {
 
   it("generates stable country route params", () => {
     const params = getCountryStaticParams();
-    expect(params).toHaveLength(17);
+    expect(params).toHaveLength(243);
     expect(params).toContainEqual({ country: "south-africa" });
   });
 
-  it("generates every valid directed comparison route", () => {
+  it("prebuilds a bounded set of featured comparison routes", () => {
     const params = getComparisonStaticParams();
-    expect(params).toHaveLength(17 * 16);
+    expect(params).toHaveLength(4);
     expect(params).toContainEqual({ from: "united-kingdom", to: "japan" });
     expect(params).not.toContainEqual({ from: "japan", to: "japan" });
   });
@@ -90,7 +88,7 @@ describe("country service", () => {
       getCountriesWithCompatiblePower(requireCountry("United Kingdom")).map(
         (country) => country.code,
       ),
-    ).toEqual(["SG", "AE"]);
+    ).toEqual(expect.arrayContaining(["SG", "AE"]));
   });
 });
 
@@ -123,12 +121,10 @@ describe("plug service", () => {
   });
 
   it("derives plug-to-country relationships", () => {
-    expect(getCountriesUsingPlug("G").map((country) => country.code)).toEqual([
-      "GB",
-      "SG",
-      "AE",
-    ]);
-    expect(getCountriesUsingPlug("O").map((country) => country.code)).toEqual(["TH"]);
+    expect(getCountriesUsingPlug("G").map((country) => country.code)).toEqual(
+      expect.arrayContaining(["GB", "SG", "AE"]),
+    );
+    expect(getCountriesUsingPlug("O").map((country) => country.code)).toContain("TH");
   });
 
   it("generates stable plug route params", () => {

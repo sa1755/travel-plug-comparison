@@ -2,7 +2,33 @@
 
 ## Version
 
-Version 1.1
+Version 2.0 — Mid-century global explorer
+
+## Approved visual identity
+
+TravelPlug combines Google-style clarity with the warmth and confidence of
+mid-century modern travel architecture. The interface is spacious, geometric,
+responsive, and interactive without becoming busy.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| Warm cream | `#F4EFE6` | Canvas |
+| Paper | `#FFFDF8` | Primary surfaces |
+| Walnut | `#3B2A22` | Text and structure |
+| Terracotta | `#C96F4A` | Character and emphasis |
+| Olive | `#71764A` | Secondary identity and calm results |
+| Action blue | `#2563EB` | Links, buttons, focus, selected points |
+
+The comparison itself is the homepage hero. It leads with accurate plug
+silhouettes for home and destination, then one “Bring…” answer. Voltage and
+frequency are progressively disclosed only when they need attention. Decorative
+flags are never the only country label.
+
+The explorer is a secondary, full-screen tool. It is dynamically loaded, stops
+rotating after interaction, disables automatic movement for reduced-motion
+users, labels countries and major cities, and always provides a keyboard-ready
+country search/list. It owns selection only; electrical rules remain in the
+domain layer.
 
 ---
 
@@ -91,9 +117,8 @@ status labels meet WCAG AA contrast against the safe background.
 
 ## Interactive Globe Boundary
 
-The globe is a future optional exploration surface, not part of the current UI
-foundation. It will be introduced only after the validated country data service
-exists.
+The globe is an optional exploration surface, subordinate to the comparison.
+It is available because the validated worldwide country service now exists.
 
 When implemented, the globe must:
 
@@ -106,8 +131,7 @@ When implemented, the globe must:
 - use the shared brand, surface, focus, and typography tokens; and
 - emit country selection only, leaving comparison rules in the domain layer.
 
-No globe library, map asset, canvas, WebGL code, simulated globe placeholder, or
-globe-specific data model belongs in the application before that phase.
+Globe code and city data stay isolated in a dynamically loaded client boundary.
 
 ---
 
