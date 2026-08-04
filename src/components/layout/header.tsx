@@ -15,7 +15,7 @@ export function Header() {
         </Link>
         <nav aria-label="Primary navigation" className="flex items-center">
           <Link href="/#compare" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold text-muted hover:text-foreground sm:px-4">Compare</Link>
-          <Link href="/?explore=globe" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold text-muted hover:text-foreground sm:px-4">Explore</Link>
+          <a href="/?explore=globe" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold text-muted hover:text-foreground sm:px-4">Explore</a>
           <Link href="/#safety" className="hidden min-h-11 items-center rounded-full px-4 text-sm font-semibold text-muted hover:text-foreground sm:inline-flex">Safety</Link>
         </nav>
       </div>

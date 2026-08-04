@@ -10,7 +10,15 @@ import type { PlugType } from "@/types";
 
 const GlobeExplorer = dynamic(
   () => import("@/components/globe/globe-explorer").then((module) => module.GlobeExplorer),
-  { ssr: false },
+  {
+    ssr: false,
+    loading: () => (
+      <div className="globe-loading" role="dialog" aria-modal="true" aria-label="Loading globe explorer">
+        <div className="globe-loading__orb" aria-hidden="true" />
+        <p><strong>Opening the world…</strong><span>Loading the interactive globe and major cities.</span></p>
+      </div>
+    ),
+  },
 );
 
 export interface JourneyCountry {
