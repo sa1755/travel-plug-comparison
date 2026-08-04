@@ -3,6 +3,7 @@ import type { z } from "zod";
 import type {
   countrySchema,
   comparisonFormSchema,
+  deviceCheckerFormSchema,
   deviceProfileSchema,
   plugSchema,
 } from "@/lib/schemas";
@@ -20,6 +21,7 @@ export type ComparisonAspect = (typeof COMPARISON_ASPECTS)[number];
 
 export type Country = z.infer<typeof countrySchema>;
 export type ComparisonFormValues = z.infer<typeof comparisonFormSchema>;
+export type DeviceCheckerFormValues = z.infer<typeof deviceCheckerFormSchema>;
 export type Plug = z.infer<typeof plugSchema>;
 export type DeviceProfile = z.infer<typeof deviceProfileSchema>;
 

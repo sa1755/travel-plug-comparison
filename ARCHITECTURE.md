@@ -131,6 +131,13 @@ Search is an accessible client interaction over the small validated local data
 set. If the data set later becomes remote or substantially larger, it can move
 behind a service without changing route components.
 
+Phase 4 implements every known country and plug route statically. Global search
+receives a serializable, prevalidated search index from the server and performs
+only ranking and filtering in its client island; raw JSON and Zod parsing do not
+enter the browser bundle. The device checker receives immutable country and
+device records, validates its three selections, and delegates all findings to
+the same pure comparison engine as route pages.
+
 The comparison form is the smallest client boundary. It uses React Hook Form for
 field state and the shared Zod schema for route-safe validation. The selected
 slugs become the URL source of truth. All 17 × 16 directed comparison routes are
@@ -162,6 +169,9 @@ The globe must have an equivalent keyboard-accessible list/search path, support
 reduced motion and non-WebGL environments, and load without delaying primary
 page content. Library selection is deferred until the country data shape,
 accessibility behaviour, and performance budget can be evaluated together.
+The Phase 4 assessment and explicit implementation gates are recorded in
+`GLOBE_EVALUATION.md`; its current decision is to defer the globe and library
+selection while retaining global search as the equivalent accessible path.
 
 ## Metadata and deployment
 

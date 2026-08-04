@@ -8,6 +8,7 @@ import {
   getCountryByIdentifier,
   getCountryBySlug,
   getCountryStaticParams,
+  getCountriesWithCompatiblePower,
   requireCountry,
   searchCountries,
 } from "@/services/country-service";
@@ -20,6 +21,7 @@ import {
   requirePlug,
 } from "@/services/plug-service";
 import { getDeviceProfile, getDeviceProfiles, requireDeviceProfile } from "@/services/device-service";
+import { searchCatalog } from "@/services/search-service";
 import { PLUG_TYPES } from "@/types";
 
 describe("catalog integrity", () => {
@@ -81,6 +83,35 @@ describe("country service", () => {
     expect(params).toHaveLength(17 * 16);
     expect(params).toContainEqual({ from: "united-kingdom", to: "japan" });
     expect(params).not.toContainEqual({ from: "japan", to: "japan" });
+  });
+
+  it("finds countries with fully compatible nominal power systems", () => {
+    expect(
+      getCountriesWithCompatiblePower(requireCountry("United Kingdom")).map(
+        (country) => country.code,
+      ),
+    ).toEqual(["SG", "AE"]);
+  });
+});
+
+describe("catalog search", () => {
+  it("searches country names, aliases, plug types, and technical standards", () => {
+    expect(searchCatalog("japan").at(0)).toMatchObject({
+      kind: "country",
+      href: "/country/japan",
+    });
+    expect(searchCatalog("UAE").at(0)?.title).toBe("United Arab Emirates");
+    expect(searchCatalog("type g").at(0)).toMatchObject({
+      kind: "plug",
+      href: "/plug/type-g",
+    });
+    expect(searchCatalog("BS 1363").at(0)?.title).toBe("Type G");
+  });
+
+  it("returns a bounded empty result for blank or unmatched queries", () => {
+    expect(searchCatalog("  ")).toEqual([]);
+    expect(searchCatalog("does-not-exist")).toEqual([]);
+    expect(searchCatalog("type", 3)).toHaveLength(3);
   });
 });
 

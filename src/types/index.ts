@@ -15,6 +15,7 @@ export type {
   Country,
   DeviceProfile,
   DeviceComparison,
+  DeviceCheckerFormValues,
   DeviceVoltageProfile,
   FrequencyComparison,
   FrequencyStatus,

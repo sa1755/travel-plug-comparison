@@ -4,6 +4,7 @@ import {
   comparisonFormSchema,
   countriesSchema,
   countrySchema,
+  deviceCheckerFormSchema,
   plugSchema,
 } from "@/lib/schemas";
 
@@ -91,5 +92,22 @@ describe("data schemas", () => {
         toCountry: "japan",
       }).success,
     ).toBe(true);
+  });
+
+  it("validates a complete device checker request", () => {
+    expect(
+      deviceCheckerFormSchema.safeParse({
+        fromCountry: "united-kingdom",
+        toCountry: "japan",
+        deviceId: "phone-charger",
+      }).success,
+    ).toBe(true);
+    expect(
+      deviceCheckerFormSchema.safeParse({
+        fromCountry: "japan",
+        toCountry: "japan",
+        deviceId: "phone-charger",
+      }).success,
+    ).toBe(false);
   });
 });

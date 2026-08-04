@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
@@ -10,7 +12,10 @@ export function Footer() {
             Clear plug, power, and device guidance for journeys worldwide.
           </p>
         </div>
-        <p className="text-sm text-muted">Travel power, explained simply.</p>
+        <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-muted">
+          <Link href="/" className="min-h-11 content-center hover:text-brand-strong">Compare countries</Link>
+          <Link href="/device-checker" className="min-h-11 content-center hover:text-brand-strong">Device checker</Link>
+        </nav>
       </div>
     </footer>
   );

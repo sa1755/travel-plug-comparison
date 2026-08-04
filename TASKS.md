@@ -62,20 +62,20 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 
 ## Phase 4 — Expansion
 
-- [ ] Implement `/country/[country]` with plug details, power information, travel
+- [x] Implement `/country/[country]` with plug details, power information, travel
   advice, and compatible-country links.
-- [ ] Implement `/plug/[type]` with imagery, description, technical facts, and
+- [x] Implement `/plug/[type]` with imagery, description, technical facts, and
   countries using the plug.
-- [ ] Implement accessible global search across countries and plug types.
-- [ ] Evaluate the optional interactive globe against the validated country
+- [x] Implement accessible global search across countries and plug types.
+- [x] Evaluate the optional interactive globe against the validated country
   service, accessibility fallback, and performance budget before selecting a
   rendering library.
-- [ ] Implement `/device-checker` for all specified device profiles, with clear
+- [x] Implement `/device-checker` for all specified device profiles, with clear
   device-label caveats.
-- [ ] Add loading, empty, validation, and not-found states where applicable.
-- [ ] Test search, detail routes, the device checker, keyboard use, and responsive
+- [x] Add loading, empty, validation, and not-found states where applicable.
+- [x] Test search, detail routes, the device checker, keyboard use, and responsive
   layouts.
-- [ ] Pass the complete Phase 4 quality gate and commit the expansion milestone.
+- [x] Pass the complete Phase 4 quality gate and commit the expansion milestone.
 
 ## Phase 5 — Production
 

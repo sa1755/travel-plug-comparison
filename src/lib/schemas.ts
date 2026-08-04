@@ -87,6 +87,10 @@ export const comparisonFormSchema = z
     }
   });
 
+export const deviceCheckerFormSchema = comparisonFormSchema.safeExtend({
+  deviceId: slugSchema,
+});
+
 export const plugSchema = z
   .object({
     type: plugTypeSchema,

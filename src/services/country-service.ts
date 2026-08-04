@@ -1,4 +1,5 @@
 import countriesJson from "@/data/countries.json";
+import { compareCountries } from "@/lib/comparison";
 import { countriesSchema } from "@/lib/schemas";
 import type { Country } from "@/types";
 import { deepFreeze, type DeepReadonly } from "@/utils/deep-freeze";
@@ -67,4 +68,13 @@ export function getComparisonStaticParams(): readonly { from: string; to: string
       .filter((destination) => destination.code !== origin.code)
       .map((destination) => ({ from: origin.slug, to: destination.slug })),
   );
+}
+
+export function getCountriesWithCompatiblePower(
+  origin: CountryRecord,
+): readonly CountryRecord[] {
+  return countries.filter((destination) => {
+    if (destination.code === origin.code) return false;
+    return compareCountries(origin, destination).level === "safe";
+  });
 }
