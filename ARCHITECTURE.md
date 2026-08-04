@@ -95,18 +95,34 @@ Electrical records and their update policy are documented in
 `src/data/README.md`. Device records are general guidance and never override the
 rating label or manufacturer instructions for a specific appliance.
 
-Comparison rules will be pure functions. Plug compatibility is based on the
-intersection of socket types; voltage guidance uses explicit tolerance rules;
-frequency is reported separately because its importance depends on the device.
-Ambiguous electrical cases must say “check the device label” rather than claim
-universal safety. Rules and thresholds will be documented beside their tests.
+Comparison rules are pure functions in `src/lib/comparison.ts`; they do not
+import React, routes, or raw data. The rules are deliberately cautious:
+
+- Plug compatibility evaluates each home plug against a documented socket-fit
+  map. It returns fully supported, partially supported, or adapter required. It
+  never treats physical fit as proof of electrical compatibility.
+- Voltage returns exact nominal match, similar low/high system with a device
+  check, variable destination supply, or a materially different voltage system
+  where a converter may be required. The low system covers 100–127 V and the
+  high system covers 220–240 V; exact device input ratings remain authoritative.
+- Frequency returns exact match, variable destination supply, or a device check.
+  It is kept separate because chargers, motors, clocks, and medical equipment do
+  not respond identically to a frequency difference.
+- Device findings combine those route-level results with the validated profile.
+  Dual-voltage is described as typical rather than guaranteed, high-power
+  single-voltage devices receive stronger warnings, and medical profiles always
+  defer to manufacturer guidance.
+
+Ambiguous cases say “check the device label” rather than claim universal safety.
+Every branch is covered by unit tests, including multi-voltage and dual-frequency
+destinations.
 
 ## Routes
 
 | Route | Rendering | Purpose |
 | --- | --- | --- |
-| `/` | Static shell + interactive selector | Primary comparison journey |
-| `/compare/[from]/[to]` | Static/server | Shareable compatibility result |
+| `/` | Static shell + client form | Primary comparison journey |
+| `/compare/[from]/[to]` | Static | Shareable compatibility result |
 | `/country/[country]` | Static | Country electrical guide |
 | `/plug/[type]` | Static | Plug technical guide and countries |
 | `/device-checker` | Static shell + client form | Device-specific guidance |
@@ -114,6 +130,12 @@ universal safety. Rules and thresholds will be documented beside their tests.
 Search is an accessible client interaction over the small validated local data
 set. If the data set later becomes remote or substantially larger, it can move
 behind a service without changing route components.
+
+The comparison form is the smallest client boundary. It uses React Hook Form for
+field state and the shared Zod schema for route-safe validation. The selected
+slugs become the URL source of truth. All 17 × 16 directed comparison routes are
+prerendered; same-country and unknown routes are excluded and resolve as not
+found.
 
 ## Design system and accessibility
 

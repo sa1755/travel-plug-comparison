@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 
-import { countriesSchema, countrySchema, plugSchema } from "@/lib/schemas";
+import {
+  comparisonFormSchema,
+  countriesSchema,
+  countrySchema,
+  plugSchema,
+} from "@/lib/schemas";
 
 const validCountry = {
   name: "Example Country",
@@ -70,5 +75,21 @@ describe("data schemas", () => {
     expect(result.error?.issues).toContainEqual(
       expect.objectContaining({ path: ["plugTypes"] }),
     );
+  });
+
+  it("requires two different countries for a comparison", () => {
+    expect(
+      comparisonFormSchema.safeParse({
+        fromCountry: "japan",
+        toCountry: "japan",
+      }).success,
+    ).toBe(false);
+
+    expect(
+      comparisonFormSchema.safeParse({
+        fromCountry: "united-kingdom",
+        toCountry: "japan",
+      }).success,
+    ).toBe(true);
   });
 });

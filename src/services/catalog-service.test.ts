@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { assertCatalogIntegrity, getCatalogIntegrityIssues } from "@/services/catalog-service";
 import {
   getCountries,
+  getComparisonStaticParams,
   getCountryByCode,
   getCountryByIdentifier,
   getCountryBySlug,
@@ -73,6 +74,13 @@ describe("country service", () => {
     const params = getCountryStaticParams();
     expect(params).toHaveLength(17);
     expect(params).toContainEqual({ country: "south-africa" });
+  });
+
+  it("generates every valid directed comparison route", () => {
+    const params = getComparisonStaticParams();
+    expect(params).toHaveLength(17 * 16);
+    expect(params).toContainEqual({ from: "united-kingdom", to: "japan" });
+    expect(params).not.toContainEqual({ from: "japan", to: "japan" });
   });
 });
 

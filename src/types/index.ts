@@ -6,12 +6,21 @@ export {
 } from "@/types/constants";
 export type {
   ComparisonAspect,
+  AdapterStatus,
+  BaseComparisonFinding,
   ComparisonFinding,
+  ComparisonFormValues,
   ComparisonResult,
   CompatibilityLevel,
   Country,
   DeviceProfile,
+  DeviceComparison,
   DeviceVoltageProfile,
+  FrequencyComparison,
+  FrequencyStatus,
   Plug,
+  PlugComparison,
   PlugType,
+  VoltageComparison,
+  VoltageStatus,
 } from "@/types/domain";

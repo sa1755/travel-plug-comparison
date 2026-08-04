@@ -3,6 +3,10 @@
 TravelPlug helps international travellers compare socket types, voltage,
 frequency, and device compatibility between their home country and destination.
 
+The current application includes a validated 17-country electrical catalog, a
+country comparison form, 272 statically generated route guides, and cautious
+device-specific guidance.
+
 ## Local development
 
 Requirements: Node.js 20.9 or newer and npm.

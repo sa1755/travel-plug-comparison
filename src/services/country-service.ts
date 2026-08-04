@@ -60,3 +60,11 @@ export function searchCountries(query: string): readonly CountryRecord[] {
 export function getCountryStaticParams(): readonly { country: string }[] {
   return countries.map((country) => ({ country: country.slug }));
 }
+
+export function getComparisonStaticParams(): readonly { from: string; to: string }[] {
+  return countries.flatMap((origin) =>
+    countries
+      .filter((destination) => destination.code !== origin.code)
+      .map((destination) => ({ from: origin.slug, to: destination.slug })),
+  );
+}

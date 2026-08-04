@@ -72,6 +72,21 @@ export const countriesSchema = z.array(countrySchema).min(1).superRefine((record
   uniqueBy(records, "code", context);
 });
 
+export const comparisonFormSchema = z
+  .object({
+    fromCountry: slugSchema,
+    toCountry: slugSchema,
+  })
+  .superRefine((values, context) => {
+    if (values.fromCountry === values.toCountry) {
+      context.addIssue({
+        code: "custom",
+        message: "Choose two different countries to compare",
+        path: ["toCountry"],
+      });
+    }
+  });
+
 export const plugSchema = z
   .object({
     type: plugTypeSchema,

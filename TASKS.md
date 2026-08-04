@@ -48,17 +48,17 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 
 ## Phase 3 — Main product
 
-- [ ] Build an accessible country selector and validated comparison form.
-- [ ] Keep selected countries in the shareable comparison URL.
-- [ ] Implement and document pure plug, voltage, and frequency comparison rules.
-- [ ] Add severity badges, comparison cards, plug cards, recommendation summary,
+- [x] Build an accessible country selector and validated comparison form.
+- [x] Keep selected countries in the shareable comparison URL.
+- [x] Implement and document pure plug, voltage, and frequency comparison rules.
+- [x] Add severity badges, comparison cards, plug cards, recommendation summary,
   and device-warning presentation.
-- [ ] Complete homepage “How it works”, adapter education, popular destinations,
+- [x] Complete homepage “How it works”, adapter education, popular destinations,
   and travel tips sections.
-- [ ] Implement `/compare/[from]/[to]` with metadata, country identity, complete
+- [x] Implement `/compare/[from]/[to]` with metadata, country identity, complete
   findings, invalid-route handling, and a path to start another comparison.
-- [ ] Test all domain rule branches and representative comparison journeys.
-- [ ] Pass the complete Phase 3 quality gate and commit the main product.
+- [x] Test all domain rule branches and representative comparison journeys.
+- [x] Pass the complete Phase 3 quality gate and commit the main product.
 
 ## Phase 4 — Expansion
 
