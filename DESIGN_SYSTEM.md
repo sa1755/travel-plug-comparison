@@ -2,7 +2,7 @@
 
 ## Version
 
-Version 1.0
+Version 1.1
 
 ---
 
@@ -34,11 +34,13 @@ safe.” Compatibility meaning is reserved for the following semantic colours:
 
 | Meaning | Strong | Soft |
 | --- | --- | --- |
-| Safe | `#188038` | `#E6F4EA` |
+| Safe | `#137333` | `#E6F4EA` |
 | Warning | `#A15C00` | `#FEF3C7` |
 | Danger | `#C5221F` | `#FCE8E6` |
 
 Every semantic state pairs colour with a label and, where useful, an icon.
+The Version 1.1 safe green is slightly darker than the original token so small
+status labels meet WCAG AA contrast against the safe background.
 
 ### Typography
 

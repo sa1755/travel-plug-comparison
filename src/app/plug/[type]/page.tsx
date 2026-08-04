@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
+import { createPageMetadata } from "@/lib/site-config";
 import { getCountriesUsingPlug, getPlugBySlug, getPlugStaticParams } from "@/services/plug-service";
 
 interface PlugPageProps {
@@ -21,7 +22,12 @@ export async function generateMetadata({ params }: PlugPageProps): Promise<Metad
   if (!plug) return { title: "Plug guide not found" };
   const title = `${plug.name} Plug Guide and Countries`;
   const description = `${plug.description} See technical details and catalog countries that use ${plug.name}.`;
-  return { title, description, openGraph: { title, description, type: "article" } };
+  return createPageMetadata({
+    title,
+    description,
+    path: `/plug/${plug.slug}`,
+    type: "article",
+  });
 }
 
 export default async function PlugPage({ params }: PlugPageProps) {

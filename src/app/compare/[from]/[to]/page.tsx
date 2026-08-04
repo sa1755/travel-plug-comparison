@@ -9,6 +9,7 @@ import { ComparisonCard } from "@/components/comparison/comparison-card";
 import { PlugCard } from "@/components/comparison/plug-card";
 import { DeviceCard } from "@/components/device/device-card";
 import { compareCountries } from "@/lib/comparison";
+import { createPageMetadata } from "@/lib/site-config";
 import {
   getComparisonStaticParams,
   getCountries,
@@ -43,15 +44,12 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   const title = `${origin.name} to ${destination.name} Plug Adapter Guide`;
   const description = `Compare plugs, voltage, frequency, and device guidance for travel from ${origin.name} to ${destination.name}.`;
 
-  return {
+  return createPageMetadata({
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      type: "article",
-    },
-  };
+    path: `/compare/${origin.slug}/${destination.slug}`,
+    type: "article",
+  });
 }
 
 export default async function ComparePage({ params }: ComparePageProps) {

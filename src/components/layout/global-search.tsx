@@ -21,6 +21,7 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const listId = useId();
 
   useEffect(() => {
@@ -80,8 +81,15 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
                 aria-controls={listId}
                 aria-expanded={query.length > 0}
                 aria-autocomplete="list"
+                aria-haspopup="listbox"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "ArrowDown" && results.length > 0) {
+                    event.preventDefault();
+                    resultRefs.current[0]?.focus();
+                  }
+                }}
                 placeholder="Search Japan, Type G, UAE…"
                 className="min-h-12 w-full rounded-2xl border border-border-strong bg-surface-muted py-3 pl-12 pr-4 text-base"
               />
@@ -96,9 +104,26 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
               <p className="px-3 py-5 text-sm leading-6 text-muted">Find a country guide or learn about a plug type.</p>
             ) : results.length ? (
               <ul className="grid gap-1">
-                {results.map((result) => (
+                {results.map((result, index) => (
                   <li key={result.id} role="none">
-                    <Link href={result.href} role="option" onClick={close} className="flex min-h-16 items-center gap-3 rounded-2xl px-3 py-2 hover:bg-brand-faint">
+                    <Link
+                      ref={(node) => { resultRefs.current[index] = node; }}
+                      href={result.href}
+                      role="option"
+                      aria-selected="false"
+                      onClick={close}
+                      onKeyDown={(event) => {
+                        if (event.key === "ArrowDown") {
+                          event.preventDefault();
+                          resultRefs.current[(index + 1) % results.length]?.focus();
+                        } else if (event.key === "ArrowUp") {
+                          event.preventDefault();
+                          if (index === 0) inputRef.current?.focus();
+                          else resultRefs.current[index - 1]?.focus();
+                        }
+                      }}
+                      className="flex min-h-16 items-center gap-3 rounded-2xl px-3 py-2 hover:bg-brand-faint"
+                    >
                       <span className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${result.kind === "country" ? "text-2xl" : "bg-brand-soft font-bold text-brand-strong"}`} aria-hidden="true">{result.marker}</span>
                       <span className="min-w-0">
                         <span className="block font-bold text-foreground">{result.title}</span>

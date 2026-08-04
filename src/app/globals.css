@@ -12,7 +12,7 @@
   --brand-strong: #174ea6;
   --brand-soft: #e8f0fe;
   --brand-faint: #f4f8ff;
-  --success: #188038;
+  --success: #137333;
   --success-soft: #e6f4ea;
   --warning: #a15c00;
   --warning-soft: #fef3c7;
@@ -100,5 +100,13 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

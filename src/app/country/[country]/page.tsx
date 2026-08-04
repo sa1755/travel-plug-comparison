@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
+import { createPageMetadata } from "@/lib/site-config";
 import {
   getCountriesWithCompatiblePower,
   getCountryBySlug,
@@ -27,7 +28,12 @@ export async function generateMetadata({ params }: CountryPageProps): Promise<Me
   if (!country) return { title: "Country guide not found" };
   const title = `${country.name} Plugs, Voltage and Travel Guide`;
   const description = `See the plug types, nominal voltage, frequency, and practical electrical travel advice for ${country.name}.`;
-  return { title, description, openGraph: { title, description, type: "article" } };
+  return createPageMetadata({
+    title,
+    description,
+    path: `/country/${country.slug}`,
+    type: "article",
+  });
 }
 
 export default async function CountryPage({ params }: CountryPageProps) {

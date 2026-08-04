@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 
 import { DeviceChecker } from "@/components/device/device-checker";
+import { createPageMetadata } from "@/lib/site-config";
 import { getCountries } from "@/services/country-service";
 import { getDeviceProfiles } from "@/services/device-service";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Travel Device Compatibility Checker",
   description: "Check general voltage and frequency guidance for common travel devices between two countries.",
-  openGraph: {
-    title: "Travel Device Compatibility Checker",
-    description: "Check common travel device guidance before connecting abroad.",
-    type: "website",
-  },
-};
+  path: "/device-checker",
+});
 
 export default function DeviceCheckerPage() {
   return (

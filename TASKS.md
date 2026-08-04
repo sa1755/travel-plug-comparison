@@ -79,15 +79,15 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 
 ## Phase 5 — Production
 
-- [ ] Add unique canonical metadata and Open Graph data to every public route.
-- [ ] Add generated `sitemap.xml`, `robots.txt`, favicons, and social imagery.
-- [ ] Audit server/client boundaries, bundle size, static generation, image
+- [x] Add unique canonical metadata and Open Graph data to every public route.
+- [x] Add generated `sitemap.xml`, `robots.txt`, favicons, and social imagery.
+- [x] Audit server/client boundaries, bundle size, static generation, image
   optimisation, and Core Web Vitals risks.
-- [ ] Audit semantics, focus order, contrast, reduced motion, touch targets, and
+- [x] Audit semantics, focus order, contrast, reduced motion, touch targets, and
   mobile layouts.
-- [ ] Run lint, type checking, unit/component/end-to-end tests, and the final
+- [x] Run lint, type checking, unit/component/end-to-end tests, and the final
   production build with no outstanding errors.
-- [ ] Document environment and Vercel deployment steps.
-- [ ] Connect the GitHub repository, deploy to Vercel, verify the production URL,
+- [x] Document environment and Vercel deployment steps.
+- [~] Connect the GitHub repository, deploy to Vercel, verify the production URL,
   and confirm automatic deployments (requires account access).
-- [ ] Commit production-readiness changes and record the live URL in `README.md`.
+- [~] Commit production-readiness changes and record the live URL in `README.md`.

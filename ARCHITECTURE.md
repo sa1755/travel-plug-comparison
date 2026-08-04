@@ -175,15 +175,20 @@ selection while retaining global search as the equivalent accessible path.
 
 ## Metadata and deployment
 
-The root layout owns title templates and default social metadata. Detail routes
-derive unique titles and descriptions from validated records. Phase 5 adds the
-canonical production origin, generated Open Graph imagery, sitemap, and robots
-configuration.
+The root layout owns the metadata base, title template, and default social data.
+Every public route derives a unique canonical path, title, and description from
+validated records. The production origin prefers `NEXT_PUBLIC_SITE_URL`, then
+Vercel's stable production-domain variable. App Router metadata routes generate
+the social image, icons, manifest, sitemap, and environment-aware robots policy.
 
 Vercel is the intended runtime. The application will not require a database in
 its initial version, so preview and production builds are deterministic. The
 deployment step requires repository and Vercel access and is intentionally kept
 separate from local implementation.
+
+Measured client-boundary, static-output, contrast, motion, and responsive-layout
+findings are recorded in `QUALITY_AUDIT.md`. Environment and release operations
+are documented in `DEPLOYMENT.md`.
 
 ## Testing strategy
 
@@ -191,8 +196,10 @@ separate from local implementation.
   comparison rule branches.
 - Component tests cover selector validation, search behaviour, result states,
   and device guidance.
-- End-to-end tests cover the main journey, representative detail pages, keyboard
-  navigation, and mobile viewports.
+- Component interaction tests cover the main journey, validation, search
+  keyboard behavior, and device guidance. HTTP end-to-end tests start the
+  optimized server and verify representative routes, metadata, discovery files,
+  generated imagery, and 404 behavior.
 - `npm run lint`, `npm run typecheck`, the automated test suite, and
   `npm run build` must pass at the end of each applicable phase.
 
