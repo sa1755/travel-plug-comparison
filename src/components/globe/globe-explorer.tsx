@@ -4,6 +4,7 @@ import { Search, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { GlobeMethods } from "react-globe.gl";
+import { MeshPhongMaterial } from "three";
 import { feature } from "topojson-client";
 import atlas from "world-atlas/countries-110m.json";
 
@@ -33,12 +34,19 @@ interface GlobeExplorerProps {
   readonly onClose: () => void;
 }
 
+const LAND_GREENS = ["#2f6b45", "#3f7d4e", "#528b57", "#669b62", "#78a86c"] as const;
+
 export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [query, setQuery] = useState("");
   const [hovered, setHovered] = useState("");
   const [size, setSize] = useState({ width: 760, height: 680 });
+  const oceanMaterial = useMemo(() => new MeshPhongMaterial({
+    color: "#2f79b9",
+    shininess: 18,
+    specular: "#9ed8f5",
+  }), []);
 
   const countryByNumeric = useMemo(
     () => new Map(countries.map((country) => [Number(country.numericCode), country])),
@@ -68,6 +76,8 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  useEffect(() => () => oceanMaterial.dispose(), [oceanMaterial]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -113,15 +123,16 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
             ref={globeRef}
             width={size.width}
             height={size.height}
-            backgroundColor="#f4efe6"
+            backgroundColor="#dcecf2"
+            globeMaterial={oceanMaterial}
             showAtmosphere
-            atmosphereColor="#2563eb"
+            atmosphereColor="#78c3e3"
             atmosphereAltitude={0.12}
             polygonsData={polygons}
             polygonAltitude={0.008}
-            polygonCapColor={(item) => Number((item as CountryFeature).id) % 3 === 0 ? "#c96f4a" : "#71764a"}
-            polygonSideColor={() => "rgba(59,42,34,.18)"}
-            polygonStrokeColor={() => "#f4efe6"}
+            polygonCapColor={(item) => LAND_GREENS[Math.abs(Number((item as CountryFeature).id)) % LAND_GREENS.length]}
+            polygonSideColor={() => "rgba(20,66,39,.42)"}
+            polygonStrokeColor={() => "#c9e3bc"}
             polygonLabel={(item) => countryByNumeric.get(Number((item as CountryFeature).id))?.name ?? ""}
             onPolygonHover={(item) => setHovered(item ? countryByNumeric.get(Number((item as CountryFeature).id))?.name ?? "" : "")}
             onPolygonClick={(item) => {
@@ -133,7 +144,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
             pointLng="lng"
             pointAltitude={0.015}
             pointRadius={(item) => (item as CityPoint).isCapital ? 0.16 : 0.08}
-            pointColor={() => "#2563eb"}
+            pointColor={() => "#f4b45f"}
             pointLabel={(item) => {
               const city = item as CityPoint;
               return `${city.name}, ${countryByCode.get(city.countryCode)?.name ?? city.countryCode}`;
