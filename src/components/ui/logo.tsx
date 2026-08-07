@@ -6,8 +6,8 @@ export function Logo() {
       <span className="flex size-9 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
         <Globe2 className="size-5" strokeWidth={2.2} aria-hidden="true" />
       </span>
-      <span>
-        Travel<span className="text-brand">Plug</span>
+      <span className="logo-wordmark">
+        Travel<span className="text-brand-strong">Plug</span>
       </span>
     </span>
   );

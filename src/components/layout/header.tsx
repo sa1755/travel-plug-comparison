@@ -2,12 +2,13 @@ import { ShieldCheck, Smartphone } from "lucide-react";
 import Link from "next/link";
 
 import { GlobalSearch } from "@/components/layout/global-search";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Logo } from "@/components/ui/logo";
 import { getCatalogSearchEntries } from "@/services/search-service";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-surface/90 backdrop-blur-xl">
+    <header className="site-header sticky top-0 z-40 border-b border-border/80 bg-surface/90 backdrop-blur-xl">
       <div className="page-container flex h-16 items-center justify-between sm:h-18">
         <Link
           href="/"
@@ -27,6 +28,7 @@ export function Header() {
             <Smartphone className="size-4.5" aria-hidden="true" />
             <span className="hidden sm:inline">Device checker</span>
           </Link>
+          <ThemeToggle />
           <GlobalSearch entries={getCatalogSearchEntries()} />
         </nav>
       </div>

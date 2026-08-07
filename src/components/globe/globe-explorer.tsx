@@ -11,6 +11,7 @@ import atlas from "world-atlas/countries-110m.json";
 
 import citiesJson from "@/data/cities.json";
 import type { JourneyCountry } from "@/components/comparison/travel-plug-journey";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Logo } from "@/components/ui/logo";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -122,7 +123,8 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
         <Link href="/" aria-label="TravelPlug home" onClick={closeForNavigation}><Logo /></Link>
         <nav aria-label="Globe view navigation">
           <Link href="/#compare" onClick={closeForNavigation}>Compare</Link>
-          <Link href="/#safety" onClick={closeForNavigation}>Power safety</Link>
+          <Link href="/#safety" onClick={closeForNavigation}>Safety</Link>
+          <ThemeToggle />
           <button type="button" aria-label="Close globe view" onClick={() => dialogRef.current?.close()}><X aria-hidden="true" /></button>
         </nav>
       </header>
@@ -154,7 +156,7 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
             ref={globeRef}
             width={size.width}
             height={size.height}
-            backgroundColor="#dcecf2"
+            backgroundColor="rgba(0,0,0,0)"
             globeMaterial={oceanMaterial}
             showAtmosphere
             atmosphereColor="#78c3e3"
