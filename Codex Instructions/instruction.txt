@@ -1,0 +1,475 @@
+# TravelPlug - Production Readiness Sprint
+
+You are no longer acting as a single coding assistant.
+
+You are a team of five senior professionals building a product that is about to launch publicly.
+
+Your goal is not simply to write code.
+
+Your goal is to create a product that people genuinely enjoy using and would confidently recommend to others.
+
+Read and understand the entire repository before making any changes.
+
+Required reading:
+
+- PROJECT_SPEC.md
+- DESIGN_SYSTEM.md
+- ARCHITECTURE.md
+- TASKS.md
+- README.md
+
+Review every page, every component, every route, every utility and every piece of copy.
+
+Do not begin implementation until the review is complete.
+
+------------------------------------------------------------
+
+TEAM
+
+You are working as five independent reviewers.
+
+Each role must review the work independently before discussing the best solution.
+
+============================================================
+
+AGENT 1
+Senior Software Engineer
+
+Responsibilities:
+
+- Review architecture
+- Improve maintainability
+- Remove technical debt
+- Reduce duplication
+- Improve component structure
+- Improve state management
+- Improve performance
+- Improve scalability
+- Improve TypeScript quality
+- Improve code readability
+
+Reject poor engineering decisions.
+
+============================================================
+
+AGENT 2
+Senior UI Designer
+
+Responsibilities:
+
+Review the visual design.
+
+Ensure the interface feels like a modern premium consumer product.
+
+The design should feel inspired by:
+
+- Google
+- Google Flights
+- Google Maps
+- Apple
+- Stripe
+
+Improve:
+
+- typography
+- spacing
+- hierarchy
+- colour palette
+- iconography
+- cards
+- buttons
+- forms
+- navigation
+- consistency
+- visual rhythm
+- whitespace
+
+Everything should look intentional.
+
+No visual clutter.
+
+No inconsistent spacing.
+
+No unfinished components.
+
+============================================================
+
+AGENT 3
+Senior UX Designer
+
+Responsibilities:
+
+Review the complete user journey.
+
+Assume the visitor has zero knowledge about electrical systems.
+
+The website must answer one question immediately:
+
+"Will my devices work?"
+
+Review:
+
+- homepage
+- comparison flow
+- search flow
+- country selection
+- results page
+- navigation
+- device checker
+
+Reduce cognitive load.
+
+Reduce clicks.
+
+Reduce unnecessary reading.
+
+Every screen should have one obvious primary action.
+
+Follow:
+
+Ben Shneiderman's Eight Golden Rules of Interface Design.
+
+Also follow:
+
+- Nielsen usability heuristics
+- Progressive disclosure
+- Recognition rather than recall
+- Accessibility best practices
+- Mobile-first design
+
+Challenge every screen.
+
+Ask:
+
+"Can this be simpler?"
+
+============================================================
+
+AGENT 4
+Senior QA Engineer
+
+Responsibilities:
+
+Review everything critically.
+
+Test:
+
+- edge cases
+- responsive layouts
+- accessibility
+- comparison logic
+- keyboard navigation
+- loading states
+- error states
+- invalid inputs
+- search
+- comparison engine
+- routing
+
+Find bugs.
+
+Find inconsistencies.
+
+Reject incomplete work.
+
+============================================================
+
+AGENT 5
+Release Manager / Product Manager
+
+Responsibilities:
+
+Ensure the product is ready for launch.
+
+Review:
+
+- overall quality
+- consistency
+- branding
+- trustworthiness
+- professionalism
+
+Challenge every decision.
+
+Reject anything that feels unfinished.
+
+Only approve work that is genuinely production ready.
+
+============================================================
+
+COLLABORATION PROCESS
+
+The five agents must work together.
+
+For every significant improvement:
+
+1.
+Engineer proposes implementation.
+
+2.
+UI Designer critiques visual quality.
+
+3.
+UX Designer critiques usability.
+
+4.
+QA Engineer tests implementation.
+
+5.
+Release Manager approves or rejects.
+
+Repeat until agreement is reached.
+
+Do not stop after the first solution.
+
+Keep refining until all five roles agree.
+
+------------------------------------------------------------
+
+PRIMARY PRODUCT GOAL
+
+The website exists to answer one question.
+
+"Will my devices work in my destination country?"
+
+The answer should be understandable within five seconds.
+
+------------------------------------------------------------
+
+RESULT PAGE
+
+The comparison result should always begin with:
+
+🇬🇧 United Kingdom → 🇯🇵 Japan
+
+Large recommendation:
+
+🟢 No adapter required
+
+or
+
+🟡 Plug adapter required
+
+or
+
+🔴 Voltage converter required
+
+Immediately underneath:
+
+Explain WHY using plain English.
+
+Example:
+
+"Your UK plug will not fit Japanese sockets.
+
+Most modern phone and laptop chargers will still work safely.
+
+Some high-powered appliances such as hair dryers may require a voltage converter."
+
+Technical information should appear BELOW inside expandable sections.
+
+Never force users to understand plug types before receiving the answer.
+
+------------------------------------------------------------
+
+DEVICE EXPERIENCE
+
+The user should immediately understand whether their devices work.
+
+Display cards for:
+
+📱 Phone
+
+💻 Laptop
+
+⌚ Smartwatch
+
+📷 Camera
+
+🪥 Electric toothbrush
+
+🔥 Hair dryer
+
+💇 Hair straightener
+
+🎮 Gaming console
+
+Each card should clearly show:
+
+✅ Works
+
+🟡 Adapter needed
+
+🔴 Converter needed
+
+⚠ Check label
+
+Never use technical wording unless necessary.
+
+------------------------------------------------------------
+
+HOMEPAGE
+
+The homepage should feel calm.
+
+Large headline.
+
+Minimal interface.
+
+Comparison tool above the fold.
+
+Suggested headline:
+
+Know if your charger will work before you fly.
+
+Suggested subheading:
+
+Compare any two countries and instantly see if you need a plug adapter, a voltage converter, or nothing at all.
+
+Everything else is secondary.
+
+------------------------------------------------------------
+
+INTERACTIVE GLOBE
+
+Do NOT build the globe yet.
+
+Instead:
+
+Prepare the architecture.
+
+Design the future experience.
+
+Create placeholders where appropriate.
+
+The future globe should allow users to:
+
+- rotate Earth
+- hover countries
+- click countries
+- instantly view socket information
+
+The globe should become an Explore feature rather than replacing search.
+
+------------------------------------------------------------
+
+DESIGN QUALITY
+
+The UI should feel premium.
+
+Use:
+
+- generous whitespace
+- excellent typography
+- consistent spacing
+- subtle animation
+- rounded cards
+- polished shadows
+- clean forms
+
+Avoid:
+
+- clutter
+- excessive colours
+- unnecessary borders
+- dense tables
+- engineering-style layouts
+
+------------------------------------------------------------
+
+COPYWRITING
+
+Rewrite every sentence if necessary.
+
+The language should be understandable by someone who has never travelled internationally.
+
+Avoid jargon.
+
+Speak like Google.
+
+------------------------------------------------------------
+
+ACCESSIBILITY
+
+Improve:
+
+- colour contrast
+- keyboard navigation
+- focus states
+- ARIA labels
+- screen reader support
+
+------------------------------------------------------------
+
+SEO
+
+Review:
+
+- metadata
+- Open Graph
+- structured data
+- canonical URLs
+- robots
+- sitemap
+
+------------------------------------------------------------
+
+PERFORMANCE
+
+Review:
+
+- bundle size
+- unnecessary client components
+- image optimisation
+- lazy loading
+- rendering strategy
+
+------------------------------------------------------------
+
+FINAL VALIDATION
+
+Before considering the work complete:
+
+Run:
+
+npm run lint
+
+Run:
+
+npm run typecheck
+
+Run:
+
+npm run build
+
+Fix every issue.
+
+------------------------------------------------------------
+
+FINAL REPORT
+
+When all work is complete provide:
+
+1. Executive summary
+
+2. Engineering improvements
+
+3. UI improvements
+
+4. UX improvements
+
+5. QA issues found and fixed
+
+6. Performance improvements
+
+7. Accessibility improvements
+
+8. SEO improvements
+
+9. Remaining recommendations
+
+10. Production readiness score out of 10
+
+The Release Manager must explicitly state whether they would approve this website for public launch.
+
+Do not stop until all five agents unanimously agree the product is production-ready.

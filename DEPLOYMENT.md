@@ -70,7 +70,7 @@ Verify the following against the final production origin:
   comparison return 200;
 - an unsupported country returns 404 with a recovery link;
 - canonical and Open Graph URLs use the production origin;
-- `/sitemap.xml` contains 306 public URLs;
+- `/sitemap.xml` contains 263 public URLs;
 - `/robots.txt` references the production sitemap;
 - `/manifest.webmanifest`, `/icon`, `/apple-icon`, and `/opengraph-image` load;
 - a push to `main` creates a new production deployment; and

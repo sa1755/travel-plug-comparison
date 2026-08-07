@@ -45,7 +45,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
 
   return (
     <>
-      <section className="border-b border-border/70 bg-surface">
+      <section className="border-b border-border/70 bg-background">
         <div className="page-container grid gap-10 py-14 lg:grid-cols-[1fr_auto] lg:items-center lg:py-20">
           <div className="max-w-3xl">
             <p className="section-label">Country power guide</p>
@@ -53,6 +53,10 @@ export default async function CountryPage({ params }: CountryPageProps) {
               <span aria-hidden="true">{country.flag}</span> Power sockets in {country.name}
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">{country.travelAdvice}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href={`/?to=${country.slug}#compare`} className="inline-flex min-h-12 items-center rounded-full bg-brand px-5 font-bold text-white hover:bg-brand-strong">Will my devices work here?</Link>
+              <Link href={`/device-checker?to=${country.slug}`} className="inline-flex min-h-12 items-center rounded-full border border-border-strong bg-surface px-5 font-bold text-brand-strong">Check a specific device</Link>
+            </div>
           </div>
           <div className="flex -space-x-10" aria-label={`Plug types used in ${country.name}`}>
             {plugs.map((plug) => (
@@ -108,14 +112,17 @@ export default async function CountryPage({ params }: CountryPageProps) {
         <h2 id="compatible-countries" className="mt-2 text-3xl font-bold tracking-tight">Countries with a compatible power system</h2>
         <p className="mt-3 max-w-2xl leading-7 text-muted">These catalog countries have compatible plugs and matching nominal voltage and frequency. Your exact device label still takes priority.</p>
         {compatibleCountries.length ? (
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {compatibleCountries.map((destination) => (
-              <Link key={destination.code} href={`/compare/${country.slug}/${destination.slug}`} className="flex min-h-16 items-center justify-between rounded-2xl border bg-surface px-5 font-semibold hover:border-brand/30">
-                <span><span aria-hidden="true">{destination.flag}</span> {destination.name}</span>
-                <ArrowRight className="size-4 text-brand" aria-hidden="true" />
-              </Link>
-            ))}
-          </div>
+          <>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {compatibleCountries.slice(0, 12).map((destination) => (
+                <Link key={destination.code} href={`/compare/${country.slug}/${destination.slug}`} className="flex min-h-16 items-center justify-between rounded-2xl border bg-surface px-5 font-semibold hover:border-brand/30">
+                  <span><span aria-hidden="true">{destination.flag}</span> {destination.name}</span>
+                  <ArrowRight className="size-4 text-brand" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+            {compatibleCountries.length > 12 ? <p className="mt-5 text-sm text-muted">Showing 12 close matches. Use global search to open any country guide.</p> : null}
+          </>
         ) : (
           <div className="mt-8 rounded-3xl border bg-surface p-6">
             <p className="font-semibold">No full match exists in the current catalog.</p>

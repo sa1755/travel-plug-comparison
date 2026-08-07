@@ -101,3 +101,14 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Add a dynamically loaded globe with major-city labels and list fallback.
 - [x] Bound static generation while preserving every valid comparison URL.
 - [x] Pass lint, type checking, tests, and a production build.
+
+## Phase 7 — Production-readiness sprint
+
+- [x] Complete independent engineering, UI, UX, QA, and release reviews.
+- [x] Make comparison routes answer-first with explicit adapter and voltage actions.
+- [x] Add eight immediate device outcomes, including smartwatch guidance.
+- [x] Prevent same-country state and preserve answer context while editing.
+- [x] Add searchable country fields and expose global search/device checking.
+- [x] Align semantic result colours, responsive cards, route CTAs, and brand artwork.
+- [x] Add WebSite structured data and reconcile release documentation.
+- [x] Complete the final quality gate and release-manager approval.

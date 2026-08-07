@@ -11,11 +11,16 @@ export function Footer() {
           <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
             Clear plug, power, and device guidance for journeys worldwide.
           </p>
+          <p className="mt-2 max-w-lg text-xs leading-5 text-muted">
+            Electrical data reviewed August 2026 against published international socket and power references. Always check your device label and local guidance.
+          </p>
         </div>
         <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-muted">
           <Link href="/" className="min-h-11 content-center hover:text-brand-strong">Compare countries</Link>
-          <a href="/?explore=globe" className="min-h-11 content-center hover:text-brand-strong">Explore globe</a>
+          <Link href="/?explore=globe" className="min-h-11 content-center hover:text-brand-strong">Globe view</Link>
+          <Link href="/device-checker" className="min-h-11 content-center hover:text-brand-strong">Device checker</Link>
           <Link href="/#safety" className="min-h-11 content-center hover:text-brand-strong">Power safety</Link>
+          <a href="https://www.worldstandards.eu/electricity/plug-voltage-by-country/" rel="noreferrer" className="min-h-11 content-center hover:text-brand-strong">Data source</a>
         </nav>
       </div>
     </footer>

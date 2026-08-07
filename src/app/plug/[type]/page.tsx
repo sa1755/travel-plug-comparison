@@ -44,13 +44,16 @@ export default async function PlugPage({ params }: PlugPageProps) {
 
   return (
     <>
-      <section className="border-b border-border/70 bg-surface">
+      <section className="border-b border-border/70 bg-background">
         <div className="page-container grid gap-10 py-14 md:grid-cols-[1fr_0.75fr] md:items-center lg:py-20">
           <div className="max-w-2xl">
             <p className="section-label">International plug guide</p>
             <h1 className="mt-3 text-5xl font-bold tracking-[-0.045em] sm:text-7xl">{plug.name}</h1>
             <p className="mt-5 text-lg leading-8 text-muted">{plug.description}</p>
             <p className="mt-6 inline-flex rounded-full bg-brand-soft px-4 py-2 text-sm font-bold text-brand-strong">Standard: {plug.technicalStandard}</p>
+            <div className="mt-7">
+              <Link href="/#compare" className="inline-flex min-h-12 items-center rounded-full bg-brand px-5 font-bold text-white hover:bg-brand-strong">See if your plug will fit</Link>
+            </div>
           </div>
           <div className="flex justify-center rounded-[2rem] border bg-surface-muted p-6">
             <PlugIllustration type={plug.type} className="size-64 max-w-full" />

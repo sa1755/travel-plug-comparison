@@ -6,21 +6,19 @@
 > capitals/cities over 100,000. The country search/list remains the accessible
 > equivalent and automatic rotation respects reduced motion.
 
-## Phase 4 decision
+## Current decision
 
-The interactive globe is deferred. No rendering library has been selected and
-no globe code, map asset, coordinate model, canvas, WebGL surface, or simulated
-placeholder has been added.
+The later worldwide product direction superseded the original Phase 4 deferral.
+The globe is now available as an optional, dynamically loaded explorer; it does
+not replace the primary searchable country comparison.
 
-The globe could become a useful secondary country-discovery surface, but it is
-not yet justified as a production dependency. The current catalog contains 17
-validated electrical records but deliberately has no geographic coordinates or
-boundary geometry. Introducing a renderer now would make the visual technology,
-rather than the user journey and validated data, drive the model.
+The catalog now contains 242 validated location records with coordinates.
+Natural Earth boundary geometry and GeoNames city data are presentation inputs;
+they do not alter or own the electrical model.
 
-Phase 4 instead establishes the required accessible equivalent: global search
-over the validated country and plug services. The primary comparison flow also
-remains fully usable without graphics, pointer input, motion, or WebGL.
+Global search, searchable country fields, and the globe sidebar remain the
+equivalent accessible paths. The primary comparison works without graphics,
+pointer input, motion, or WebGL.
 
 ## Readiness assessment
 
@@ -28,23 +26,20 @@ remains fully usable without graphics, pointer input, motion, or WebGL.
 | --- | --- | --- |
 | Validated country service | Ready | Continue consuming serializable summaries from `country-service` only |
 | Country selection contract | Ready | Globe may emit a country slug; it must not own comparison rules |
-| Keyboard fallback | Ready | Global search and native country selectors must remain equivalent paths |
-| Geographic data | Not ready | Add separately validated coordinates or geometry without changing electrical records |
-| Rendering fallback | Not ready | Define a non-WebGL country list and failure state before library selection |
-| Performance budget | Not measured | Compare candidate libraries by compressed client cost, load isolation, and mid-tier mobile interaction |
+| Keyboard fallback | Ready | Global search and searchable country fields remain equivalent paths |
+| Geographic data | Ready | Natural Earth geometry and reviewed country coordinates are isolated from electrical rules |
+| Rendering fallback | Ready | Searchable country list remains available without using the canvas |
+| Performance budget | Partially measured | Explorer is dynamically loaded; field performance should be monitored after deployment |
 | Reduced motion | Contract defined | Disable automatic rotation and nonessential camera motion when requested |
-| Touch and keyboard model | Not designed | Prototype focus order, country activation, zoom, and escape behavior first |
+| Touch and keyboard model | Ready | Dialog, Escape, close, searchable list, and focus return cover the equivalent selection path |
 
-## Future integration boundary
+## Integration boundary
 
-Any future implementation must be an isolated, dynamically loaded client
-component. A server route will obtain a small serializable country summary from
-the existing service and pass it into the island. The island may emit only a
-country selection event. URLs and `src/lib/comparison.ts` remain the source of
-truth for travel compatibility.
+The globe remains an isolated, dynamically loaded client component. It receives
+small serializable country summaries and emits only a country selection event.
+URLs and `src/lib/comparison.ts` remain the source of truth for compatibility.
 
-A rendering library can be selected only after an accessible interaction
-prototype and a measured comparison demonstrate that it:
+The explorer must continue to:
 
 - adds no client JavaScript to users who never open the explorer;
 - preserves country search and selection without WebGL;
@@ -53,5 +48,5 @@ prototype and a measured comparison demonstrate that it:
 - handles loading, unsupported-device, and rendering-failure states; and
 - uses the existing design tokens without introducing a second visual system.
 
-This decision should be revisited when catalog coverage and geographic data make
-spatial exploration materially more useful than search.
+The performance and fallback decision should be revisited if city density,
+geometry, or the rendering library materially changes.

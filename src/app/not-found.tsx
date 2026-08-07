@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <section className="page-container flex min-h-[65vh] items-center justify-center py-16 text-center">
       <div className="max-w-xl rounded-[2rem] border bg-surface p-8 shadow-card sm:p-12">
-        <span className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-brand-soft text-brand-strong">
+        <span className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-warning-soft text-warning">
           <Compass className="size-7" aria-hidden="true" />
         </span>
         <p className="section-label mt-6">Guide not found</p>

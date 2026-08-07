@@ -1,11 +1,16 @@
 "use client";
 
-import { Check, ChevronDown, Compass, LocateFixed, RotateCcw, ShieldAlert } from "lucide-react";
+import { ArrowLeftRight, CircleCheck, Compass, Globe2, LocateFixed, RotateCcw, ShieldCheck, TriangleAlert } from "lucide-react";
 import dynamic from "next/dynamic";
-import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
+import { TripResult } from "@/components/comparison/trip-result";
+import { CountryCombobox } from "@/components/country/country-combobox";
 import { compareCountries } from "@/lib/comparison";
+import type { DeviceRecord } from "@/services/device-service";
 import type { PlugType } from "@/types";
 
 const GlobeExplorer = dynamic(
@@ -31,48 +36,99 @@ export interface JourneyCountry {
   readonly voltages: readonly number[];
   readonly frequencies: readonly number[];
   readonly coordinates: readonly [number, number];
+  readonly aliases: readonly string[];
 }
 
 interface TravelPlugJourneyProps {
   readonly countries: readonly JourneyCountry[];
+  readonly devices: readonly DeviceRecord[];
   readonly initialFrom?: string;
   readonly initialTo?: string;
+  readonly mode?: "home" | "result";
 }
 
 const HOME_KEY = "travelplug-home-country";
 
-export function TravelPlugJourney({ countries, initialFrom, initialTo }: TravelPlugJourneyProps) {
+export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, mode = "home" }: TravelPlugJourneyProps) {
+  const router = useRouter();
+  const pathname = usePathname();
   const [fromSlug, setFromSlug] = useState(initialFrom ?? "");
   const [toSlug, setToSlug] = useState(initialTo ?? "");
   const [locationStatus, setLocationStatus] = useState("");
+  const [isLocating, setIsLocating] = useState(false);
   const [globeOpen, setGlobeOpen] = useState(false);
+  const lastGlobeTriggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (!initialFrom) setFromSlug(localStorage.getItem(HOME_KEY) ?? "");
-    if (new URLSearchParams(window.location.search).get("explore") === "globe") setGlobeOpen(true);
-  }, [initialFrom]);
+    const query = new URLSearchParams(window.location.search);
+    const storedHome = initialFrom ? "" : localStorage.getItem(HOME_KEY) ?? "";
+    const requestedDestination = initialTo ? "" : query.get("to") ?? "";
+    // Browser-only preferences are intentionally restored after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (storedHome) setFromSlug(storedHome);
+    if (requestedDestination && countries.some(({ slug }) => slug === requestedDestination)) setToSlug(requestedDestination);
+    if (query.get("explore") === "globe") setGlobeOpen(true);
+  }, [countries, initialFrom, initialTo]);
 
   const origin = countries.find(({ slug }) => slug === fromSlug);
   const destination = countries.find(({ slug }) => slug === toSlug);
   const result = useMemo(
-    () => origin && destination ? compareCountries(origin, destination) : undefined,
-    [origin, destination],
+    () => origin && destination && origin.code !== destination.code
+      ? compareCountries(origin, destination, devices)
+      : undefined,
+    [devices, origin, destination],
+  );
+  const initialOrigin = initialFrom ? countries.find(({ slug }) => slug === initialFrom) : undefined;
+  const initialDestination = initialTo ? countries.find(({ slug }) => slug === initialTo) : undefined;
+  const displayedOrigin = origin ?? initialOrigin;
+  const displayedDestination = destination ?? initialDestination;
+  const displayedResult = result ?? (
+    mode === "result" && initialOrigin && initialDestination
+      ? compareCountries(initialOrigin, initialDestination, devices)
+      : undefined
   );
 
   useEffect(() => {
-    if (origin && destination && origin.code !== destination.code) {
-      window.history.replaceState({}, "", `/compare/${origin.slug}/${destination.slug}`);
-    }
-  }, [origin, destination]);
+    if (!origin || !destination || origin.code === destination.code) return;
+    const nextPath = `/compare/${origin.slug}/${destination.slug}`;
+    if (pathname === nextPath) return;
+    if (pathname === "/") router.push(nextPath, { scroll: false });
+    else router.replace(nextPath, { scroll: false });
+  }, [destination, origin, pathname, router]);
 
   const rememberOrigin = (slug: string) => {
     setFromSlug(slug);
+    setLocationStatus("");
     if (slug) localStorage.setItem(HOME_KEY, slug);
+    else localStorage.removeItem(HOME_KEY);
+    if (slug === toSlug) setToSlug("");
+  };
+
+  const chooseDestination = (slug: string) => setToSlug(slug === fromSlug ? "" : slug);
+
+  const closeGlobe = () => {
+    setGlobeOpen(false);
+    window.requestAnimationFrame(() => lastGlobeTriggerRef.current?.focus());
+  };
+
+  const openGlobe = (event: React.MouseEvent<HTMLButtonElement>) => {
+    lastGlobeTriggerRef.current = event.currentTarget;
+    setGlobeOpen(true);
+  };
+
+  const swapCountries = () => {
+    if (!origin || !destination) return;
+    setFromSlug(destination.slug);
+    setToSlug(origin.slug);
+    localStorage.setItem(HOME_KEY, destination.slug);
   };
 
   const detectLocation = () => {
+    if (isLocating) return;
+    setIsLocating(true);
     setLocationStatus("Finding your country…");
     if (!("geolocation" in navigator)) {
+      setIsLocating(false);
       setLocationStatus("Location is unavailable. Choose your country below.");
       return;
     }
@@ -96,6 +152,8 @@ export function TravelPlugJourney({ countries, initialFrom, initialTo }: TravelP
         setLocationStatus(`${found.name} set as home. Your precise location stays in this browser.`);
       } catch {
         setLocationStatus("We could not match your position. Choose your country below.");
+      } finally {
+        setIsLocating(false);
       }
     }, async () => {
       try {
@@ -107,87 +165,99 @@ export function TravelPlugJourney({ countries, initialFrom, initialTo }: TravelP
         setLocationStatus(`${found.name} set from your approximate region. You can change it below.`);
       } catch {
         setLocationStatus("Location permission was not granted. Choose your country below.");
+      } finally {
+        setIsLocating(false);
       }
     }, { enableHighAccuracy: false, timeout: 10_000, maximumAge: 86_400_000 });
   };
 
-  return (
-    <section id="compare" className="journey-shell" aria-labelledby="journey-title">
-      <div className="journey-intro">
-        <p className="section-label">Plug confidence, worldwide</p>
-        <h1 id="journey-title">Your plug. Their socket. One clear answer.</h1>
-        <p>Choose where your devices come from and where you are going. We’ll show the plug shapes first.</p>
-      </div>
-
+  const panels = (
+    <>
       <div className="journey-grid">
-        <CountryPanel
-          eyebrow="You use"
-          label="Where are you travelling from?"
-          value={fromSlug}
-          countries={countries}
-          country={origin}
-          onChange={rememberOrigin}
-        >
+        <CountryPanel eyebrow="Home" label="Where are you travelling from?" value={fromSlug} countries={countries} country={origin} onChange={rememberOrigin}>
           {!origin ? (
-            <button type="button" className="location-button" onClick={detectLocation}>
-              <LocateFixed aria-hidden="true" /> Use my location
+            <button type="button" className="location-button" onClick={detectLocation} disabled={isLocating}>
+              <LocateFixed aria-hidden="true" /> {isLocating ? "Finding your country…" : "Use my location"}
             </button>
           ) : (
-            <button
-              type="button"
-              className="text-button"
-              onClick={() => { localStorage.removeItem(HOME_KEY); setFromSlug(""); }}
-            >
-              <RotateCcw aria-hidden="true" /> Change or forget home
+            <button type="button" className="text-button" onClick={() => rememberOrigin("")}>
+              <RotateCcw aria-hidden="true" /> Change home country
             </button>
           )}
           {locationStatus ? <p className="location-status" role="status">{locationStatus}</p> : null}
         </CountryPanel>
 
-        <CountryPanel
-          eyebrow="They use"
-          label="Where are you travelling to?"
-          value={toSlug}
-          countries={countries.filter(({ slug }) => slug !== fromSlug)}
-          country={destination}
-          onChange={setToSlug}
-        >
-          <button type="button" className="globe-button" onClick={() => setGlobeOpen(true)}>
-            <Compass aria-hidden="true" /> Explore the globe
+        <CountryPanel eyebrow="Destination" label="Where are you travelling to?" value={toSlug} countries={countries.filter(({ slug }) => slug !== fromSlug)} country={destination} onChange={chooseDestination}>
+          <button type="button" className="globe-button" onClick={openGlobe}>
+            <Compass aria-hidden="true" /> Open globe view
           </button>
         </CountryPanel>
       </div>
+      {origin && destination ? (
+        <button type="button" className="swap-button" onClick={swapCountries}>
+          <ArrowLeftRight aria-hidden="true" /> Swap countries
+        </button>
+      ) : null}
+    </>
+  );
 
-      {result && origin && destination ? (
-        <div className={`trip-answer trip-answer--${result.level}`} aria-live="polite">
-          <span className="answer-icon" aria-hidden="true">
-            {result.plug.status === "not-required" ? <Check /> : <ShieldAlert />}
-          </span>
+  return (
+    <section id="compare" className="journey-shell" aria-labelledby="journey-title">
+      {mode === "result" && displayedResult && displayedOrigin && displayedDestination ? (
+        <>
+          <h1 id="journey-title" className="sr-only">Travel power result</h1>
+          <TripResult origin={displayedOrigin} destination={displayedDestination} result={displayedResult} />
+          <details className="change-journey">
+            <summary>Change or swap countries</summary>
+            {panels}
+          </details>
+        </>
+      ) : (
+        <>
+          <div className="journey-intro">
+            <div className="journey-intro__copy">
+              <p className="section-label">Plug confidence, worldwide</p>
+              <h1 id="journey-title">Know if your charger will work before you fly.</h1>
+              <p>Compare any two countries and see whether you need a plug adapter, a voltage converter, or nothing at all.</p>
+            </div>
+            <button type="button" className="hero-globe-link" onClick={openGlobe}>
+              <span className="hero-globe" aria-hidden="true"><Globe2 /></span>
+              <span>Explore destinations<strong>Open Globe view</strong></span>
+            </button>
+          </div>
+          {panels}
+          {result && origin && destination ? <TripResult origin={origin} destination={destination} result={result} compact /> : null}
+        </>
+      )}
+
+      <section id="safety" className="safety-guide" aria-labelledby="safety-title">
+        <div className="safety-guide__intro">
+          <ShieldCheck aria-hidden="true" />
           <div>
-            <p className="answer-kicker">Bring</p>
-            <h2>{result.plug.status === "not-required" ? "No plug adapter needed" : `A Type ${destination.plugTypes.join(" / ")} travel adapter`}</h2>
-            <p>{result.plug.summary}</p>
-            {result.voltage.status !== "same" || result.frequency.status !== "same" ? (
-              <details>
-                <summary>Check power compatibility</summary>
-                <p><strong>Voltage:</strong> {result.voltage.summary}</p>
-                <p><strong>Frequency:</strong> {result.frequency.summary}</p>
-              </details>
-            ) : null}
+            <p className="section-label">Power safety</p>
+            <h2 id="safety-title">Check the label before you plug in.</h2>
+            <p>A plug adapter only changes the plug shape. It does not change the voltage supplied to your device.</p>
           </div>
         </div>
-      ) : null}
-
-      <div id="safety" className="device-note">
-        <p><strong>Taking a device?</strong> Chargers and electronics are often multi-voltage. High-power or medical equipment needs its exact rating checked.</p>
-      </div>
+        <div className="safety-guide__steps">
+          <article>
+            <CircleCheck aria-hidden="true" />
+            <div><h3>Find the input rating</h3><p>Look on the device, charger, or power brick for the word “INPUT”.</p></div>
+          </article>
+          <article>
+            <CircleCheck aria-hidden="true" />
+            <div><h3>Read the voltage range</h3><p>“100–240V, 50/60Hz” usually means it can accept common worldwide supplies, though a plug adapter may still be needed.</p></div>
+          </article>
+          <article className="safety-guide__warning">
+            <TriangleAlert aria-hidden="true" />
+            <div><h3>Be careful with high-power devices</h3><p>Hair tools, heating appliances, and medical equipment may be single-voltage. Use only a correctly rated converter or the manufacturer’s approved solution.</p></div>
+          </article>
+        </div>
+        <Link href="/device-checker" className="primary-pill">Check a specific device</Link>
+      </section>
 
       {globeOpen ? (
-        <GlobeExplorer
-          countries={countries}
-          onClose={() => setGlobeOpen(false)}
-          onSelect={(slug) => { setToSlug(slug); setGlobeOpen(false); }}
-        />
+        <GlobeExplorer countries={countries} onClose={closeGlobe} onSelect={(slug) => { chooseDestination(slug); closeGlobe(); }} />
       ) : null}
     </section>
   );
@@ -203,23 +273,17 @@ function CountryPanel({ eyebrow, label, value, countries, country, onChange, chi
   readonly children: React.ReactNode;
 }) {
   return (
-    <article className="country-panel">
+    <article className={`country-panel${country ? " country-panel--selected" : ""}`}>
       <p className="country-panel__eyebrow">{eyebrow}</p>
-      <label className="country-select-label">
+      <div className="country-select-label">
         <span>{label}</span>
-        <span className="country-select-wrap">
-          <select value={value} onChange={(event) => onChange(event.target.value)}>
-            <option value="">Choose a country</option>
-            {countries.map(({ name, slug }) => <option key={slug} value={slug}>{name}</option>)}
-          </select>
-          <ChevronDown aria-hidden="true" />
-        </span>
-      </label>
+        <CountryCombobox label={label} value={value} countries={countries} onChange={onChange} />
+      </div>
       <div className="plug-stage">
         {country ? (
           <>
             <div className="plug-stage__visuals">
-              {country.plugTypes.map((type) => <PlugIllustration key={type} type={type} className="plug-hero" />)}
+              {country.plugTypes.slice(0, 3).map((type) => <PlugIllustration key={type} type={type} className="plug-hero" />)}
             </div>
             <p><span aria-hidden="true">{country.flag}</span> {country.name} · Type {country.plugTypes.join(" / ")}</p>
           </>

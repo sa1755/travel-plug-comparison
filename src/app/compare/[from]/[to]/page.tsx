@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { TravelPlugJourney } from "@/components/comparison/travel-plug-journey";
 import { createPageMetadata } from "@/lib/site-config";
 import { getComparisonStaticParams, getCountries, getCountryBySlug } from "@/services/country-service";
+import { getFeaturedDeviceProfiles } from "@/services/device-service";
 
 interface ComparePageProps {
   readonly params: Promise<{ from: string; to: string }>;
@@ -39,7 +40,17 @@ export default async function ComparePage({ params }: ComparePageProps) {
     numericCode: country.numericCode, flag: country.flag,
     plugTypes: country.plugTypes, voltages: country.voltages,
     frequencies: country.frequencies, coordinates: country.coordinates,
+    aliases: country.aliases,
   }));
 
-  return <TravelPlugJourney countries={countries} initialFrom={origin.slug} initialTo={destination.slug} />;
+  return (
+    <TravelPlugJourney
+      key={`${origin.slug}-${destination.slug}`}
+      countries={countries}
+      devices={getFeaturedDeviceProfiles()}
+      initialFrom={origin.slug}
+      initialTo={destination.slug}
+      mode="result"
+    />
+  );
 }

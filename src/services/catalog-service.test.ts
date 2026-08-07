@@ -30,7 +30,7 @@ describe("catalog integrity", () => {
     expect(() => assertCatalogIntegrity()).not.toThrow();
     expect(getCountries()).toHaveLength(242);
     expect(getPlugs().map((plug) => plug.type)).toEqual(PLUG_TYPES);
-    expect(getDeviceProfiles()).toHaveLength(8);
+    expect(getDeviceProfiles()).toHaveLength(9);
   });
 
   it("preserves countries with multiple electrical values", () => {

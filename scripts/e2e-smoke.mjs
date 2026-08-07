@@ -19,7 +19,7 @@ server.stderr.on("data", (chunk) => {
 });
 
 const waitForServer = async () => {
-  for (let attempt = 0; attempt < 60; attempt += 1) {
+  for (let attempt = 0; attempt < 240; attempt += 1) {
     try {
       const response = await fetch(origin);
       if (response.ok) return;
@@ -63,10 +63,10 @@ const stopServer = async () => {
 
 try {
   await waitForServer();
-  await expectRoute({ path: "/", includes: ["Know what plug you need before you fly", 'rel="canonical"'] });
+  await expectRoute({ path: "/", includes: ["Know if your charger will work before you fly", 'rel="canonical"', "Device checker"] });
   await expectRoute({ path: "/country/japan", includes: ["Power sockets in Japan", "/country/japan"] });
   await expectRoute({ path: "/plug/type-g", includes: ["Type G", "/plug/type-g"] });
-  await expectRoute({ path: "/compare/united-kingdom/japan", includes: ["Your travel power guide", "/compare/united-kingdom/japan"] });
+  await expectRoute({ path: "/compare/united-kingdom/japan", includes: ["A voltage converter may be required", "Smartwatch", "/compare/united-kingdom/japan"] });
   await expectRoute({ path: "/device-checker", includes: ["Will your device work when you travel", "/device-checker"] });
   const sitemap = await expectRoute({ path: "/sitemap.xml", contentType: "application/xml" });
   const urlCount = (sitemap.match(/<url>/g) ?? []).length;

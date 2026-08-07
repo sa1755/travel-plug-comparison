@@ -5,10 +5,10 @@ frequency, and device compatibility between their home country and destination.
 
 **Live site:** [travel-plug-comparison.vercel.app](https://travel-plug-comparison.vercel.app)
 
-The current application includes a validated 17-country electrical catalog, a
-country comparison form, 272 statically generated comparison guides, country
-and plug reference pages, global catalog search, and an eight-profile device
-checker with cautious guidance.
+The current application includes a validated 242-location electrical catalog,
+answer-first country comparisons, 242 country guides, all plug types A–O,
+global catalog search, an optional globe explorer, and a nine-profile device
+checker. Comparison results summarize eight common travel devices immediately.
 
 ## Local development
 

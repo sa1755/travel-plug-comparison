@@ -26,6 +26,7 @@ const REQUIRED_COUNTRY_CODES = [
 const REQUIRED_DEVICE_IDS = [
   "phone-charger",
   "laptop",
+  "smartwatch",
   "camera-charger",
   "hair-dryer",
   "hair-straightener",

@@ -13,14 +13,14 @@ describe("device checker", () => {
     const user = userEvent.setup();
     render(<DeviceChecker countries={getCountries()} devices={getDeviceProfiles()} />);
 
-    await user.selectOptions(
-      screen.getByRole("combobox", { name: /Where does your device come from/ }),
-      "united-kingdom",
-    );
-    await user.selectOptions(
-      screen.getByRole("combobox", { name: /Where will you use it/ }),
-      "japan",
-    );
+    const origin = screen.getByRole("combobox", { name: /Where does your device come from/ });
+    await user.click(origin);
+    await user.type(origin, "United Kingdom");
+    await user.click(screen.getByRole("option", { name: /United Kingdom GB/ }));
+    const destination = screen.getByRole("combobox", { name: /Where will you use it/ });
+    await user.click(destination);
+    await user.type(destination, "Japan");
+    await user.click(screen.getByRole("option", { name: /Japan JP/ }));
     await user.click(screen.getByRole("radio", { name: "Hair dryer" }));
     await user.click(screen.getByRole("button", { name: "Check this device" }));
 
@@ -35,8 +35,12 @@ describe("device checker", () => {
     render(<DeviceChecker countries={getCountries()} devices={getDeviceProfiles()} />);
 
     const selectors = screen.getAllByRole("combobox");
-    await user.selectOptions(selectors[0], "japan");
-    await user.selectOptions(selectors[1], "japan");
+    await user.click(selectors[0]);
+    await user.type(selectors[0], "Japan");
+    await user.click(screen.getByRole("option", { name: /Japan JP/ }));
+    await user.click(selectors[1]);
+    await user.type(selectors[1], "Japan");
+    await user.click(screen.getByRole("option", { name: /Japan JP/ }));
     await user.click(screen.getByRole("radio", { name: "Phone charger" }));
     await user.click(screen.getByRole("button", { name: "Check this device" }));
 

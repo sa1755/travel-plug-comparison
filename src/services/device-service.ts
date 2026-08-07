@@ -8,8 +8,23 @@ export type DeviceRecord = DeepReadonly<DeviceProfile>;
 
 const devices = deepFreeze(deviceProfilesSchema.parse(devicesJson));
 
+const FEATURED_DEVICE_IDS = [
+  "phone-charger",
+  "laptop",
+  "smartwatch",
+  "camera-charger",
+  "electric-toothbrush",
+  "hair-dryer",
+  "hair-straightener",
+  "gaming-console",
+] as const;
+
 export function getDeviceProfiles(): readonly DeviceRecord[] {
   return devices;
+}
+
+export function getFeaturedDeviceProfiles(): readonly DeviceRecord[] {
+  return FEATURED_DEVICE_IDS.map((id) => requireDeviceProfile(id));
 }
 
 export function getDeviceProfile(id: string): DeviceRecord | undefined {

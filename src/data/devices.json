@@ -18,6 +18,15 @@
     "guidance": "Confirm the power supply input label includes the destination voltage and frequency. The detachable mains lead may need an adapter."
   },
   {
+    "id": "smartwatch",
+    "name": "Smartwatch",
+    "category": "charger",
+    "voltageProfile": "typically-dual-voltage",
+    "highPower": false,
+    "summary": "Smartwatch USB power adapters commonly support international voltage ranges.",
+    "guidance": "Check the input rating on the USB power adapter or charging dock. Look for 100–240 V, 50/60 Hz; a plug adapter may still be required."
+  },
+  {
     "id": "camera-charger",
     "name": "Camera charger",
     "category": "charger",

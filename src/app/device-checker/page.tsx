@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { DeviceChecker } from "@/components/device/device-checker";
 import { createPageMetadata } from "@/lib/site-config";
-import { getCountries } from "@/services/country-service";
+import { getCountries, getCountryBySlug } from "@/services/country-service";
 import { getDeviceProfiles } from "@/services/device-service";
 
 export const metadata: Metadata = createPageMetadata({
@@ -11,10 +11,17 @@ export const metadata: Metadata = createPageMetadata({
   path: "/device-checker",
 });
 
-export default function DeviceCheckerPage() {
+interface DeviceCheckerPageProps {
+  readonly searchParams: Promise<{ from?: string; to?: string }>;
+}
+
+export default async function DeviceCheckerPage({ searchParams }: DeviceCheckerPageProps) {
+  const { from = "", to = "" } = await searchParams;
+  const safeFrom = getCountryBySlug(from)?.slug ?? "";
+  const safeTo = getCountryBySlug(to)?.slug ?? "";
   return (
     <>
-      <section className="border-b border-border/70 bg-surface">
+      <section className="border-b border-border/70 bg-background">
         <div className="page-container py-14 sm:py-20">
           <p className="section-label">Device checker</p>
           <h1 className="mt-3 max-w-4xl text-balance text-4xl font-bold tracking-[-0.04em] sm:text-6xl">Will your device work when you travel?</h1>
@@ -22,7 +29,7 @@ export default function DeviceCheckerPage() {
         </div>
       </section>
       <section className="page-container py-12 sm:py-16">
-        <DeviceChecker countries={getCountries()} devices={getDeviceProfiles()} />
+        <DeviceChecker countries={getCountries()} devices={getDeviceProfiles()} defaultFrom={safeFrom} defaultTo={safeFrom === safeTo ? "" : safeTo} />
       </section>
     </>
   );

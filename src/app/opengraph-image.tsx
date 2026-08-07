@@ -14,8 +14,8 @@ export default function OpenGraphImage() {
           display: "flex",
           position: "relative",
           overflow: "hidden",
-          background: "#F8FAFD",
-          color: "#162033",
+          background: "#F4EFE6",
+          color: "#3B2A22",
           fontFamily: "sans-serif",
           padding: "72px 80px",
         }}
@@ -28,7 +28,7 @@ export default function OpenGraphImage() {
             right: -120,
             top: -170,
             borderRadius: 999,
-            background: "#E8F0FE",
+            background: "#E5D8C8",
           }}
         />
         <div
@@ -39,19 +39,19 @@ export default function OpenGraphImage() {
             right: 70,
             bottom: -190,
             borderRadius: 999,
-            background: "#1A73E8",
+            background: "#C96F4A",
             opacity: 0.12,
           }}
         />
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 34, fontWeight: 800 }}>
-            <div style={{ width: 58, height: 58, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 17, background: "#1A73E8", color: "white" }}>T</div>
+            <div style={{ width: 58, height: 58, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 17, background: "#2563EB", color: "white" }}>T</div>
             TravelPlug
           </div>
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 850 }}>
-            <div style={{ color: "#174EA6", fontSize: 23, fontWeight: 700, letterSpacing: 2 }}>TRAVEL POWER, EXPLAINED SIMPLY</div>
-            <div style={{ marginTop: 18, fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2.5 }}>Know what plug you need before you fly.</div>
-            <div style={{ marginTop: 24, color: "#5F6B7A", fontSize: 28, lineHeight: 1.35 }}>Compare sockets, voltage, frequency, and device guidance between countries.</div>
+            <div style={{ color: "#71764A", fontSize: 23, fontWeight: 700, letterSpacing: 2 }}>TRAVEL POWER, EXPLAINED SIMPLY</div>
+            <div style={{ marginTop: 18, fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2.5 }}>Know if your charger will work before you fly.</div>
+            <div style={{ marginTop: 24, color: "#6D5E53", fontSize: 28, lineHeight: 1.35 }}>One clear answer for plug adapters, voltage converters, and common devices.</div>
           </div>
         </div>
       </div>
