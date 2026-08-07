@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   Camera,
   Check,
   Gamepad2,
@@ -14,6 +15,7 @@ import {
 import Link from "next/link";
 
 import { CompatibilityBadge } from "@/components/comparison/compatibility-badge";
+import { PlugIllustration } from "@/components/comparison/plug-illustration";
 import type { JourneyCountry } from "@/components/comparison/travel-plug-journey";
 import type { ComparisonResult, DeviceComparison } from "@/types";
 import { formatElectricalValues } from "@/utils/format-electrical-values";
@@ -110,6 +112,26 @@ export function TripResult({ origin, destination, result, compact = false }: Tri
             </>
           ) : null}
         </div>
+      </div>
+
+      <div className="socket-comparison" aria-label={`${origin.name} and ${destination.name} plug and socket types`}>
+        <article>
+          <p>Plug/socket type at home</p>
+          <div className="socket-comparison__visuals">
+            {origin.plugTypes.slice(0, 3).map((type) => <PlugIllustration key={type} type={type} className="socket-comparison__plug" />)}
+          </div>
+          <strong><span aria-hidden="true">{origin.flag}</span> {origin.name}</strong>
+          <small>Type {origin.plugTypes.join(" / ")}</small>
+        </article>
+        <ArrowRight className="socket-comparison__arrow" aria-hidden="true" />
+        <article>
+          <p>Plug/socket type at destination</p>
+          <div className="socket-comparison__visuals">
+            {destination.plugTypes.slice(0, 3).map((type) => <PlugIllustration key={type} type={type} className="socket-comparison__plug" />)}
+          </div>
+          <strong><span aria-hidden="true">{destination.flag}</span> {destination.name}</strong>
+          <small>Type {destination.plugTypes.join(" / ")}</small>
+        </article>
       </div>
 
       <div className="trip-result__actions">

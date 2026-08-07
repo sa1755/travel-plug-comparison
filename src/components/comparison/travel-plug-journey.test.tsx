@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -48,6 +48,10 @@ describe("travel plug journey", () => {
     );
 
     expect(screen.getByRole("heading", { name: "A voltage converter may be required" })).toBeTruthy();
+    const socketComparison = screen.getByLabelText("United Kingdom and Japan plug and socket types");
+    expect(within(socketComparison).getByRole("img", { name: "Simplified Type G plug diagram" })).toBeTruthy();
+    expect(within(socketComparison).getByRole("img", { name: "Simplified Type A plug diagram" })).toBeTruthy();
+    expect(within(socketComparison).getByRole("img", { name: "Simplified Type B plug diagram" })).toBeTruthy();
     expect(screen.getAllByText(/United Kingdom/).length).toBeGreaterThan(0);
     for (const device of ["Phone", "Laptop", "Smartwatch", "Camera", "Electric toothbrush", "Hair dryer", "Hair straightener", "Gaming console"]) {
       expect(screen.getByRole("heading", { name: device })).toBeTruthy();
@@ -69,6 +73,20 @@ describe("travel plug journey", () => {
 
     expect((screen.getAllByRole("combobox")[1] as HTMLInputElement).value).toBe("");
     expect(screen.queryByText("No plug adapter required")).toBeNull();
+  });
+
+  it("keeps an existing result internally consistent during an invalid staged edit", async () => {
+    const user = userEvent.setup();
+    render(<TravelPlugJourney countries={countries} devices={getFeaturedDeviceProfiles()} initialFrom="united-kingdom" initialTo="japan" mode="result" />);
+
+    await user.click(screen.getByText("Change or swap countries"));
+    const originField = screen.getAllByRole("combobox")[0];
+    await user.click(originField);
+    await user.type(originField, "Japan");
+    await user.click(screen.getByRole("option", { name: /Japan JP/ }));
+
+    expect(screen.getByLabelText("United Kingdom and Japan plug and socket types")).toBeTruthy();
+    expect(screen.queryByLabelText("Japan and Japan plug and socket types")).toBeNull();
   });
 
   it("provides actionable power safety guidance", () => {

@@ -30,6 +30,7 @@ describe("country combobox", () => {
 
     await user.click(screen.getByRole("button", { name: "Outside" }));
     expect(input.getAttribute("aria-expanded")).toBe("false");
+    expect((input as HTMLInputElement).value).toBe("United Kingdom");
   });
 
   it("chooses the first result with a single ArrowDown", async () => {
@@ -48,7 +49,19 @@ describe("country combobox", () => {
 
     const input = screen.getByRole("combobox", { name: "Destination" });
     expect(input.getAttribute("placeholder")).toBe("Type a country name…");
-    expect(screen.getByText("Start typing a country name, or choose one from the list.")).toBeTruthy();
+    expect(screen.getByText("Type or choose a country.")).toBeTruthy();
     expect(input.getAttribute("aria-describedby")).toBeTruthy();
+  });
+
+  it("keeps options out of the tab order and closes when focus leaves", async () => {
+    const user = userEvent.setup();
+    render(<><CountryCombobox label="Destination" value="" countries={countries} onChange={vi.fn()} /><button type="button">Next control</button></>);
+
+    const input = screen.getByRole("combobox", { name: "Destination" });
+    await user.click(input);
+    expect(screen.getAllByRole("option").every((option) => option.getAttribute("tabindex") === "-1")).toBe(true);
+    await user.tab();
+    expect(document.activeElement).toBe(screen.getByRole("button", { name: "Next control" }));
+    expect(input.getAttribute("aria-expanded")).toBe("false");
   });
 });

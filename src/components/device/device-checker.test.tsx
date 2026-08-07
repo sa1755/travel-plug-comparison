@@ -46,4 +46,16 @@ describe("device checker", () => {
 
     expect(await screen.findByText("Choose two different countries to compare")).toBeTruthy();
   });
+
+  it("identifies every missing field on a blank submission", async () => {
+    const user = userEvent.setup();
+    render(<DeviceChecker countries={getCountries()} devices={getDeviceProfiles()} />);
+
+    await user.click(screen.getByRole("button", { name: "Check this device" }));
+
+    expect(await screen.findByText("Choose where your device comes from")).toBeTruthy();
+    expect(screen.getByText("Choose where you will use it")).toBeTruthy();
+    expect(screen.getByText("Choose a device")).toBeTruthy();
+    expect(screen.getByRole("combobox", { name: /Where does your device come from/ }).getAttribute("aria-invalid")).toBe("true");
+  });
 });

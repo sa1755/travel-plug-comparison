@@ -21,7 +21,7 @@ export function Header() {
           <Link href="/?explore=globe" className="hidden min-h-11 items-center rounded-full px-3 text-sm font-semibold text-muted hover:text-foreground md:inline-flex sm:px-4">Globe view</Link>
           <Link href="/#safety" className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-semibold text-muted hover:bg-surface-muted hover:text-foreground sm:px-4" aria-label="Power safety">
             <ShieldCheck className="size-4.5" aria-hidden="true" />
-            <span className="hidden lg:inline">Safety</span>
+            <span className="hidden lg:inline">Power safety</span>
           </Link>
           <Link href="/device-checker" className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-semibold text-muted hover:bg-surface-muted hover:text-foreground sm:px-4" aria-label="Device checker">
             <Smartphone className="size-4.5" aria-hidden="true" />

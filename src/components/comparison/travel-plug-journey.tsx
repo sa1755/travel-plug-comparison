@@ -80,13 +80,11 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
   );
   const initialOrigin = initialFrom ? countries.find(({ slug }) => slug === initialFrom) : undefined;
   const initialDestination = initialTo ? countries.find(({ slug }) => slug === initialTo) : undefined;
-  const displayedOrigin = origin ?? initialOrigin;
-  const displayedDestination = destination ?? initialDestination;
-  const displayedResult = result ?? (
-    mode === "result" && initialOrigin && initialDestination
-      ? compareCountries(initialOrigin, initialDestination, devices)
-      : undefined
-  );
+  const displayedTrip = result && origin && destination
+    ? { origin, destination, result }
+    : mode === "result" && initialOrigin && initialDestination
+      ? { origin: initialOrigin, destination: initialDestination, result: compareCountries(initialOrigin, initialDestination, devices) }
+      : undefined;
 
   useEffect(() => {
     if (!origin || !destination || origin.code === destination.code) return;
@@ -108,7 +106,9 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
 
   const closeGlobe = () => {
     setGlobeOpen(false);
-    window.requestAnimationFrame(() => lastGlobeTriggerRef.current?.focus());
+    window.requestAnimationFrame(() => {
+      (lastGlobeTriggerRef.current ?? document.getElementById("journey-title"))?.focus();
+    });
   };
 
   const openGlobe = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -203,10 +203,10 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
 
   return (
     <section id="compare" className="journey-shell" aria-labelledby="journey-title">
-      {mode === "result" && displayedResult && displayedOrigin && displayedDestination ? (
+      {mode === "result" && displayedTrip ? (
         <>
-          <h1 id="journey-title" className="sr-only">Travel power result</h1>
-          <TripResult origin={displayedOrigin} destination={displayedDestination} result={displayedResult} />
+          <h1 id="journey-title" className="sr-only" tabIndex={-1}>Travel power result</h1>
+          <TripResult origin={displayedTrip.origin} destination={displayedTrip.destination} result={displayedTrip.result} />
           <details className="change-journey">
             <summary>Change or swap countries</summary>
             {panels}
@@ -217,7 +217,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
           <div className="journey-intro">
             <div className="journey-intro__copy">
               <p className="section-label">Plug confidence, worldwide</p>
-              <h1 id="journey-title">Know if your charger will work before you fly.</h1>
+              <h1 id="journey-title" tabIndex={-1}>Know if your charger will work before you fly.</h1>
               <p>Compare any two countries and see whether you need a plug adapter, a voltage converter, or nothing at all.</p>
             </div>
             <button type="button" className="hero-globe-link" onClick={openGlobe}>
@@ -236,7 +236,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
           <div>
             <p className="section-label">Power safety</p>
             <h2 id="safety-title">Check the label before you plug in.</h2>
-            <p>A plug adapter only changes the plug shape. It does not change the voltage supplied to your device.</p>
+            <p>A plug adapter only changes the plug shape. It does not make a different voltage safe.</p>
           </div>
         </div>
         <div className="safety-guide__steps">
@@ -250,14 +250,14 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
           </article>
           <article className="safety-guide__warning">
             <TriangleAlert aria-hidden="true" />
-            <div><h3>Be careful with high-power devices</h3><p>Hair tools, heating appliances, and medical equipment may be single-voltage. Use only a correctly rated converter or the manufacturer’s approved solution.</p></div>
+            <div><h3>Be careful with high-power devices</h3><p>Never connect a device unless its INPUT range includes the destination voltage. For hair tools, heating appliances, or medical equipment, use the manufacturer-approved solution or ask a qualified retailer or electrician.</p></div>
           </article>
         </div>
         <Link href="/device-checker" className="primary-pill">Check a specific device</Link>
       </section>
 
       {globeOpen ? (
-        <GlobeExplorer countries={countries} onClose={closeGlobe} onSelect={(slug) => { chooseDestination(slug); closeGlobe(); }} />
+        <GlobeExplorer countries={countries} excludedSlug={fromSlug} onClose={closeGlobe} onSelect={(slug) => { chooseDestination(slug); closeGlobe(); }} />
       ) : null}
     </section>
   );

@@ -103,18 +103,18 @@ export function DeviceChecker({ countries, devices, defaultFrom = "", defaultTo 
         <div>
           <p className="text-sm font-bold">Where does your device come from?</p>
           <p className="mt-1 text-sm text-muted">Use the country where it is normally connected.</p>
-          <Controller control={control} name="fromCountry" render={({ field }) => (
-            <CountryCombobox label="Where does your device come from?" value={field.value} countries={countries} onChange={field.onChange} />
+          <Controller control={control} name="fromCountry" rules={{ required: "Choose where your device comes from" }} render={({ field }) => (
+            <CountryCombobox label="Where does your device come from?" value={field.value} countries={countries} onChange={field.onChange} invalid={Boolean(errors.fromCountry)} errorId={errors.fromCountry ? "from-country-error" : undefined} />
           )} />
-          {errors.fromCountry ? <p className="mt-2 text-sm font-semibold text-danger" role="alert">{errors.fromCountry.message}</p> : null}
+          {errors.fromCountry ? <p id="from-country-error" className="mt-2 text-sm font-semibold text-danger" role="alert">{errors.fromCountry.message}</p> : null}
         </div>
         <div className="mt-5">
           <p className="text-sm font-bold">Where will you use it?</p>
           <p className="mt-1 text-sm text-muted">Choose the destination power supply.</p>
-          <Controller control={control} name="toCountry" render={({ field }) => (
-            <CountryCombobox label="Where will you use it?" value={field.value} countries={countries} onChange={field.onChange} />
+          <Controller control={control} name="toCountry" rules={{ required: "Choose where you will use it" }} render={({ field }) => (
+            <CountryCombobox label="Where will you use it?" value={field.value} countries={countries} onChange={field.onChange} invalid={Boolean(errors.toCountry)} errorId={errors.toCountry ? "to-country-error" : undefined} />
           )} />
-          {errors.toCountry ? <p className="mt-2 text-sm font-semibold text-danger" role="alert">{errors.toCountry.message}</p> : null}
+          {errors.toCountry ? <p id="to-country-error" className="mt-2 text-sm font-semibold text-danger" role="alert">{errors.toCountry.message}</p> : null}
         </div>
 
         <fieldset className="mt-6">

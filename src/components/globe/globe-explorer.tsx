@@ -32,14 +32,16 @@ interface CountryFeature extends GeoJSON.Feature {
 
 interface GlobeExplorerProps {
   readonly countries: readonly JourneyCountry[];
+  readonly excludedSlug?: string;
   readonly onSelect: (slug: string) => void;
   readonly onClose: () => void;
 }
 
 const LAND_GREENS = ["#2f6b45", "#3f7d4e", "#528b57", "#669b62", "#78a86c"] as const;
 
-export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerProps) {
+export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: GlobeExplorerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [query, setQuery] = useState("");
@@ -64,15 +66,17 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
 
   const results = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase();
-    if (!normalized) return countries.slice(0, 12);
-    return countries.filter(({ name, code, aliases }) =>
+    const availableCountries = countries.filter(({ slug }) => slug !== excludedSlug);
+    if (!normalized) return availableCountries.slice(0, 12);
+    return availableCountries.filter(({ name, code, aliases }) =>
       [name, code, ...aliases].some((value) => value.toLocaleLowerCase().includes(normalized)),
     ).slice(0, 30);
-  }, [countries, query]);
+  }, [countries, excludedSlug, query]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
     dialog?.showModal();
+    window.requestAnimationFrame(() => headingRef.current?.focus());
     const canvas = canvasRef.current;
     if (!canvas) return;
     const observer = new ResizeObserver(([entry]) => {
@@ -102,21 +106,30 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
     if (controls) controls.autoRotate = false;
   };
 
+  const selectCountry = (country: JourneyCountry) => {
+    if (country.slug === excludedSlug) {
+      setHovered(`${country.name} is already your home country. Choose another destination.`);
+      return;
+    }
+    onSelect(country.slug);
+  };
+
   const closeForNavigation = () => dialogRef.current?.close();
 
   return (
-    <dialog ref={dialogRef} className="globe-dialog" onClose={onClose} onCancel={onClose}>
+    <dialog ref={dialogRef} className="globe-dialog" aria-labelledby="globe-dialog-title" onClose={onClose} onCancel={onClose}>
       <header className="globe-topbar">
         <Link href="/" aria-label="TravelPlug home" onClick={closeForNavigation}><Logo /></Link>
         <nav aria-label="Globe view navigation">
           <Link href="/#compare" onClick={closeForNavigation}>Compare</Link>
-          <Link href="/#safety" onClick={closeForNavigation}>Safety</Link>
+          <Link href="/#safety" onClick={closeForNavigation}>Power safety</Link>
+          <button type="button" aria-label="Close globe view" onClick={() => dialogRef.current?.close()}><X aria-hidden="true" /></button>
         </nav>
       </header>
       <div className="globe-layout">
         <aside className="globe-sidebar">
           <div className="globe-sidebar__header">
-            <div><p className="section-label">Globe view</p><h2>Choose a destination</h2></div>
+            <div><p className="section-label">Globe view</p><h2 ref={headingRef} tabIndex={-1} id="globe-dialog-title">Choose a destination</h2></div>
             <button type="button" aria-label="Close globe" onClick={() => dialogRef.current?.close()}><X /></button>
           </div>
           <label className="globe-search">
@@ -127,7 +140,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
           <p className="globe-hint">Spin, hover, or use this accessible list. City dots cover capitals and cities over 100,000 people.</p>
           <div className="globe-country-list" role="list">
             {results.map((country) => (
-              <button type="button" key={country.slug} onClick={() => onSelect(country.slug)}>
+              <button type="button" key={country.slug} onClick={() => selectCountry(country)}>
                 <span aria-hidden="true">{country.flag}</span><span>{country.name}</span>
               </button>
             ))}
@@ -136,7 +149,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
           <p className="globe-attribution">City data © GeoNames, CC BY 4.0. Globe geography: Natural Earth via world-atlas.</p>
         </aside>
         <div ref={canvasRef} className="globe-canvas" onPointerDown={stopRotation}>
-          <p className="globe-hover-label" aria-live="polite">{hovered || "Drag to explore the world"}</p>
+          <p className="globe-hover-label">{hovered || "Drag to explore the world"}</p>
           <Globe
             ref={globeRef}
             width={size.width}
@@ -158,7 +171,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
             }}
             onPolygonClick={(item) => {
               const country = countryByNumeric.get(Number((item as CountryFeature).id));
-              if (country) onSelect(country.slug);
+              if (country) selectCountry(country);
             }}
             pointsData={cities}
             pointLat="lat"
@@ -176,7 +189,7 @@ export function GlobeExplorer({ countries, onSelect, onClose }: GlobeExplorerPro
             }}
             onPointClick={(item) => {
               const country = countryByCode.get((item as CityPoint).countryCode);
-              if (country) onSelect(country.slug);
+              if (country) selectCountry(country);
             }}
           />
         </div>
