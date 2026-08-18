@@ -1,7 +1,6 @@
 "use client";
 
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
@@ -104,7 +103,6 @@ export function AnalyticsProvider() {
           return { ...event, url: url.toString() };
         }}
       />
-      <SpeedInsights beforeSend={(event) => analyticsAllowed() ? event : null} />
       {hasGoogleAnalytics && consent === "accepted" ? (
         <Script
           id="travelplug-google-analytics"

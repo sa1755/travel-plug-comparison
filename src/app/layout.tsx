@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { AnalyticsProvider } from "@/components/analytics/analytics-provider";
 import { Footer } from "@/components/layout/footer";
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main id="main-content" className="flex-1" tabIndex={-1}>{children}</main>
         <Footer />
         <AnalyticsProvider />
+        <SpeedInsights />
       </body>
     </html>
   );
