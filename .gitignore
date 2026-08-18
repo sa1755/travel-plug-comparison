@@ -18,6 +18,7 @@
 *.pem
 *.log
 .eslintcache
+/Codex Instructions/master production.txt
 
 # environment files (commit explicit examples separately)
 .env*

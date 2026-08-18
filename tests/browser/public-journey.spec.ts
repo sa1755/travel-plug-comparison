@@ -56,3 +56,16 @@ test("checks a device and exposes trust links", async ({ page }) => {
   );
   await expect(page.getByRole("link", { name: /Electrical data sources/ })).toBeVisible();
 });
+
+test("persists theme preference and provides a useful not-found recovery", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Switch to dark mode" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+
+  await page.goto("/country/atlantis");
+  await expect(page.getByRole("heading", { name: "This route is not in our travel catalog." })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Return to TravelPlug" })).toHaveAttribute("href", "/");
+});
