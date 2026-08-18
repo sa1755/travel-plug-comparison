@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { AdapterRecommendations } from "@/components/affiliate/adapter-recommendations";
 import { CompatibilityBadge } from "@/components/comparison/compatibility-badge";
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
 import type { JourneyCountry } from "@/components/comparison/travel-plug-journey";
@@ -44,6 +45,22 @@ function getVerdict(result: ComparisonResult) {
       level: "danger" as const,
       kicker: "Voltage check required",
       title: "A voltage converter may be required",
+      icon: ShieldAlert,
+    };
+  }
+  if (result.voltage.status === "variable-destination") {
+    return {
+      level: "warning" as const,
+      kicker: "Before you plug in",
+      title: "Confirm the local voltage",
+      icon: ShieldAlert,
+    };
+  }
+  if (result.voltage.status === "check-device") {
+    return {
+      level: "warning" as const,
+      kicker: "Before you plug in",
+      title: "Check the device label",
       icon: ShieldAlert,
     };
   }
@@ -111,6 +128,13 @@ export function TripResult({ origin, destination, result, compact = false }: Tri
               </ul>
             </>
           ) : null}
+          {result.voltage.status === "variable-destination" ? (
+            <ul className="trip-actions-list">
+              {!plugFits ? <li><Check aria-hidden="true" /> Bring a plug adapter</li> : null}
+              <li><Check aria-hidden="true" /> Ask your accommodation which voltage its socket supplies</li>
+              <li><Check aria-hidden="true" /> Confirm every device label includes that voltage</li>
+            </ul>
+          ) : null}
         </div>
       </div>
 
@@ -147,6 +171,10 @@ export function TripResult({ origin, destination, result, compact = false }: Tri
           <div><dt>Frequency</dt><dd>{formatElectricalValues(origin.frequencies, "Hz")} → {formatElectricalValues(destination.frequencies, "Hz")}. {result.frequency.summary}</dd></div>
         </dl>
       </details>
+
+      {result.plug.status !== "not-required" ? (
+        <AdapterRecommendations origin={origin} destination={destination} />
+      ) : null}
 
       {result.devices.length ? (
         <div className="device-results" aria-labelledby="device-results-title">

@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
             right: 70,
             bottom: -190,
             borderRadius: 999,
-            background: "#C96F4A",
+            background: "#A64F31",
             opacity: 0.12,
           }}
         />

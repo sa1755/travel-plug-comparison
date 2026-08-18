@@ -27,7 +27,7 @@ interface DeviceElectricalProfile {
 const PLUG_SOCKET_COMPATIBILITY: Readonly<Record<PlugType, readonly PlugType[]>> = {
   A: ["A", "B"],
   B: ["B"],
-  C: ["C", "E", "F", "H", "J", "K", "L", "N", "O"],
+  C: ["C", "E", "F"],
   D: ["D"],
   E: ["E", "F"],
   F: ["E", "F"],
@@ -40,6 +40,16 @@ const PLUG_SOCKET_COMPATIBILITY: Readonly<Record<PlugType, readonly PlugType[]>>
   M: ["M"],
   N: ["N"],
   O: ["O"],
+};
+
+// The catalog groups the slim CEE 7/16 Europlug and the larger CEE 7/17
+// contour plug under Type C. Some sockets accept only the slim variant, so
+// these relationships must prompt a physical plug check instead of promising
+// universal fit.
+const CONDITIONAL_PLUG_SOCKET_COMPATIBILITY: Partial<
+  Readonly<Record<PlugType, readonly PlugType[]>>
+> = {
+  C: ["H", "J", "K", "L", "N", "O"],
 };
 
 const levelRank: Readonly<Record<CompatibilityLevel, number>> = {
@@ -77,6 +87,11 @@ export function comparePlugCompatibility(
       destinationSockets.has(socketType),
     ),
   );
+  const conditionallyCompatibleOriginPlugTypes = originPlugTypes.filter((originType) =>
+    CONDITIONAL_PLUG_SOCKET_COMPATIBILITY[originType]?.some((socketType) =>
+      destinationSockets.has(socketType),
+    ),
+  );
 
   if (compatibleOriginPlugTypes.length === originPlugTypes.length) {
     return {
@@ -91,7 +106,7 @@ export function comparePlugCompatibility(
     };
   }
 
-  if (compatibleOriginPlugTypes.length > 0) {
+  if (compatibleOriginPlugTypes.length > 0 || conditionallyCompatibleOriginPlugTypes.length > 0) {
     return {
       aspect: "plug",
       status: "check-specific-plug",
@@ -129,6 +144,19 @@ export function compareVoltage(
       level: "warning",
       title: "Confirm the voltage at your accommodation",
       summary: `The destination uses more than one nominal supply (${formatValues(destinationVoltages, "V")}).`,
+      originVoltages,
+      destinationVoltages,
+      sharedVoltages,
+    };
+  }
+
+  if (originVoltages.length > 1) {
+    return {
+      aspect: "voltage",
+      status: "check-device",
+      level: "warning",
+      title: "Check the voltage on the device label",
+      summary: `The home location uses more than one nominal supply (${formatValues(originVoltages, "V")}). Confirm the device input range includes ${formatValues(destinationVoltages, "V")}.`,
       originVoltages,
       destinationVoltages,
       sharedVoltages,

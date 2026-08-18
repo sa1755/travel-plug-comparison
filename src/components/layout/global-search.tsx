@@ -113,7 +113,7 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
                       role="option"
                       aria-selected="false"
                       onClick={() => {
-                        trackEvent("Search Used", { result_kind: result.kind });
+                        trackEvent("search_used", { result_kind: result.kind });
                         close();
                       }}
                       onKeyDown={(event) => {

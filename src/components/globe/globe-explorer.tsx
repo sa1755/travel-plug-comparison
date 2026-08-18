@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, X } from "lucide-react";
+import { Globe2, Search, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -13,6 +13,7 @@ import citiesJson from "@/data/cities.json";
 import type { JourneyCountry } from "@/components/comparison/travel-plug-journey";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Logo } from "@/components/ui/logo";
+import { trackEvent } from "@/lib/analytics";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
@@ -47,6 +48,7 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [query, setQuery] = useState("");
   const [hovered, setHovered] = useState("");
+  const [webGlAvailable, setWebGlAvailable] = useState(true);
   const [size, setSize] = useState({ width: 760, height: 680 });
   const oceanMaterial = useMemo(() => new MeshPhongMaterial({
     color: "#2f79b9",
@@ -68,11 +70,22 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
   const results = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase();
     const availableCountries = countries.filter(({ slug }) => slug !== excludedSlug);
-    if (!normalized) return availableCountries.slice(0, 12);
+    if (!normalized) return availableCountries;
     return availableCountries.filter(({ name, code, aliases }) =>
       [name, code, ...aliases].some((value) => value.toLocaleLowerCase().includes(normalized)),
-    ).slice(0, 30);
+    );
   }, [countries, excludedSlug, query]);
+
+  useEffect(() => {
+    const canvas = document.createElement("canvas");
+    const available = Boolean(canvas.getContext("webgl2") || canvas.getContext("webgl"));
+    if (!available) {
+      // Capability detection happens only in the browser after hydration.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setWebGlAvailable(false);
+      trackEvent("error_encountered", { error_type: "webgl_unavailable" });
+    }
+  }, []);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -132,14 +145,13 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
         <aside className="globe-sidebar">
           <div className="globe-sidebar__header">
             <div><p className="section-label">Globe view</p><h2 ref={headingRef} tabIndex={-1} id="globe-dialog-title">Choose a destination</h2></div>
-            <button type="button" aria-label="Close globe" onClick={() => dialogRef.current?.close()}><X /></button>
           </div>
           <label className="globe-search">
             <Search aria-hidden="true" />
             <span className="sr-only">Search countries</span>
             <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search 242 locations" />
           </label>
-          <p className="globe-hint">Spin, hover, or use this accessible list. City dots cover capitals and cities over 100,000 people.</p>
+          <p className="globe-hint">Spin or hover on the globe, or browse and search the complete destination list. City dots cover capitals and cities over 100,000 people.</p>
           <div className="globe-country-list" role="list">
             {results.map((country) => (
               <button type="button" key={country.slug} onClick={() => selectCountry(country)}>
@@ -148,9 +160,9 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
             ))}
             {!results.length ? <p className="globe-hint">No matching location. Try a country name or two-letter code.</p> : null}
           </div>
-          <p className="globe-attribution">City data © GeoNames, CC BY 4.0. Globe geography: Natural Earth via world-atlas.</p>
+          <p className="globe-attribution">Filtered and transformed city data © <a href="https://www.geonames.org/" target="_blank" rel="noreferrer">GeoNames</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Geography: Natural Earth via world-atlas.</p>
         </aside>
-        <div ref={canvasRef} className="globe-canvas" onPointerDown={stopRotation}>
+        {webGlAvailable ? <div ref={canvasRef} className="globe-canvas" onPointerDown={stopRotation}>
           <p className="globe-hover-label">{hovered || "Drag to explore the world"}</p>
           <Globe
             ref={globeRef}
@@ -194,7 +206,13 @@ export function GlobeExplorer({ countries, excludedSlug, onSelect, onClose }: Gl
               if (country) selectCountry(country);
             }}
           />
-        </div>
+        </div> : (
+          <div className="globe-canvas globe-canvas--fallback" role="status">
+            <Globe2 aria-hidden="true" />
+            <h3>Interactive globe unavailable</h3>
+            <p>Use the complete country list to choose your destination.</p>
+          </div>
+        )}
       </div>
     </dialog>
   );

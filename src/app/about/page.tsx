@@ -23,7 +23,7 @@ export default function AboutPage() {
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         <article className="rounded-[1.75rem] border bg-surface p-6 sm:p-8">
           <Globe2 className="size-8 text-brand" aria-hidden="true" />
-          <h2 className="mt-5 text-2xl font-bold">Built for worldwide journeys</h2>
+          <h2 className="mt-5 text-2xl font-bold">Built for 242 destinations</h2>
           <p className="mt-3 leading-7 text-muted">Explore 242 country and territory guides, every plug type from A to O, and plain-language guidance for common travel devices.</p>
           <Link href="/#compare" className="mt-5 inline-flex min-h-11 items-center font-bold text-brand-strong">Compare countries →</Link>
         </article>
@@ -35,7 +35,7 @@ export default function AboutPage() {
             href="https://github.com/sa1755/travel-plug-comparison"
             target="_blank"
             rel="noreferrer"
-            eventName="GitHub Link Clicked"
+            eventName="github_link_clicked"
             eventProperties={{ location: "about" }}
             className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold text-brand-strong"
             aria-label="View TravelPlug on GitHub (opens in a new tab)"
@@ -44,6 +44,17 @@ export default function AboutPage() {
           </TrackedExternalLink>
         </article>
       </div>
+
+      <section id="data-sources" className="mt-10 max-w-3xl rounded-[1.75rem] border bg-surface p-6 sm:p-8">
+        <h2 className="text-2xl font-bold">Sources and limitations</h2>
+        <p className="mt-3 leading-7 text-muted">Electrical records were reviewed against published World Standards country and plug references and the IEC catalogue of domestic systems. City points are a filtered and transformed extract of GeoNames data, licensed under CC BY 4.0. TravelPlug provides general guidance: the rating label, accommodation information, manufacturer instructions, and qualified local advice remain authoritative.</p>
+        <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+          <a className="font-semibold text-brand-strong underline" href="https://www.worldstandards.eu/electricity/plug-voltage-by-country/" target="_blank" rel="noreferrer">Electrical reference</a>
+          <a className="font-semibold text-brand-strong underline" href="https://www.geonames.org/" target="_blank" rel="noreferrer">GeoNames source</a>
+          <a className="font-semibold text-brand-strong underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0 licence</a>
+          <a className="font-semibold text-brand-strong underline" href="https://github.com/sa1755/travel-plug-comparison/blob/main/src/data/README.md" target="_blank" rel="noreferrer">Methodology</a>
+        </div>
+      </section>
     </section>
   );
 }

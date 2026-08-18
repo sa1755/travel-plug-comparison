@@ -26,6 +26,10 @@ describe("plug compatibility", () => {
     expect(result.compatibleOriginPlugTypes).toEqual(["A"]);
   });
 
+  it("treats subtype-dependent Type C fit as uncertain", () => {
+    expect(comparePlugCompatibility(["C"], ["N"]).status).toBe("check-specific-plug");
+  });
+
   it("requires an adapter when no home plug type fits", () => {
     expect(comparePlugCompatibility(["G"], ["A", "B"]).status).toBe("required");
   });
@@ -38,6 +42,12 @@ describe("voltage compatibility", () => {
 
   it("requires a location check for variable destination voltage", () => {
     expect(compareVoltage([120], [127, 220]).status).toBe("variable-destination");
+  });
+
+  it("requires a device check when the origin has variable voltage", () => {
+    const result = compareVoltage([110, 220], [110]);
+    expect(result.status).toBe("check-device");
+    expect(result.level).toBe("warning");
   });
 
   it("distinguishes nearby nominal values from different voltage systems", () => {

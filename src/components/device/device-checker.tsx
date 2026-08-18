@@ -65,7 +65,7 @@ export function DeviceChecker({ countries, devices, defaultFrom = "", defaultTo 
   }, [visibleResult]);
 
   useEffect(() => {
-    trackEvent("Device Checker Opened");
+    trackEvent("device_checker_opened");
   }, []);
 
   const checkDevice = (formValues: DeviceCheckerFormValues) => {
@@ -89,15 +89,17 @@ export function DeviceChecker({ countries, devices, defaultFrom = "", defaultTo 
       return;
     }
 
+    const result = compareCountries(origin, destination, [device]);
     setSubmitted({
       key: `${origin.slug}:${destination.slug}:${device.id}`,
       origin,
       destination,
-      result: compareCountries(origin, destination, [device]),
+      result,
     });
-    trackEvent("Device Checked", {
-      device: device.id,
-      from_country: origin.slug,
+    trackEvent("device_checked", {
+      device_category: device.id,
+      compatibility_result: result.devices[0]?.level ?? result.level,
+      origin_country: origin.slug,
       destination_country: destination.slug,
     });
   };

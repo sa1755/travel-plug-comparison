@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeftRight, CircleCheck, Compass, Globe2, LocateFixed, RotateCcw, ShieldCheck, TriangleAlert } from "lucide-react";
+import { ArrowLeftRight, CircleCheck, Compass, LocateFixed, RotateCcw, ShieldCheck, TriangleAlert } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -9,6 +9,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
 import { TripResult } from "@/components/comparison/trip-result";
 import { CountryCombobox } from "@/components/country/country-combobox";
+import { HeroDeskGlobe } from "@/components/globe/hero-desk-globe";
 import { compareCountries } from "@/lib/comparison";
 import { trackEvent } from "@/lib/analytics";
 import type { DeviceRecord } from "@/services/device-service";
@@ -102,22 +103,26 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     const comparisonKey = `${origin.slug}:${destination.slug}`;
     if (lastCompletedComparisonRef.current === comparisonKey) return;
     lastCompletedComparisonRef.current = comparisonKey;
-    trackEvent("Comparison Completed", {
-      from_country: origin.slug,
+    trackEvent("comparison_completed", {
+      origin_country: origin.slug,
       destination_country: destination.slug,
+      origin_plug_type: origin.plugTypes.join("/"),
+      destination_socket_type: destination.plugTypes.join("/"),
+      adapter_required: result.plug.status !== "not-required",
+      converter_required: result.voltage.status === "converter-may-be-required",
     });
   }, [destination, origin, result]);
 
   const markComparisonStarted = () => {
     if (comparisonStartedRef.current) return;
     comparisonStartedRef.current = true;
-    trackEvent("Comparison Started", { entry_point: mode });
+    trackEvent("comparison_started", { entry_point: mode });
   };
 
   const rememberOrigin = (slug: string) => {
     if (slug) {
       markComparisonStarted();
-      trackEvent("Country Selected", { role: "from", country: slug });
+      trackEvent("origin_country_selected", { origin_country: slug });
     }
     setFromSlug(slug);
     setLocationStatus("");
@@ -129,7 +134,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
   const chooseDestination = (slug: string) => {
     if (slug && slug !== fromSlug) {
       markComparisonStarted();
-      trackEvent("Country Selected", { role: "destination", country: slug });
+      trackEvent("destination_country_selected", { destination_country: slug });
     }
     setToSlug(slug === fromSlug ? "" : slug);
   };
@@ -148,6 +153,10 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
 
   const swapCountries = () => {
     if (!origin || !destination) return;
+    trackEvent("countries_swapped", {
+      origin_country: origin.slug,
+      destination_country: destination.slug,
+    });
     setFromSlug(destination.slug);
     setToSlug(origin.slug);
     localStorage.setItem(HOME_KEY, destination.slug);
@@ -181,6 +190,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
         rememberOrigin(found.slug);
         setLocationStatus(`${found.name} set as home. Your precise location stays in this browser.`);
       } catch {
+        trackEvent("error_encountered", { error_type: "precise_location_match_failed" });
         setLocationStatus("We could not match your position. Choose your country below.");
       } finally {
         setIsLocating(false);
@@ -194,6 +204,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
         rememberOrigin(found.slug);
         setLocationStatus(`${found.name} set from your approximate region. You can change it below.`);
       } catch {
+        trackEvent("error_encountered", { error_type: "approximate_location_failed" });
         setLocationStatus("Location permission was not granted. Choose your country below.");
       } finally {
         setIsLocating(false);
@@ -251,7 +262,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
               <p>Compare any two countries and see whether you need a plug adapter, a voltage converter, or nothing at all.</p>
             </div>
             <button type="button" className="hero-globe-link" onClick={openGlobe}>
-              <span className="hero-globe" aria-hidden="true"><Globe2 /></span>
+              <HeroDeskGlobe />
               <span>Explore destinations<strong>Open Globe view</strong></span>
             </button>
           </div>

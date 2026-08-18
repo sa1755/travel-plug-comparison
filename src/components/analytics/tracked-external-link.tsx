@@ -2,11 +2,11 @@
 
 import type { ComponentPropsWithoutRef } from "react";
 
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, type AnalyticsEventName, type AnalyticsProperties } from "@/lib/analytics";
 
 interface TrackedExternalLinkProps extends ComponentPropsWithoutRef<"a"> {
-  readonly eventName: string;
-  readonly eventProperties?: Record<string, string | number | boolean | null>;
+  readonly eventName: AnalyticsEventName;
+  readonly eventProperties?: AnalyticsProperties;
 }
 
 export function TrackedExternalLink({ eventName, eventProperties, onClick, ...props }: TrackedExternalLinkProps) {

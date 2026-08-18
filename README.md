@@ -25,7 +25,8 @@ recommendation before showing the technical detail.
 - Searchable country selectors and global catalog search
 - Optional interactive globe with an accessible list fallback
 - Shareable comparison URLs and indexable static guides
-- Privacy-conscious, cookie-free product analytics
+- Privacy-conscious product analytics and real-user performance monitoring
+- Affiliate-ready adapter recommendations that remain hidden until real, reviewed products are configured
 - Responsive, keyboard-accessible, reduced-motion-aware interface
 
 ## Technology stack
@@ -35,7 +36,7 @@ recommendation before showing the technical detail.
 - Tailwind CSS 4
 - Zod, React Hook Form, Lucide React, and Framer Motion
 - Vitest and Testing Library
-- Vercel Web Analytics and Vercel deployment
+- Vercel Web Analytics, Speed Insights, optional consented GA4, and Vercel deployment
 
 ## Getting started
 
@@ -52,6 +53,35 @@ Open [http://localhost:3000](http://localhost:3000). No database or secret
 application variables are required. Copy `.env.example` only when you want to
 override the canonical origin or analytics setting.
 
+## Environment variables
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Optional canonical origin override |
+| `NEXT_PUBLIC_ANALYTICS_ENABLED` | Set to `false` to disable all analytics |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional public GA4 web-stream ID; blank disables GA4 and its consent prompt |
+
+No analytics secret belongs in a `NEXT_PUBLIC_` variable. See
+[ANALYTICS.md](ANALYTICS.md) for local and Vercel configuration.
+
+## Analytics overview
+
+Vercel Web Analytics supplies aggregate traffic and product events, while
+Vercel Speed Insights measures real-user Core Web Vitals. Optional GA4 adds
+consented session, acquisition, and funnel reporting. Events pass through the
+typed utility in `src/lib/analytics.ts`; analytics failures never block the
+comparison journey.
+
+## Affiliate architecture
+
+TravelPlug recommends products only when an adapter is actually needed. The
+public product catalog is intentionally empty until genuine retailer products
+and URLs have been reviewed. Future products are configured in
+`src/data/adapter-products.ts`, matched through
+`src/services/product-recommendation-service.ts`, and displayed with a nearby
+affiliate disclosure and view/click events. No product click is treated as a
+sale.
+
 ## Quality checks
 
 ```bash
@@ -63,6 +93,10 @@ npm run test:e2e
 ```
 
 The end-to-end suite runs against an existing production build.
+
+The current HTTP smoke suite validates representative routes and assets. A
+real-browser Playwright suite is still recommended before broad promotion for
+hydration, keyboard, WebGL, reduced-motion, and responsive-layout coverage.
 
 ## Project structure
 

@@ -58,6 +58,21 @@ describe("travel plug journey", () => {
     }
   });
 
+  it("leads a variable-voltage destination with a local voltage warning", () => {
+    render(
+      <TravelPlugJourney
+        countries={countries}
+        devices={getFeaturedDeviceProfiles()}
+        initialFrom="united-states"
+        initialTo="brazil"
+        mode="result"
+      />,
+    );
+
+    expect(screen.getByRole("heading", { name: "Confirm the local voltage" })).toBeTruthy();
+    expect(screen.getByText(/Ask your accommodation which voltage/i)).toBeTruthy();
+  });
+
   it("clears a destination that becomes the home country", async () => {
     const user = userEvent.setup();
     render(<TravelPlugJourney countries={countries} devices={getFeaturedDeviceProfiles()} />);

@@ -1,0 +1,797 @@
+TRAVELPLUG — ANALYTICS, AFFILIATE MONETIZATION, OPEN SOURCE & PUBLIC LAUNCH
+
+You are working on the TravelPlug production website.
+
+This is a production-readiness task.
+
+Before changing anything, read the entire repository and understand the existing implementation.
+
+Read:
+
+- PROJECT_SPEC.md
+- DESIGN_SYSTEM.md
+- ARCHITECTURE.md
+- TASKS.md
+- README.md
+- package.json
+- existing source code
+- existing comparison/data logic
+- existing environment configuration
+
+Do not remove working functionality.
+
+Do not rewrite the application unnecessarily.
+
+Preserve the existing design direction.
+
+============================================================
+PART 1 — PRODUCT MESSAGE
+============================================================
+
+Change the primary homepage headline from:
+
+"Know if your charger will work before you fly."
+
+to:
+
+"Does your charger work abroad? Check before you fly"
+
+Review the surrounding copy so the new headline feels natural.
+
+The product message should remain extremely simple.
+
+TravelPlug's core purpose:
+
+A traveller enters their current country and destination country.
+
+TravelPlug tells them, in plain English:
+
+1. Whether they need a plug adapter.
+2. Whether they need a voltage converter.
+3. Whether their devices are likely to work.
+4. Why.
+
+The answer must be more prominent than technical electrical information.
+
+============================================================
+PART 2 — ANALYTICS STRATEGY
+============================================================
+
+I want comprehensive analytics for the website.
+
+Do NOT build a custom analytics database or analytics dashboard unless there is a compelling technical reason.
+
+Because TravelPlug is deployed on Vercel, evaluate and implement:
+
+1. Vercel Analytics
+2. Vercel Speed Insights
+3. Google Analytics 4 for deeper behavioural/product analytics
+
+Use the current official documentation and the project's existing framework/version when implementing.
+
+The analytics architecture must be clean and maintainable.
+
+Do not add multiple analytics libraries that duplicate the same functionality.
+
+============================================================
+PART 3 — VERCEL ANALYTICS
+============================================================
+
+Add Vercel Analytics using the official supported implementation.
+
+Use it for:
+
+- visitors
+- page views
+- traffic overview
+- top pages
+- basic site usage
+- custom events where appropriate
+
+Add Vercel Speed Insights where appropriate to measure real-user performance.
+
+The implementation must not significantly affect page performance.
+
+============================================================
+PART 4 — GOOGLE ANALYTICS 4
+============================================================
+
+Add GA4 only if it provides meaningful information beyond Vercel Analytics.
+
+Use environment variables for configuration.
+
+Do NOT hardcode sensitive configuration.
+
+Use a variable such as:
+
+NEXT_PUBLIC_GA_MEASUREMENT_ID
+
+Document exactly how I should configure it in:
+
+- local development
+- Vercel production
+
+Do not expose any secret API keys.
+
+The implementation must work correctly with the existing application architecture.
+
+============================================================
+PART 5 — EVENTS TO TRACK
+============================================================
+
+Create a central analytics utility rather than scattering raw analytics calls throughout components.
+
+Track meaningful product events.
+
+At minimum track:
+
+PAGE / DISCOVERY
+
+- page_view
+- landing_page_view
+
+COUNTRY SELECTION
+
+- origin_country_selected
+- destination_country_selected
+- countries_swapped
+
+COMPARISON
+
+- comparison_started
+- comparison_completed
+
+Include useful non-sensitive parameters such as:
+
+- origin_country
+- destination_country
+- origin_plug_type
+- destination_socket_type
+- adapter_required
+- converter_required
+
+Do not send unnecessary personal information.
+
+DEVICE CHECKER
+
+- device_checker_opened
+- device_checked
+
+Useful parameters:
+
+- device_category
+- compatibility_result
+
+ADAPTER RECOMMENDATIONS
+
+- adapter_recommendation_viewed
+- adapter_product_clicked
+
+Useful parameters:
+
+- origin_country
+- destination_country
+- adapter_type
+- retailer
+- product_id
+
+GITHUB
+
+- github_link_clicked
+
+OTHER IMPORTANT PRODUCT EVENTS
+
+- search_used
+- swap_countries
+- error_encountered
+
+Only track events that provide useful product insight.
+
+Do not create dozens of meaningless events.
+
+============================================================
+PART 6 — PRIVACY
+============================================================
+
+Analytics must be privacy-conscious.
+
+Never send:
+
+- names
+- email addresses
+- passwords
+- payment information
+- precise personal information
+- sensitive personal information
+
+Do not intentionally fingerprint users.
+
+Do not create unnecessary user profiles.
+
+Document what analytics collects.
+
+If the chosen implementation requires consent depending on jurisdiction/configuration, implement an appropriate consent mechanism rather than ignoring the issue.
+
+Do not claim legal compliance without appropriate basis.
+
+Create or update appropriate privacy documentation.
+
+============================================================
+PART 7 — ANALYTICS DOCUMENTATION
+============================================================
+
+Create:
+
+ANALYTICS.md
+
+Document:
+
+1. Analytics providers
+2. Why each provider is used
+3. Environment variables
+4. Events
+5. Event parameters
+6. Privacy considerations
+7. How to test analytics locally
+8. How to view analytics in Vercel
+9. How to view analytics in GA4
+10. How to add a future event
+
+Make this documentation understandable to a non-expert developer.
+
+============================================================
+PART 8 — PRODUCT INSIGHTS
+============================================================
+
+The analytics implementation should allow me to answer:
+
+TRAFFIC
+
+- How many visitors does TravelPlug receive?
+- How many sessions?
+- Which pages are most popular?
+- Where are visitors coming from?
+- Which countries are visitors located in?
+
+PRODUCT USAGE
+
+- How many people start a comparison?
+- How many complete a comparison?
+- What is the comparison completion rate?
+- Which origin countries are most common?
+- Which destinations are most common?
+- Which origin/destination combinations are most common?
+
+ELECTRICAL NEEDS
+
+- How often is an adapter required?
+- How often is a voltage converter required?
+- How often is neither required?
+
+DEVICE USAGE
+
+- Which devices are checked?
+- Which devices most often require attention?
+
+MONETIZATION
+
+- How many users see an adapter recommendation?
+- How many click a recommended adapter?
+- Which adapter products receive the most clicks?
+- Which retailers receive the most clicks?
+
+NAVIGATION
+
+- How many users click GitHub?
+- How many users use search?
+- Where do users abandon the comparison flow?
+
+PERFORMANCE
+
+- Is the site fast?
+- What are the real-user Core Web Vitals?
+- Are mobile users experiencing slower performance?
+
+============================================================
+PART 9 — AFFILIATE MONETIZATION
+============================================================
+
+I want TravelPlug to eventually generate revenue through affiliate recommendations.
+
+Do NOT implement traditional dropshipping.
+
+The initial monetization model is affiliate marketing.
+
+TravelPlug should recommend an adapter only when the comparison indicates that the user actually needs one.
+
+Never recommend an adapter simply to generate revenue.
+
+Trust is more important than monetization.
+
+============================================================
+PART 10 — PRODUCT RECOMMENDATION ARCHITECTURE
+============================================================
+
+Design a clean product recommendation system.
+
+The architecture should support:
+
+origin country / plug type
++
+destination country / socket type
++
+recommended adapter
+
+For example:
+
+United Kingdom → Japan
+
+Result:
+
+Plug adapter required
+
+Recommendation:
+
+UK → Japan travel plug adapter
+
+The system should eventually support multiple retailers.
+
+Do NOT hardcode Amazon/eBay logic into UI components.
+
+Create a clean data model/configuration layer.
+
+Potential product fields:
+
+- id
+- name
+- description
+- retailer
+- productUrl
+- affiliateUrl
+- imageUrl
+- price
+- currency
+- originPlugTypes
+- destinationPlugTypes
+- supportedCountries
+- active
+- priority
+
+Do not invent affiliate URLs.
+
+Do not create fake products.
+
+Use placeholder product records only where necessary for development.
+
+Clearly mark placeholders.
+
+============================================================
+PART 11 — AFFILIATE LINK TRACKING
+============================================================
+
+When a real affiliate product is eventually added, the system should be able to track:
+
+adapter_recommendation_viewed
+
+adapter_product_clicked
+
+Do not claim that a click equals a sale.
+
+Do not attempt to fabricate conversion data.
+
+The analytics should allow future affiliate performance analysis.
+
+============================================================
+PART 12 — AFFILIATE DISCLOSURE
+============================================================
+
+When affiliate products are displayed, provide a clear disclosure near the recommendation.
+
+Example:
+
+"Affiliate link: TravelPlug may earn a commission if you purchase through this link, at no extra cost to you."
+
+Do not hide this exclusively in the footer.
+
+Make the disclosure visually clear but unobtrusive.
+
+============================================================
+PART 13 — PRODUCT RECOMMENDATION UI
+============================================================
+
+The primary result must remain the electrical answer.
+
+Example:
+
+UK → Japan
+
+🟡 Plug adapter required
+
+"Your UK plug will not fit Japanese sockets."
+
+Then:
+
+Recommended adapter
+
+[Product]
+
+[Buy adapter]
+
+Affiliate disclosure
+
+Do not allow the affiliate product card to overpower the actual TravelPlug result.
+
+============================================================
+PART 14 — GITHUB LINK ON WEBSITE
+============================================================
+
+Add a clear link to the GitHub repository:
+
+https://github.com/sa1755/travel-plug-comparison
+
+Place it appropriately in the footer and/or an About/Open Source area.
+
+Use an accessible GitHub icon if appropriate.
+
+Do not make GitHub the primary CTA.
+
+The website should still feel like a consumer travel product.
+
+Track:
+
+github_link_clicked
+
+============================================================
+PART 15 — GITHUB README
+============================================================
+
+Update README.md.
+
+At the very top include:
+
+TravelPlug
+
+"Does your charger work abroad? Check before you fly."
+
+Live Demo:
+
+https://travel-plug-comparison.vercel.app/
+
+Repository:
+
+https://github.com/sa1755/travel-plug-comparison
+
+Add:
+
+- Live Demo
+- Project description
+- Features
+- How it works
+- Technology stack
+- Analytics overview
+- Affiliate architecture overview
+- Local development
+- Environment variables
+- Testing
+- Deployment
+- Contributing
+- License
+
+Make the README look like a professional open-source project.
+
+============================================================
+PART 16 — APACHE LICENSE 2.0
+============================================================
+
+The repository should be licensed under Apache License 2.0.
+
+Ensure:
+
+LICENSE
+
+contains the official Apache License 2.0 text.
+
+Do not modify the legal license text.
+
+Update README.md with:
+
+"Licensed under the Apache License 2.0."
+
+Review package dependencies for obvious licensing conflicts.
+
+Do not claim ownership of third-party dependencies.
+
+============================================================
+PART 17 — WEBSITE ↔ GITHUB CONNECTION
+============================================================
+
+Website:
+
+https://travel-plug-comparison.vercel.app/
+
+GitHub:
+
+https://github.com/sa1755/travel-plug-comparison
+
+Website must link to GitHub.
+
+GitHub README must link to the website.
+
+Both links should be easy to find.
+
+============================================================
+PART 18 — SEO
+============================================================
+
+Update:
+
+- page title
+- meta description
+- Open Graph title
+- Open Graph description
+- social metadata
+- canonical URL where appropriate
+
+Use the new product messaging.
+
+Do not keyword stuff.
+
+============================================================
+PART 19 — PRIVACY / TRUST
+============================================================
+
+Review the website for trust.
+
+Users should understand:
+
+- what TravelPlug does
+- why recommendations are being made
+- that affiliate links may generate commissions
+- what analytics are being collected
+
+Do not make misleading claims.
+
+============================================================
+PART 20 — PERFORMANCE
+============================================================
+
+Ensure analytics and affiliate functionality do not unnecessarily hurt performance.
+
+Review:
+
+- client components
+- bundle size
+- third-party scripts
+- image loading
+- unnecessary JavaScript
+- loading states
+
+Do not add heavy libraries when a lightweight solution is sufficient.
+
+============================================================
+PART 21 — ACCESSIBILITY
+============================================================
+
+Review all newly modified UI.
+
+Ensure:
+
+- keyboard navigation
+- focus states
+- accessible buttons
+- accessible links
+- meaningful labels
+- sufficient contrast
+- screen-reader-friendly text
+
+============================================================
+PART 22 — TESTING
+============================================================
+
+After implementation run:
+
+npm run lint
+
+npm run typecheck
+
+npm run build
+
+Fix every error.
+
+Also manually test:
+
+- homepage
+- origin country selection
+- destination country selection
+- swap
+- comparison
+- result
+- device checker
+- adapter recommendation
+- GitHub link
+- footer
+- mobile layout
+- desktop layout
+- analytics event triggering
+- production build
+
+Ensure the site still works if an analytics provider is unavailable.
+
+Analytics must never prevent the main TravelPlug functionality from working.
+
+============================================================
+PART 23 — ENVIRONMENT VARIABLES
+============================================================
+
+If GA4 is implemented, document the required variable.
+
+Example:
+
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
+
+Do not commit real secrets.
+
+Update:
+
+.env.example
+
+with safe placeholders.
+
+Review .gitignore to ensure local environment files containing secrets are not committed.
+
+============================================================
+PART 24 — GIT / RELEASE
+============================================================
+
+After all changes pass testing:
+
+Run:
+
+git status
+
+Review every changed file.
+
+Do not force push.
+
+Do not rewrite existing Git history.
+
+Create a clear commit.
+
+Suggested commit:
+
+"Add analytics and affiliate-ready monetization"
+
+Push to:
+
+https://github.com/sa1755/travel-plug-comparison
+
+============================================================
+PART 25 — VERCEL DEPLOYMENT
+============================================================
+
+The production website is:
+
+https://travel-plug-comparison.vercel.app/
+
+Ensure the latest GitHub commit is deployed.
+
+If Vercel is connected to GitHub, use the existing deployment workflow.
+
+Do not create unnecessary deployment infrastructure.
+
+Verify the production site after deployment.
+
+============================================================
+PART 26 — RELEASE CHECKLIST
+============================================================
+
+Before declaring this task complete:
+
+[ ] New headline implemented
+
+[ ] Vercel Analytics implemented if appropriate
+
+[ ] Vercel Speed Insights implemented if appropriate
+
+[ ] GA4 implemented if justified
+
+[ ] Analytics events implemented
+
+[ ] Analytics documentation created
+
+[ ] Privacy implications documented
+
+[ ] Affiliate architecture implemented
+
+[ ] Affiliate product placeholders clearly identified
+
+[ ] Affiliate disclosure implemented for product recommendations
+
+[ ] GitHub link added to website
+
+[ ] GitHub link tracked
+
+[ ] Live website link added to README
+
+[ ] Apache 2.0 LICENSE present
+
+[ ] README updated
+
+[ ] .env.example updated
+
+[ ] Secrets protected
+
+[ ] SEO updated
+
+[ ] Accessibility reviewed
+
+[ ] Mobile reviewed
+
+[ ] Desktop reviewed
+
+[ ] npm run lint passes
+
+[ ] npm run typecheck passes
+
+[ ] npm run build passes
+
+[ ] Production website verified
+
+[ ] Git changes reviewed
+
+[ ] Changes pushed to GitHub
+
+============================================================
+FINAL REPORT
+============================================================
+
+When finished provide:
+
+1. Summary of changes
+
+2. Analytics:
+   - providers
+   - events
+   - parameters
+   - where to view the data
+
+3. Affiliate system:
+   - architecture
+   - where products are configured
+   - how affiliate URLs will be added later
+
+4. Open source:
+   - Apache 2.0 status
+   - README status
+
+5. GitHub:
+   - repository URL
+   - commit hash
+
+6. Deployment:
+   - production URL
+   - deployment status
+
+7. Testing:
+   - lint
+   - typecheck
+   - build
+   - manual testing
+
+8. Any remaining tasks I must perform manually.
+
+IMPORTANT:
+
+Do not pretend that analytics data exists before real visitors use the site.
+
+Do not invent affiliate links.
+
+Do not invent product prices.
+
+Do not invent sales or conversion data.
+
+Do not claim an affiliate click generated revenue unless the retailer/network actually reports it.
+
+The goal is to make TravelPlug technically ready for real analytics and affiliate monetization while maintaining user trust.
+
+Only declare the task complete after all verification steps pass.

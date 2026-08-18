@@ -15,7 +15,7 @@ responsive, and interactive without becoming busy.
 | Warm cream | `#F4EFE6` | Canvas |
 | Paper | `#FFFDF8` | Primary surfaces |
 | Walnut | `#3B2A22` | Text and structure |
-| Terracotta | `#C96F4A` | Character and emphasis |
+| Terracotta | `#A64F31` | Character and accessible small-text emphasis |
 | Olive | `#71764A` | Secondary identity and calm results |
 | Action blue | `#2563EB` | Links, buttons, focus, selected points |
 

@@ -60,9 +60,9 @@ export function ComparisonForm({
     }
 
     startTransition(() => {
-      trackEvent("Comparison Started", { entry_point: "comparison_form" });
-      trackEvent("Comparison Completed", {
-        from_country: result.data.fromCountry,
+      trackEvent("comparison_started", { entry_point: "comparison_form" });
+      trackEvent("comparison_completed", {
+        origin_country: result.data.fromCountry,
         destination_country: result.data.toCountry,
       });
       router.push(`/compare/${result.data.fromCountry}/${result.data.toCountry}`);
@@ -72,6 +72,12 @@ export function ComparisonForm({
   const swapCountries = () => {
     const origin = getValues("fromCountry");
     const destination = getValues("toCountry");
+    if (origin || destination) {
+      trackEvent("countries_swapped", {
+        origin_country: origin || "not_selected",
+        destination_country: destination || "not_selected",
+      });
+    }
     setValue("fromCountry", destination, { shouldDirty: true, shouldValidate: true });
     setValue("toCountry", origin, { shouldDirty: true, shouldValidate: true });
     clearErrors();

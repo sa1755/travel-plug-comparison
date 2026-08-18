@@ -25,3 +25,4 @@ export type {
   VoltageComparison,
   VoltageStatus,
 } from "@/types/domain";
+export type { AdapterProduct } from "@/types/affiliate";

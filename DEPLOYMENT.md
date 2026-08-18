@@ -28,6 +28,12 @@ deployed. No analytics secret is required. Set
 `NEXT_PUBLIC_ANALYTICS_ENABLED=false` only when analytics should be disabled;
 the default production behavior is enabled. See [ANALYTICS.md](ANALYTICS.md).
 
+Enable Speed Insights in the same Vercel project. To use optional GA4, create a
+GA4 web data stream, add its public measurement ID as
+`NEXT_PUBLIC_GA_MEASUREMENT_ID`, and redeploy. Leave the variable blank to keep
+GA4 and its consent prompt out of the build. Do not add a Measurement Protocol
+secret to a public environment variable.
+
 ## Local release check
 
 ```bash
@@ -78,6 +84,8 @@ Verify the following against the final production origin:
 - `/sitemap.xml` contains 265 public URLs;
 - `/robots.txt` references the production sitemap;
 - `/manifest.webmanifest`, `/icon`, `/apple-icon`, and `/opengraph-image` load;
+- security headers are present and optional GA4 remains blocked before consent;
+- Vercel Web Analytics and Speed Insights are enabled in the project dashboard;
 - a push to `main` creates a new production deployment; and
 - the Vercel deployment reports the same Git commit as GitHub `main`.
 
