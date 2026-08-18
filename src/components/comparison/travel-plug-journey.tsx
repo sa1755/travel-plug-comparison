@@ -246,7 +246,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     <section id="compare" className="journey-shell" aria-labelledby="journey-title">
       {mode === "result" && displayedTrip ? (
         <>
-          <h1 id="journey-title" className="sr-only" tabIndex={-1}>Travel power result</h1>
+          <h1 id="journey-title" className="sr-only" tabIndex={-1}>{displayedTrip.origin.name} to {displayedTrip.destination.name} plug and power guide</h1>
           <TripResult origin={displayedTrip.origin} destination={displayedTrip.destination} result={displayedTrip.result} />
           <details className="change-journey">
             <summary>Change or swap countries</summary>
@@ -257,7 +257,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
         <>
           <div className="journey-intro">
             <div className="journey-intro__copy">
-              <p className="section-label">Plug confidence, worldwide</p>
+              <p className="section-label">Plug confidence across borders</p>
               <h1 id="journey-title" tabIndex={-1}>Does your charger work abroad? Check before you fly.</h1>
               <p>Compare any two countries and see whether you need a plug adapter, a voltage converter, or nothing at all.</p>
             </div>

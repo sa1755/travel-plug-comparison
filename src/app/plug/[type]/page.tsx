@@ -76,6 +76,7 @@ export default async function PlugPage({ params }: PlugPageProps) {
         <div className="mt-5 rounded-2xl bg-warning-soft/60 p-5 text-sm leading-6 text-warning">
           Plug shape alone does not establish voltage compatibility. Check the local supply and the rating label on your exact device.
         </div>
+        <p className="mt-6 text-sm leading-6 text-muted">Technical record reviewed August 2026. See the <Link href="/about#data-sources" className="font-semibold text-brand-strong underline">sources, methodology, and limitations</Link>. Socket designs and accepted plug variants can differ.</p>
       </section>
 
       <section className="border-t border-border/70 bg-surface-muted">

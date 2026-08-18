@@ -14,19 +14,19 @@ describe("global search", () => {
 
     const trigger = screen.getByRole("button", { name: "Search" });
     await user.click(trigger);
-    const input = screen.getByRole("combobox", {
+    const input = screen.getByRole("searchbox", {
       name: "Search countries and plug types",
     });
     await user.type(input, "Japan");
 
-    const results = await screen.findAllByRole("option");
+    const results = await screen.findAllByRole("link");
     const countryResult = results.find(
       (result) => result.getAttribute("href") === "/country/japan",
     );
     expect(countryResult).toBeTruthy();
 
     await user.keyboard("{ArrowDown}");
-    expect(document.activeElement?.getAttribute("role")).toBe("option");
+    expect(document.activeElement?.getAttribute("href")).toBe("/country/japan");
 
     await user.keyboard("{Escape}");
     expect(trigger.getAttribute("aria-expanded")).toBe("false");
@@ -39,7 +39,7 @@ describe("global search", () => {
 
     await user.click(screen.getByRole("button", { name: "Search" }));
     await user.type(
-      screen.getByRole("combobox", { name: "Search countries and plug types" }),
+      screen.getByRole("searchbox", { name: "Search countries and plug types" }),
       "Atlantis",
     );
 

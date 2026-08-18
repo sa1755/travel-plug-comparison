@@ -1,6 +1,6 @@
 # Production readiness quality audit
 
-Audit date: 6 August 2026
+Audit date: 18 August 2026
 
 ## Product and safety
 
@@ -15,7 +15,7 @@ Audit date: 6 August 2026
 
 ## Rendering and performance
 
-- The pre-launch build generated 272 route outputs. The public-launch sitemap contains 265 URLs:
+- The production build generated 274 route outputs. The public-launch sitemap contains 265 URLs:
   homepage, device checker, 242 country pages, 15 plug pages, and four featured
   comparisons.
 - Country, plug, and featured comparison routes are statically generated.
@@ -54,13 +54,20 @@ Audit date: 6 August 2026
 
 - ESLint uses the Next.js Core Web Vitals rules.
 - TypeScript runs in strict no-emit mode.
-- Forty-four unit and component tests cover schemas, catalog integrity, domain
+- Sixty unit and component tests cover schemas, catalog integrity, domain
   branches, search, forms, device guidance, answer hierarchy, and invalid live
-  journey state.
+  journey state, analytics consent, affiliate filtering, and privacy preferences.
 - HTTP smoke tests cover representative pages, metadata/discovery assets, the
   265-URL sitemap, generated imagery, and invalid-route recovery.
-- The optimized Next.js Webpack build completes with 272 route outputs.
+- Six real-browser journeys pass in desktop Chromium and a Pixel 7 viewport,
+  covering comparison/swap, search, globe/list access, reduced motion, device
+  guidance, repository links, and source links.
+- The optimized Next.js Webpack build completes with 274 route outputs.
+- GitHub Actions runs lint, strict type checking, unit/component tests, the
+  production build, HTTP smoke tests, and the browser suite for pushes and pull
+  requests targeting `main`.
 
 The local gate is `npm run lint`, `npm run typecheck`, `npm test`,
-`npm run build`, and `npm run test:e2e`. Live deployment verification remains a
-separate release operation and must not be inferred from a local build.
+`npm run build`, `npm run test:e2e`, and `npm run test:browser`. Live deployment
+verification remains a separate release operation and must not be inferred from
+a local build.

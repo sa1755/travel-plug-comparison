@@ -129,6 +129,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
             <Link href="/" className="mt-3 inline-flex min-h-11 items-center text-brand-strong font-semibold">Compare a specific journey instead →</Link>
           </div>
         )}
+        <p className="mt-8 text-sm leading-6 text-muted">Electrical record reviewed August 2026. See the <Link href="/about#data-sources" className="font-semibold text-brand-strong underline">sources, methodology, and limitations</Link>. Local conditions and individual sockets can vary.</p>
       </section>
     </>
   );

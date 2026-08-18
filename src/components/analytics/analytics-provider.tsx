@@ -35,7 +35,6 @@ export function AnalyticsProvider() {
     }
     const saved = localStorage.getItem(GOOGLE_ANALYTICS_CONSENT_KEY);
     // Local consent is intentionally restored after hydration.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setConsent(saved === "accepted" || saved === "declined" ? saved : "unknown");
   }, []);
 

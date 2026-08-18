@@ -58,6 +58,7 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
         ref={buttonRef}
         type="button"
         onClick={() => setIsOpen((open) => !open)}
+        aria-label="Search"
         aria-expanded={isOpen}
         aria-controls="global-search-panel"
         className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-semibold text-muted transition-colors hover:bg-surface-muted hover:text-foreground sm:px-4"
@@ -77,12 +78,8 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
               <input
                 ref={inputRef}
                 type="search"
-                role="combobox"
                 aria-label="Search countries and plug types"
                 aria-controls={listId}
-                aria-expanded={query.length > 0}
-                aria-autocomplete="list"
-                aria-haspopup="listbox"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 onKeyDown={(event) => {
@@ -100,18 +97,16 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
             </button>
           </div>
 
-          <div id={listId} role="listbox" aria-label="Search results" className="mt-3 max-h-[min(24rem,60vh)] overflow-y-auto">
+          <div id={listId} aria-label="Search results" aria-live="polite" className="mt-3 max-h-[min(24rem,60vh)] overflow-y-auto">
             {!query ? (
               <p className="px-3 py-5 text-sm leading-6 text-muted">Find a country guide or learn about a plug type.</p>
             ) : results.length ? (
               <ul className="grid gap-1">
                 {results.map((result, index) => (
-                  <li key={result.id} role="none">
+                  <li key={result.id}>
                     <Link
                       ref={(node) => { resultRefs.current[index] = node; }}
                       href={result.href}
-                      role="option"
-                      aria-selected="false"
                       onClick={() => {
                         trackEvent("search_used", { result_kind: result.kind });
                         close();

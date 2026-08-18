@@ -120,3 +120,17 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Add About, GitHub, Privacy, and Apache 2.0 license links to the website.
 - [x] Prepare the repository README and Apache License 2.0 presentation.
 - [~] Complete the final quality gate, release commit, push, and production verification.
+
+## Phase 9 — Analytics, monetisation readiness, and globe refinement
+
+- [x] Replace the decorative hero icon with a responsive animated desk globe.
+- [x] Add Vercel Web Analytics, Speed Insights, typed product events, and an
+  optional consent-gated GA4 integration.
+- [x] Add a deliberately empty affiliate catalog, product service boundary,
+  sponsored-link safeguards, disclosures, and test-only fixtures.
+- [x] Correct ambiguous voltage and Type C compatibility outcomes, expand public
+  source/attribution notes, and strengthen privacy documentation.
+- [x] Fix light-theme label contrast, mobile search naming, globe list access,
+  reduced-motion behaviour, and WebGL failure handling.
+- [x] Add desktop/mobile Playwright journeys and a GitHub Actions quality gate.
+- [~] Push the final refinement commit and verify the production deployment.
