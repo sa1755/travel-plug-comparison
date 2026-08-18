@@ -15,7 +15,7 @@ Audit date: 6 August 2026
 
 ## Rendering and performance
 
-- The build generates 272 route outputs. The public sitemap contains 263 URLs:
+- The pre-launch build generated 272 route outputs. The public-launch sitemap contains 265 URLs:
   homepage, device checker, 242 country pages, 15 plug pages, and four featured
   comparisons.
 - Country, plug, and featured comparison routes are statically generated.
@@ -58,7 +58,7 @@ Audit date: 6 August 2026
   branches, search, forms, device guidance, answer hierarchy, and invalid live
   journey state.
 - HTTP smoke tests cover representative pages, metadata/discovery assets, the
-  263-URL sitemap, generated imagery, and invalid-route recovery.
+  265-URL sitemap, generated imagery, and invalid-route recovery.
 - The optimized Next.js Webpack build completes with 272 route outputs.
 
 The local gate is `npm run lint`, `npm run typecheck`, `npm test`,

@@ -1,0 +1,503 @@
+Yes. I’d give Codex **one comprehensive implementation prompt** so it handles the analytics, branding, GitHub/website connection, Apache 2.0 licensing, and release workflow together.
+
+One important point: **analytics should be privacy-conscious**. Tell Codex to choose an analytics solution that doesn't unnecessarily collect personal information, and to document what is collected.
+
+Paste this **exactly into Codex**:
+
+# TravelPlug — Analytics, Branding, Open Source & Release Update
+
+You are working on the TravelPlug production website.
+
+Before making changes, read the entire repository, including:
+
+* PROJECT_SPEC.md
+* DESIGN_SYSTEM.md
+* ARCHITECTURE.md
+* TASKS.md
+* README.md
+* package.json
+
+Review the current implementation and preserve existing functionality.
+
+The goal of this task is to make TravelPlug ready for a public announcement and open-source release.
+
+Do not remove working functionality.
+
+---
+
+# 1. Update the Main Website Headline
+
+The current headline is:
+
+"Know if your charger will work before you fly."
+
+Replace it with:
+
+"Does your charger work abroad? Check before you fly."
+
+Use this as the primary homepage headline.
+
+Review the surrounding homepage copy and make sure it naturally supports the new headline.
+
+The messaging should remain:
+
+* Simple
+* Clear
+* Google-like
+* Travel-focused
+* Friendly
+* Immediately understandable
+
+Do not make the headline overly technical.
+
+---
+
+# 2. Add Privacy-Conscious Analytics
+
+Add website analytics so I can understand how people use TravelPlug after launch.
+
+Before implementation, evaluate the best analytics solution for this project.
+
+Prioritise:
+
+* Privacy
+* Simple implementation
+* Low performance impact
+* Useful product insights
+* Compatibility with Next.js/Vercel
+* Minimal or no personally identifiable information
+
+Do NOT build a custom analytics system unless there is a strong reason.
+
+Track useful events such as:
+
+* Page view
+* Country selected
+* Comparison started
+* Comparison completed
+* From country
+* Destination country
+* Device checker opened
+* Device checked
+* GitHub link clicked
+* Search used
+
+Do NOT collect unnecessary personal information.
+
+Do NOT collect sensitive personal information.
+
+Do NOT track individual users unnecessarily.
+
+Document:
+
+* Which analytics provider is being used
+* What information is collected
+* What events are tracked
+* Why each event is tracked
+* Any privacy implications
+* How analytics can be disabled or configured
+
+Add the relevant privacy documentation to the project.
+
+If a cookie consent mechanism is legally/technically required by the chosen analytics implementation, implement an appropriate consent solution rather than ignoring the requirement.
+
+---
+
+# 3. GitHub Shortcut on the Website
+
+Add a clear but unobtrusive link to the GitHub repository.
+
+Repository:
+
+[https://github.com/sa1755/travel-plug-comparison](https://github.com/sa1755/travel-plug-comparison)
+
+The GitHub link should be available from the website, preferably in:
+
+* Footer
+* About/open-source area
+
+Consider adding a small GitHub icon using the existing icon system.
+
+Do not make GitHub the primary CTA.
+
+The website should still feel like a consumer travel product.
+
+The GitHub link should open the repository in a new tab where appropriate.
+
+Use accessible labels.
+
+Example:
+
+"View TravelPlug on GitHub"
+
+---
+
+# 4. Website Shortcut on GitHub
+
+Update the GitHub repository README so users can easily find the live website.
+
+The README should prominently display:
+
+TravelPlug
+
+Does your charger work abroad? Check before you fly.
+
+Live website:
+
+[https://travel-plug-comparison.vercel.app/](https://travel-plug-comparison.vercel.app/)
+
+GitHub:
+
+[https://github.com/sa1755/travel-plug-comparison](https://github.com/sa1755/travel-plug-comparison)
+
+Add a clear "Live Demo" link near the top of the README.
+
+Also include:
+
+* Project description
+* Main features
+* Technology stack
+* How to run locally
+* How to contribute
+* License
+* Link to the live website
+
+---
+
+# 5. Apache License 2.0
+
+Make the repository open source under the Apache License 2.0.
+
+Create:
+
+LICENSE
+
+Use the official Apache License 2.0 text.
+
+Do not modify the legal license text.
+
+Update README.md to clearly state:
+
+"Licensed under the Apache License 2.0."
+
+Add an appropriate license section.
+
+Review package dependencies and ensure there are no obvious licensing conflicts with releasing this project under Apache 2.0.
+
+Do not claim that third-party dependencies are owned by this project.
+
+---
+
+# 6. Open Source Presentation
+
+Improve the GitHub README so that someone discovering the project understands it immediately.
+
+README structure should include:
+
+1. TravelPlug title
+2. Short description
+3. Live Demo
+4. Screenshot or preview if appropriate
+5. What TravelPlug does
+6. Main features
+7. Technology stack
+8. Getting started
+9. Project structure
+10. Contributing
+11. License
+12. Links
+
+Make the README professional.
+
+It should feel like a real open-source project rather than an unfinished personal repository.
+
+---
+
+# 7. Website Footer
+
+Review the footer.
+
+It should contain appropriate links such as:
+
+* Home
+* About
+* GitHub
+* Privacy
+* License
+
+Do not overcrowd the footer.
+
+Keep it consistent with DESIGN_SYSTEM.md.
+
+---
+
+# 8. Public Launch Preparation
+
+Review the entire website specifically from the perspective of someone discovering it for the first time.
+
+Ask:
+
+Can a visitor immediately understand what TravelPlug does?
+
+Can they immediately compare countries?
+
+Can they understand the answer without knowing electrical terminology?
+
+Can they find the GitHub project?
+
+Can they find the live website from GitHub?
+
+Does the website look trustworthy?
+
+Does it look ready to share publicly?
+
+Fix any obvious problems you discover.
+
+---
+
+# 9. Analytics-Friendly Product Insights
+
+Use analytics to help answer product questions.
+
+Examples:
+
+* Which countries are most frequently compared?
+* Which destinations are most popular?
+* How often do users complete a comparison?
+* Which devices are checked most frequently?
+* Where do users abandon the comparison flow?
+* How often is the GitHub link clicked?
+
+Do not build a complicated analytics dashboard inside TravelPlug yet.
+
+The goal is to collect useful, privacy-conscious product analytics that can be reviewed through the analytics provider.
+
+---
+
+# 10. UX Review
+
+Before finalising this work, review the main user journey:
+
+Landing page
+→ Select current country
+→ Select destination
+→ Compare
+→ Receive simple answer
+
+The user should receive an immediately understandable result such as:
+
+"Plug adapter required."
+
+or:
+
+"No plug adapter needed."
+
+or:
+
+"Voltage converter required."
+
+The technical explanation can appear underneath.
+
+The primary answer must remain visually dominant.
+
+---
+
+# 11. Visual Polish
+
+Review the updated homepage after changing the headline.
+
+Ensure:
+
+* Typography remains balanced
+* Headline does not wrap awkwardly
+* Mobile layout works
+* CTA remains obvious
+* Spacing remains consistent
+* No component looks unfinished
+
+If the new headline requires adjustments to spacing, font sizing, or layout, make those adjustments.
+
+Do not compromise the design system.
+
+---
+
+# 12. SEO
+
+Update metadata where appropriate so the new messaging is reflected.
+
+Review:
+
+* Page title
+* Meta description
+* Open Graph title
+* Open Graph description
+* Twitter/social metadata if implemented
+
+The metadata should clearly explain TravelPlug.
+
+Do not keyword-stuff.
+
+---
+
+# 13. Testing
+
+After implementation run:
+
+npm run lint
+
+npm run typecheck
+
+npm run build
+
+Fix all errors.
+
+Then test the website manually.
+
+Test:
+
+* Homepage
+* Country selection
+* Comparison
+* Device checker
+* Navigation
+* GitHub link
+* Mobile layout
+* Desktop layout
+* Analytics events
+* Footer links
+
+Ensure analytics does not break the application if the analytics provider is unavailable.
+
+---
+
+# 14. Git
+
+After all changes are tested:
+
+Review:
+
+git status
+
+Create a clear commit.
+
+Suggested commit message:
+
+"Prepare TravelPlug for public launch"
+
+Then push the changes to:
+
+[https://github.com/sa1755/travel-plug-comparison](https://github.com/sa1755/travel-plug-comparison)
+
+Do not force push.
+
+Do not overwrite existing history.
+
+---
+
+# 15. Production Deployment
+
+After the GitHub repository has been updated, verify that the Vercel deployment receives the latest commit.
+
+Production website:
+
+[https://travel-plug-comparison.vercel.app/](https://travel-plug-comparison.vercel.app/)
+
+Verify:
+
+* Website loads
+* HTTPS works
+* Homepage is updated
+* New headline is visible
+* Analytics is active
+* GitHub link works
+* All existing features still work
+
+If Vercel is already connected to GitHub, allow the normal deployment process to run.
+
+Do not create a second deployment system unnecessarily.
+
+---
+
+# 16. Final Release Review
+
+Act as a Release Manager before declaring the task complete.
+
+Ask:
+
+* Is the website production-ready?
+* Is the new headline polished?
+* Is analytics working?
+* Is analytics privacy-conscious?
+* Is the GitHub repository professional?
+* Is the Apache 2.0 license correctly included?
+* Does GitHub link to the live website?
+* Does the website link to GitHub?
+* Does the production deployment contain the latest changes?
+* Do lint, typecheck and build pass?
+* Are there any broken links?
+* Are there any obvious UX problems?
+
+Fix any issues you find.
+
+Do not simply report problems — fix them where appropriate.
+
+---
+
+# Final Report
+
+When everything is complete, provide:
+
+## Changes made
+
+List all important changes.
+
+## Analytics
+
+State:
+
+* Provider
+* Events tracked
+* Privacy approach
+* Any consent requirements
+
+## Open Source
+
+Confirm:
+
+* Apache License 2.0 added
+* README updated
+* GitHub/live website links added
+
+## Website
+
+Confirm:
+
+* New headline deployed
+* GitHub shortcut added
+* Footer updated
+
+## Testing
+
+Report:
+
+* npm run lint
+* npm run typecheck
+* npm run build
+* Manual testing
+
+## Deployment
+
+Confirm the production URL:
+
+[https://travel-plug-comparison.vercel.app/](https://travel-plug-comparison.vercel.app/)
+
+## Git
+
+Provide:
+
+* Commit hash
+* Confirmation that changes were pushed
+
+## Final recommendation
+
+Give the project a production-readiness score out of 10 and explain anything that should still be improved before publicly announcing TravelPlug.

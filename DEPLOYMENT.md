@@ -23,6 +23,11 @@ canonical origin resolves in this order:
 Do not set `NEXT_PUBLIC_SITE_URL` to a preview deployment. Vercel's production
 domain variable is preferable because it remains stable across previews.
 
+Enable Web Analytics in the Vercel project dashboard before the release is
+deployed. No analytics secret is required. Set
+`NEXT_PUBLIC_ANALYTICS_ENABLED=false` only when analytics should be disabled;
+the default production behavior is enabled. See [ANALYTICS.md](ANALYTICS.md).
+
 ## Local release check
 
 ```bash
@@ -70,7 +75,7 @@ Verify the following against the final production origin:
   comparison return 200;
 - an unsupported country returns 404 with a recovery link;
 - canonical and Open Graph URLs use the production origin;
-- `/sitemap.xml` contains 263 public URLs;
+- `/sitemap.xml` contains 265 public URLs;
 - `/robots.txt` references the production sitemap;
 - `/manifest.webmanifest`, `/icon`, `/apple-icon`, and `/opengraph-image` load;
 - a push to `main` creates a new production deployment; and

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 
+import { AnalyticsProvider } from "@/components/analytics/analytics-provider";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { createPageMetadata, siteConfig } from "@/lib/site-config";
@@ -9,12 +10,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.origin),
   ...createPageMetadata({
-    title: "TravelPlug — Travel power made simple",
+    title: "Does your charger work abroad? | TravelPlug",
     description: siteConfig.description,
     path: "/",
   }),
   title: {
-    default: "TravelPlug — Travel power made simple",
+    default: "Does your charger work abroad? | TravelPlug",
     template: "%s | TravelPlug",
   },
   applicationName: "TravelPlug",
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Header />
         <main id="main-content" className="flex-1" tabIndex={-1}>{children}</main>
         <Footer />
+        <AnalyticsProvider />
       </body>
     </html>
   );

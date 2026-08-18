@@ -10,6 +10,7 @@ import {
   type CountryOption,
 } from "@/components/country/country-selector";
 import { comparisonFormSchema } from "@/lib/schemas";
+import { trackEvent } from "@/lib/analytics";
 import type { ComparisonFormValues } from "@/types";
 
 interface ComparisonFormProps {
@@ -59,6 +60,11 @@ export function ComparisonForm({
     }
 
     startTransition(() => {
+      trackEvent("Comparison Started", { entry_point: "comparison_form" });
+      trackEvent("Comparison Completed", {
+        from_country: result.data.fromCountry,
+        destination_country: result.data.toCountry,
+      });
       router.push(`/compare/${result.data.fromCountry}/${result.data.toCountry}`);
     });
   };

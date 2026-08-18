@@ -29,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: absoluteUrl("/"), changeFrequency: "monthly", priority: 1 },
     { url: absoluteUrl("/device-checker"), changeFrequency: "monthly", priority: 0.9 },
+    { url: absoluteUrl("/about"), changeFrequency: "yearly", priority: 0.6 },
+    { url: absoluteUrl("/privacy"), changeFrequency: "yearly", priority: 0.4 },
     ...countries,
     ...plugs,
     ...comparisons,

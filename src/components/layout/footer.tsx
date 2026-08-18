@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Code2 } from "lucide-react";
 
+import { TrackedExternalLink } from "@/components/analytics/tracked-external-link";
 import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
@@ -16,11 +18,21 @@ export function Footer() {
           </p>
         </div>
         <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-muted">
-          <Link href="/" className="min-h-11 content-center hover:text-brand-strong">Compare countries</Link>
-          <Link href="/?explore=globe" className="min-h-11 content-center hover:text-brand-strong">Globe view</Link>
-          <Link href="/device-checker" className="min-h-11 content-center hover:text-brand-strong">Device checker</Link>
-          <Link href="/#safety" className="min-h-11 content-center hover:text-brand-strong">Power safety</Link>
-          <a href="https://www.worldstandards.eu/electricity/plug-voltage-by-country/" rel="noreferrer" className="min-h-11 content-center hover:text-brand-strong">Data source</a>
+          <Link href="/" className="min-h-11 content-center hover:text-brand-strong">Home</Link>
+          <Link href="/about" className="min-h-11 content-center hover:text-brand-strong">About</Link>
+          <TrackedExternalLink
+            href="https://github.com/sa1755/travel-plug-comparison"
+            target="_blank"
+            rel="noreferrer"
+            eventName="GitHub Link Clicked"
+            eventProperties={{ location: "footer" }}
+            className="inline-flex min-h-11 items-center gap-1.5 hover:text-brand-strong"
+            aria-label="View TravelPlug on GitHub (opens in a new tab)"
+          >
+            <Code2 className="size-4" aria-hidden="true" /> GitHub
+          </TrackedExternalLink>
+          <Link href="/privacy" className="min-h-11 content-center hover:text-brand-strong">Privacy</Link>
+          <a href="https://github.com/sa1755/travel-plug-comparison/blob/main/LICENSE" target="_blank" rel="noreferrer" className="min-h-11 content-center hover:text-brand-strong" aria-label="Apache 2.0 license (opens in a new tab)">License</a>
         </nav>
       </div>
     </footer>

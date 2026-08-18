@@ -10,6 +10,7 @@ import { PlugIllustration } from "@/components/comparison/plug-illustration";
 import { TripResult } from "@/components/comparison/trip-result";
 import { CountryCombobox } from "@/components/country/country-combobox";
 import { compareCountries } from "@/lib/comparison";
+import { trackEvent } from "@/lib/analytics";
 import type { DeviceRecord } from "@/services/device-service";
 import type { PlugType } from "@/types";
 
@@ -58,6 +59,8 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
   const [isLocating, setIsLocating] = useState(false);
   const [globeOpen, setGlobeOpen] = useState(false);
   const lastGlobeTriggerRef = useRef<HTMLButtonElement>(null);
+  const comparisonStartedRef = useRef(false);
+  const lastCompletedComparisonRef = useRef("");
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
@@ -94,7 +97,28 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     else router.replace(nextPath, { scroll: false });
   }, [destination, origin, pathname, router]);
 
+  useEffect(() => {
+    if (!result || !origin || !destination) return;
+    const comparisonKey = `${origin.slug}:${destination.slug}`;
+    if (lastCompletedComparisonRef.current === comparisonKey) return;
+    lastCompletedComparisonRef.current = comparisonKey;
+    trackEvent("Comparison Completed", {
+      from_country: origin.slug,
+      destination_country: destination.slug,
+    });
+  }, [destination, origin, result]);
+
+  const markComparisonStarted = () => {
+    if (comparisonStartedRef.current) return;
+    comparisonStartedRef.current = true;
+    trackEvent("Comparison Started", { entry_point: mode });
+  };
+
   const rememberOrigin = (slug: string) => {
+    if (slug) {
+      markComparisonStarted();
+      trackEvent("Country Selected", { role: "from", country: slug });
+    }
     setFromSlug(slug);
     setLocationStatus("");
     if (slug) localStorage.setItem(HOME_KEY, slug);
@@ -102,7 +126,13 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     if (slug === toSlug) setToSlug("");
   };
 
-  const chooseDestination = (slug: string) => setToSlug(slug === fromSlug ? "" : slug);
+  const chooseDestination = (slug: string) => {
+    if (slug && slug !== fromSlug) {
+      markComparisonStarted();
+      trackEvent("Country Selected", { role: "destination", country: slug });
+    }
+    setToSlug(slug === fromSlug ? "" : slug);
+  };
 
   const closeGlobe = () => {
     setGlobeOpen(false);
@@ -217,7 +247,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
           <div className="journey-intro">
             <div className="journey-intro__copy">
               <p className="section-label">Plug confidence, worldwide</p>
-              <h1 id="journey-title" tabIndex={-1}>Know if your charger will work before you fly.</h1>
+              <h1 id="journey-title" tabIndex={-1}>Does your charger work abroad? Check before you fly.</h1>
               <p>Compare any two countries and see whether you need a plug adapter, a voltage converter, or nothing at all.</p>
             </div>
             <button type="button" className="hero-globe-link" onClick={openGlobe}>

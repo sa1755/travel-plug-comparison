@@ -112,3 +112,11 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Align semantic result colours, responsive cards, route CTAs, and brand artwork.
 - [x] Add WebSite structured data and reconcile release documentation.
 - [x] Complete the final quality gate and release-manager approval.
+
+## Phase 8 — Public open-source launch
+
+- [x] Update the homepage and social messaging for the public launch.
+- [x] Add privacy-conscious Vercel Web Analytics and documented product events.
+- [x] Add About, GitHub, Privacy, and Apache 2.0 license links to the website.
+- [x] Prepare the repository README and Apache License 2.0 presentation.
+- [~] Complete the final quality gate, release commit, push, and production verification.

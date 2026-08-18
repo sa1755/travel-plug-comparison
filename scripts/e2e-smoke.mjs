@@ -63,19 +63,21 @@ const stopServer = async () => {
 
 try {
   await waitForServer();
-  await expectRoute({ path: "/", includes: ["Know if your charger will work before you fly", 'rel="canonical"', "Device checker"] });
+  await expectRoute({ path: "/", includes: ["Does your charger work abroad? Check before you fly.", 'rel="canonical"', "GitHub"] });
   await expectRoute({ path: "/country/japan", includes: ["Power sockets in Japan", "/country/japan"] });
   await expectRoute({ path: "/plug/type-g", includes: ["Type G", "/plug/type-g"] });
   await expectRoute({ path: "/compare/united-kingdom/japan", includes: ["A voltage converter may be required", "Smartwatch", "/compare/united-kingdom/japan"] });
   await expectRoute({ path: "/device-checker", includes: ["Will your device work when you travel", "/device-checker"] });
+  await expectRoute({ path: "/about", includes: ["Travel power guidance without the electrical jargon", "View TravelPlug on GitHub"] });
+  await expectRoute({ path: "/privacy", includes: ["Simple analytics, minimal data", "Do Not Track"] });
   const sitemap = await expectRoute({ path: "/sitemap.xml", contentType: "application/xml" });
   const urlCount = (sitemap.match(/<url>/g) ?? []).length;
-  if (urlCount !== 263) throw new Error(`/sitemap.xml: expected 263 URLs, received ${urlCount}`);
+  if (urlCount !== 265) throw new Error(`/sitemap.xml: expected 265 URLs, received ${urlCount}`);
   await expectRoute({ path: "/robots.txt", includes: ["Sitemap:"] });
   await expectRoute({ path: "/manifest.webmanifest", includes: ["TravelPlug"] });
   await expectRoute({ path: "/opengraph-image", contentType: "image/png" });
   await expectRoute({ path: "/country/atlantis", status: 404, includes: ["Guide not found"] });
-  console.log("HTTP smoke tests passed (10 routes, 263 sitemap URLs). ");
+  console.log("HTTP smoke tests passed (12 routes, 265 sitemap URLs). ");
 } finally {
   await stopServer();
 }

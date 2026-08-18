@@ -14,7 +14,7 @@ const normalizeOrigin = (value: string | undefined): string | undefined => {
 
 export const siteConfig = {
   name: "TravelPlug",
-  description: "Compare plugs, sockets, voltage, and device compatibility before you travel.",
+  description: "Does your charger work abroad? Compare plugs, voltage, and device compatibility before you fly.",
   origin:
     normalizeOrigin(process.env.NEXT_PUBLIC_SITE_URL) ??
     normalizeOrigin(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??

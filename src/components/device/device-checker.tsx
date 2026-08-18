@@ -8,6 +8,7 @@ import { Controller, useForm, useWatch } from "react-hook-form";
 import { CompatibilityBadge } from "@/components/comparison/compatibility-badge";
 import { CountryCombobox } from "@/components/country/country-combobox";
 import { compareCountries } from "@/lib/comparison";
+import { trackEvent } from "@/lib/analytics";
 import { deviceCheckerFormSchema } from "@/lib/schemas";
 import type { CountryRecord } from "@/services/country-service";
 import type { DeviceRecord } from "@/services/device-service";
@@ -63,6 +64,10 @@ export function DeviceChecker({ countries, devices, defaultFrom = "", defaultTo 
     if (visibleResult) resultHeadingRef.current?.focus();
   }, [visibleResult]);
 
+  useEffect(() => {
+    trackEvent("Device Checker Opened");
+  }, []);
+
   const checkDevice = (formValues: DeviceCheckerFormValues) => {
     clearErrors();
     const parsed = deviceCheckerFormSchema.safeParse(formValues);
@@ -89,6 +94,11 @@ export function DeviceChecker({ countries, devices, defaultFrom = "", defaultTo 
       origin,
       destination,
       result: compareCountries(origin, destination, [device]),
+    });
+    trackEvent("Device Checked", {
+      device: device.id,
+      from_country: origin.slug,
+      destination_country: destination.slug,
     });
   };
 

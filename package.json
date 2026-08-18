@@ -2,6 +2,7 @@
   "name": "travelplug",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=20.9.0"
   },
@@ -16,6 +17,7 @@
     "test:e2e": "node scripts/e2e-smoke.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "d3-geo": "3.1.1",
     "framer-motion": "12.43.0",
     "lucide-react": "1.28.0",

@@ -8,6 +8,7 @@ import {
   filterCatalogSearch,
   type CatalogSearchEntry,
 } from "@/lib/catalog-search";
+import { trackEvent } from "@/lib/analytics";
 
 interface GlobalSearchProps {
   readonly entries: readonly CatalogSearchEntry[];
@@ -111,7 +112,10 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
                       href={result.href}
                       role="option"
                       aria-selected="false"
-                      onClick={close}
+                      onClick={() => {
+                        trackEvent("Search Used", { result_kind: result.kind });
+                        close();
+                      }}
                       onKeyDown={(event) => {
                         if (event.key === "ArrowDown") {
                           event.preventDefault();

@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 850 }}>
             <div style={{ color: "#71764A", fontSize: 23, fontWeight: 700, letterSpacing: 2 }}>TRAVEL POWER, EXPLAINED SIMPLY</div>
-            <div style={{ marginTop: 18, fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2.5 }}>Know if your charger will work before you fly.</div>
+            <div style={{ marginTop: 18, fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2.5 }}>Does your charger work abroad? Check before you fly.</div>
             <div style={{ marginTop: 24, color: "#6D5E53", fontSize: 28, lineHeight: 1.35 }}>One clear answer for plug adapters, voltage converters, and common devices.</div>
           </div>
         </div>
