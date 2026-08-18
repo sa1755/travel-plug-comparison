@@ -34,7 +34,7 @@ recommendation before showing the technical detail.
 - Next.js 16 App Router and React 19
 - TypeScript in strict mode
 - Tailwind CSS 4
-- Zod, React Hook Form, Lucide React, and Framer Motion
+- Zod, React Hook Form, and Lucide React
 - Vitest and Testing Library
 - Vercel Web Analytics, Speed Insights, optional consented GA4, and Vercel deployment
 
@@ -80,7 +80,8 @@ and URLs have been reviewed. Future products are configured in
 `src/data/adapter-products.ts`, matched through
 `src/services/product-recommendation-service.ts`, and displayed with a nearby
 affiliate disclosure and view/click events. No product click is treated as a
-sale.
+sale. See [AFFILIATE.md](AFFILIATE.md) for the review process, real-product
+fields, and Amazon Associates manual steps.
 
 ## Quality checks
 
@@ -90,13 +91,15 @@ npm run typecheck
 npm test
 npm run build
 npm run test:e2e
+npm run test:browser
 ```
 
 The end-to-end suite runs against an existing production build.
 
-The current HTTP smoke suite validates representative routes and assets. A
-real-browser Playwright suite is still recommended before broad promotion for
-hydration, keyboard, WebGL, reduced-motion, and responsive-layout coverage.
+The HTTP smoke suite validates representative routes and assets. Playwright
+also exercises comparison, swapping, search, the globe/list fallback, reduced
+motion, device guidance, theme persistence, not-found recovery, and trust links
+in desktop, tablet, and Pixel 7 Chromium viewports.
 
 ## Project structure
 
@@ -115,6 +118,7 @@ For deeper context, see [PROJECT_SPEC.md](PROJECT_SPEC.md),
 [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md), [ARCHITECTURE.md](ARCHITECTURE.md), and
 [TASKS.md](TASKS.md). Deployment is covered in [DEPLOYMENT.md](DEPLOYMENT.md),
 and collected analytics are documented in [ANALYTICS.md](ANALYTICS.md).
+Affiliate product operations are documented in [AFFILIATE.md](AFFILIATE.md).
 
 ## Contributing
 

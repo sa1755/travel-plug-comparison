@@ -3,9 +3,8 @@
 Production URL: [https://travel-plug-comparison.vercel.app](https://travel-plug-comparison.vercel.app)
 
 The initial production deployment was verified on 4 August 2026. The Vercel
-project is `sana-525f/travel-plug-comparison`. Automatic GitHub deployments
-remain pending until GitHub is added as a login connection to the Vercel
-account; direct production deployment is operational.
+project is `sana-525f/travel-plug-comparison`. Automatic deployment from the
+GitHub `main` branch and the production URL were verified on 18 August 2026.
 
 ## Requirements
 
@@ -43,10 +42,14 @@ npm run typecheck
 npm test
 npm run build
 npm run test:e2e
+npm run test:browser
 ```
 
 The HTTP suite requires the production build and briefly opens localhost port
-3210. Set `TRAVELPLUG_E2E_PORT` if that port is occupied.
+3210. Set `TRAVELPLUG_E2E_PORT` if that port is occupied. The Playwright suite
+launches its own production server on dedicated port 3110 and never reuses an
+existing process. It requires its Chromium runtime (`npx playwright install
+chromium` locally; CI installs the browser and operating-system dependencies).
 
 ## GitHub-connected Vercel deployment
 
@@ -91,3 +94,10 @@ Verify the following against the final production origin:
 
 Rollback by promoting the last known-good Vercel deployment or reverting the
 offending commit on `main`; never rewrite shared production history.
+
+## Remaining manual compatibility checks
+
+Before broad promotion, manually check Safari on iOS/macOS, a low-end Android
+device, and representative keyboard and screen-reader journeys. Run axe or an
+equivalent accessibility audit in a real production browser. These checks are
+deliberately not marked complete by the Chromium release suite.

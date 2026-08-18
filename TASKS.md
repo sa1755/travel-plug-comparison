@@ -134,3 +134,11 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
   reduced-motion behaviour, and WebGL failure handling.
 - [x] Add desktop/mobile Playwright journeys and a GitHub Actions quality gate.
 - [x] Push the final refinement commit and verify the production deployment.
+
+## Phase 10 — Master production audit
+
+- [x] Reconcile analytics, Speed Insights, GA4, affiliate, privacy, README,
+  deployment, accessibility, SEO, and release evidence against the master task.
+- [~] Complete the final automated and manual quality gate without pushing.
+  Chromium automation is complete; Safari/iOS, low-end Android,
+  screen-reader/axe, production GA4, and post-deployment checks remain manual.

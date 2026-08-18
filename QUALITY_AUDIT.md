@@ -54,18 +54,34 @@ Audit date: 18 August 2026
 
 - ESLint uses the Next.js Core Web Vitals rules.
 - TypeScript runs in strict no-emit mode.
-- Sixty unit and component tests cover schemas, catalog integrity, domain
+- Eighty-four unit and component tests cover schemas, catalog integrity, domain
   branches, search, forms, device guidance, answer hierarchy, and invalid live
   journey state, analytics consent, affiliate filtering, and privacy preferences.
 - HTTP smoke tests cover representative pages, metadata/discovery assets, the
   265-URL sitemap, generated imagery, and invalid-route recovery.
-- Six real-browser journeys pass in desktop Chromium and a Pixel 7 viewport,
-  covering comparison/swap, search, globe/list access, reduced motion, device
-  guidance, repository links, and source links.
+- Twelve real-browser journeys pass in desktop Chromium, a 768 × 1024 tablet
+  viewport, and a Pixel 7 viewport, covering comparison/swap, search,
+  globe/list access, reduced motion, device guidance, theme persistence,
+  not-found recovery, repository links, and source links.
 - The optimized Next.js Webpack build completes with 274 route outputs.
 - GitHub Actions runs lint, strict type checking, unit/component tests, the
   production build, HTTP smoke tests, and the browser suite for pushes and pull
   requests targeting `main`.
+
+## Known framework diagnostic
+
+Next.js 16 can log `Internal: NoFallbackError` under `next start` when an
+unknown parameter is correctly rejected by a route with
+`dynamicParams = false`. TravelPlug keeps that route contract because country
+and plug pages must come from the validated catalog. HTTP and browser tests
+confirm that visitors still receive status 404 and the custom recovery page.
+The diagnostic matches the open upstream Next.js issue
+[`vercel/next.js#87738`](https://github.com/vercel/next.js/issues/87738); no
+application workaround is applied solely to suppress framework logging.
+
+The automated browser matrix is Chromium-based. Safari/iOS, low-end Android,
+screen-reader, and axe checks remain explicit manual release work rather than
+being represented as completed automation.
 
 The local gate is `npm run lint`, `npm run typecheck`, `npm test`,
 `npm run build`, `npm run test:e2e`, and `npm run test:browser`. Live deployment

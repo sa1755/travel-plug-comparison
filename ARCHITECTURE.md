@@ -14,7 +14,6 @@ for interactions such as selectors, search, and the device checker.
 - Tailwind CSS 4 with project design tokens in `src/app/globals.css`
 - Zod at data and user-input boundaries
 - React Hook Form for forms that need managed client state
-- Framer Motion for purposeful, reduced-motion-aware interaction
 - Lucide React for interface icons
 
 Node.js 20.9 or newer is required. Dependencies are locked by
@@ -116,6 +115,18 @@ import React, routes, or raw data. The rules are deliberately cautious:
 Ambiguous cases say “check the device label” rather than claim universal safety.
 Every branch is covered by unit tests, including multi-voltage and dual-frequency
 destinations.
+
+Analytics is isolated from product behaviour. The root layout renders Vercel
+Web Analytics/optional consented GA4 and Speed Insights once through separate
+client boundaries. Features emit bounded semantic events through
+`src/lib/analytics.ts`; provider failures never affect navigation or electrical
+results.
+
+Affiliate recommendations are a downstream presentation layer. The pure
+comparison engine first decides whether an adapter may be needed; only then may
+the product service match an active, reviewed catalog record by plug systems and
+optional origin/destination country restrictions. The public catalog remains
+empty until genuine products and URLs are supplied.
 
 ## Routes
 
