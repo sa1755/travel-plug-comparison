@@ -119,7 +119,7 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Add privacy-conscious Vercel Web Analytics and documented product events.
 - [x] Add About, GitHub, Privacy, and Apache 2.0 license links to the website.
 - [x] Prepare the repository README and Apache License 2.0 presentation.
-- [~] Complete the final quality gate, release commit, push, and production verification.
+- [x] Complete the final quality gate, release commit, push, and production verification.
 
 ## Phase 9 — Analytics, monetisation readiness, and globe refinement
 
@@ -133,4 +133,4 @@ Status key: `[x]` complete, `[~]` in progress, `[ ]` not started.
 - [x] Fix light-theme label contrast, mobile search naming, globe list access,
   reduced-motion behaviour, and WebGL failure handling.
 - [x] Add desktop/mobile Playwright journeys and a GitHub Actions quality gate.
-- [~] Push the final refinement commit and verify the production deployment.
+- [x] Push the final refinement commit and verify the production deployment.
