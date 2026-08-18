@@ -40,6 +40,10 @@ export default function PrivacyPage() {
             <AnalyticsPreferencesButton />
           </section>
           <section>
+            <h2 className="text-2xl font-bold text-foreground">Affiliate recommendations</h2>
+            <p className="mt-3">TravelPlug does not currently display affiliate products. If reviewed affiliate links are added later, recommendations will appear only when the electrical comparison indicates that an adapter may be needed. A clear disclosure will appear beside those links. TravelPlug may then earn a commission from a qualifying purchase; it does not add a separate TravelPlug fee, although the retailer’s own prices and terms still apply. Product clicks do not tell TravelPlug whether a purchase was completed.</p>
+          </section>
+          <section>
             <h2 className="text-2xl font-bold text-foreground">Control and retention</h2>
             <p className="mt-3">You can decline optional Google Analytics or reopen the choice above. Analytics retention and deletion are managed in the corresponding Vercel and Google project settings. For a privacy request, contact the project maintainer through the <a className="font-semibold text-brand-strong underline" href="https://github.com/sa1755/travel-plug-comparison/issues" target="_blank" rel="noreferrer">GitHub issue tracker</a>; do not include sensitive information in a public issue. This notice describes the implementation and is not a claim of compliance with every jurisdiction.</p>
           </section>

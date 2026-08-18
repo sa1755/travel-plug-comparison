@@ -7,12 +7,13 @@ export interface AdapterProduct {
   readonly retailer: string;
   readonly productUrl: string;
   readonly affiliateUrl?: string;
+  readonly affiliateProgramme?: "amazon-associates" | "other";
+  readonly affiliateDisclosure?: string;
   readonly imageUrl?: string;
-  readonly price?: number;
-  readonly currency?: string;
   readonly originPlugTypes: readonly PlugType[];
   readonly destinationPlugTypes: readonly PlugType[];
-  readonly supportedCountries?: readonly string[];
+  readonly supportedOriginCountries?: readonly string[];
+  readonly supportedDestinationCountries?: readonly string[];
   readonly active: boolean;
   readonly priority: number;
 }

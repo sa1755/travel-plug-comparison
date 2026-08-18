@@ -32,15 +32,44 @@ describe("adapter recommendations", () => {
     ]).map(({ id }) => id)).toEqual(["test-uk-to-japan"]);
   });
 
-  it("honours destination restrictions and priority", () => {
+  it("requires coverage of every origin plug type", () => {
+    expect(findAdapterRecommendations({ ...query, originPlugTypes: ["C", "E"] }, [
+      fixture({ id: "partial", originPlugTypes: ["C"] }),
+      fixture({ id: "complete", originPlugTypes: ["C", "E"] }),
+    ]).map(({ id }) => id)).toEqual(["complete"]);
+  });
+
+  it("requires coverage of every destination socket type", () => {
+    expect(findAdapterRecommendations(query, [
+      fixture({ id: "type-a-only", destinationPlugTypes: ["A"] }),
+      fixture({ id: "type-b-only", destinationPlugTypes: ["B"] }),
+      fixture({ id: "complete", destinationPlugTypes: ["A", "B"] }),
+    ]).map(({ id }) => id)).toEqual(["complete"]);
+  });
+
+  it("honours route restrictions and priority", () => {
     expect(findAdapterRecommendations(query, [
       fixture({ id: "lower", priority: 1 }),
-      fixture({ id: "higher", priority: 20, supportedCountries: ["japan"] }),
-      fixture({ id: "france-only", supportedCountries: ["france"] }),
+      fixture({ id: "higher", priority: 20, supportedOriginCountries: ["united-kingdom"], supportedDestinationCountries: ["japan"] }),
+      fixture({ id: "wrong-origin-country", supportedOriginCountries: ["france"] }),
+      fixture({ id: "france-only", supportedDestinationCountries: ["france"] }),
     ]).map(({ id }) => id)).toEqual(["higher", "lower"]);
   });
 
   it("keeps the public catalog empty until real products are configured", () => {
     expect(findAdapterRecommendations(query)).toEqual([]);
+  });
+
+  it("rejects unsafe URLs and affiliate links without programme disclosure", () => {
+    expect(findAdapterRecommendations(query, [
+      fixture({ id: "unsafe", productUrl: "http://example.test/product" }),
+      fixture({ id: "undisclosed", affiliateUrl: "https://example.test/affiliate" }),
+      fixture({
+        id: "reviewed-affiliate",
+        affiliateUrl: "https://example.test/affiliate",
+        affiliateProgramme: "other",
+        affiliateDisclosure: "Test-only affiliate disclosure.",
+      }),
+    ]).map(({ id }) => id)).toEqual(["reviewed-affiliate"]);
   });
 });

@@ -8,8 +8,13 @@ interface AdapterRecommendationQuery {
   readonly destinationPlugTypes: readonly PlugType[];
 }
 
-const overlaps = <Value,>(left: readonly Value[], right: readonly Value[]) =>
-  left.some((value) => right.includes(value));
+const isSecureUrl = (value: string) => {
+  try {
+    return new URL(value).protocol === "https:";
+  } catch {
+    return false;
+  }
+};
 
 export function findAdapterRecommendations(
   query: AdapterRecommendationQuery,
@@ -18,11 +23,18 @@ export function findAdapterRecommendations(
   return products
     .filter((product) => {
       if (!product.active) return false;
-      if (!overlaps(product.originPlugTypes, query.originPlugTypes)) return false;
-      if (!overlaps(product.destinationPlugTypes, query.destinationPlugTypes)) return false;
-      if (product.supportedCountries?.length) {
-        return product.supportedCountries.includes(query.destinationCountry);
-      }
+      if (!isSecureUrl(product.productUrl)) return false;
+      if (product.affiliateUrl && (
+        !isSecureUrl(product.affiliateUrl) ||
+        !product.affiliateProgramme ||
+        !product.affiliateDisclosure?.trim()
+      )) return false;
+      if (!query.originPlugTypes.every((type) => product.originPlugTypes.includes(type))) return false;
+      if (!query.destinationPlugTypes.every((type) => product.destinationPlugTypes.includes(type))) return false;
+      if (product.supportedOriginCountries?.length &&
+          !product.supportedOriginCountries.includes(query.originCountry)) return false;
+      if (product.supportedDestinationCountries?.length &&
+          !product.supportedDestinationCountries.includes(query.destinationCountry)) return false;
       return true;
     })
     .toSorted((left, right) => right.priority - left.priority);

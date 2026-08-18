@@ -51,26 +51,32 @@ export function AdapterRecommendations({ origin, destination }: AdapterRecommend
               <p>{product.description}</p>
               <small>Sold by {product.retailer}</small>
             </div>
-            <TrackedExternalLink
-              href={product.affiliateUrl ?? product.productUrl}
-              target="_blank"
-              rel="sponsored noreferrer"
-              eventName="adapter_product_clicked"
-              eventProperties={{
-                origin_country: origin.slug,
-                destination_country: destination.slug,
-                adapter_type: `${origin.plugTypes.join("/")}-to-${destination.plugTypes.join("/")}`,
-                retailer: product.retailer,
-                product_id: product.id,
-              }}
-              aria-label={`View ${product.name} at ${product.retailer} (opens in a new tab)`}
-            >
-              View adapter <ExternalLink aria-hidden="true" />
-            </TrackedExternalLink>
+            <div className="adapter-recommendations__actions">
+              <TrackedExternalLink
+                href={product.affiliateUrl ?? product.productUrl}
+                target="_blank"
+                rel={product.affiliateUrl ? "sponsored noreferrer" : "noreferrer"}
+                eventName="adapter_product_clicked"
+                eventProperties={{
+                  origin_country: origin.slug,
+                  destination_country: destination.slug,
+                  adapter_type: `${origin.plugTypes.join("/")}-to-${destination.plugTypes.join("/")}`,
+                  retailer: product.retailer,
+                  product_id: product.id,
+                }}
+                aria-label={`View ${product.name} at ${product.retailer} (opens in a new tab)`}
+              >
+                View adapter <ExternalLink aria-hidden="true" />
+              </TrackedExternalLink>
+              {product.affiliateUrl && product.affiliateDisclosure ? (
+                <p className="adapter-recommendations__disclosure">
+                  Affiliate disclosure: {product.affiliateDisclosure}
+                </p>
+              ) : null}
+            </div>
           </article>
         ))}
       </div>
-      <p className="adapter-recommendations__disclosure">Affiliate link: TravelPlug may earn a commission if you purchase through this link, at no extra cost to you.</p>
     </section>
   );
 }

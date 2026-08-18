@@ -243,7 +243,8 @@ body {
   .adapter-recommendations__grid small { display: block; margin-top: .35rem; color: var(--muted); }
   .adapter-recommendations__grid a { display: inline-flex; min-height: 2.75rem; align-items: center; gap: .45rem; border-radius: 999px; background: var(--brand); padding-inline: 1rem; color: white; font-size: .88rem; font-weight: 800; }
   .adapter-recommendations__grid a svg { width: 1rem; }
-  .adapter-recommendations__disclosure { margin-top: .75rem; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+  .adapter-recommendations__actions { display: grid; max-width: 24rem; justify-items: end; gap: .5rem; }
+  .adapter-recommendations__disclosure { color: var(--muted); font-size: .78rem; line-height: 1.5; text-align: right; }
   .device-results { margin-top: clamp(2rem, 5vw, 3.5rem); }
   .device-results__intro h3 { margin-top: .3rem; font-size: clamp(1.6rem, 3vw, 2.25rem); letter-spacing: -.035em; }
   .device-results__intro > p:last-child { margin-top: .55rem; max-width: 42rem; color: var(--muted); line-height: 1.6; }

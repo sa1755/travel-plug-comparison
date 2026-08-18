@@ -163,19 +163,6 @@ export function TripResult({ origin, destination, result, compact = false }: Tri
         <Link href={`/country/${destination.slug}`} className="secondary-pill">Open {destination.name} guide</Link>
       </div>
 
-      <details className="technical-disclosure">
-        <summary>Plug, voltage and frequency details</summary>
-        <dl>
-          <div><dt>Plug fit</dt><dd>{result.plug.summary}</dd></div>
-          <div><dt>Voltage</dt><dd>{formatElectricalValues(origin.voltages, "V")} → {formatElectricalValues(destination.voltages, "V")}. {result.voltage.summary}</dd></div>
-          <div><dt>Frequency</dt><dd>{formatElectricalValues(origin.frequencies, "Hz")} → {formatElectricalValues(destination.frequencies, "Hz")}. {result.frequency.summary}</dd></div>
-        </dl>
-      </details>
-
-      {result.plug.status !== "not-required" ? (
-        <AdapterRecommendations origin={origin} destination={destination} />
-      ) : null}
-
       {result.devices.length ? (
         <div className="device-results" aria-labelledby="device-results-title">
           <div className="device-results__intro">
@@ -204,6 +191,19 @@ export function TripResult({ origin, destination, result, compact = false }: Tri
           </div>
         </div>
       ) : null}
+
+      {result.plug.status !== "not-required" ? (
+        <AdapterRecommendations origin={origin} destination={destination} />
+      ) : null}
+
+      <details className="technical-disclosure">
+        <summary>Plug, voltage and frequency details</summary>
+        <dl>
+          <div><dt>Plug fit</dt><dd>{result.plug.summary}</dd></div>
+          <div><dt>Voltage</dt><dd>{formatElectricalValues(origin.voltages, "V")} → {formatElectricalValues(destination.voltages, "V")}. {result.voltage.summary}</dd></div>
+          <div><dt>Frequency</dt><dd>{formatElectricalValues(origin.frequencies, "Hz")} → {formatElectricalValues(destination.frequencies, "Hz")}. {result.frequency.summary}</dd></div>
+        </dl>
+      </details>
     </section>
   );
 }
