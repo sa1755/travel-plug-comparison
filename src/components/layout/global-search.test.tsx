@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
@@ -30,7 +30,7 @@ describe("global search", () => {
 
     await user.keyboard("{Escape}");
     expect(trigger.getAttribute("aria-expanded")).toBe("false");
-    expect(document.activeElement).toBe(trigger);
+    await waitFor(() => expect(document.activeElement).toBe(trigger));
   });
 
   it("presents a useful empty state for unmatched searches", async () => {
@@ -44,5 +44,16 @@ describe("global search", () => {
     );
 
     expect(await screen.findByText("No matching guide found")).toBeTruthy();
+  });
+
+  it("returns focus to the search trigger when the Close button is used", async () => {
+    const user = userEvent.setup();
+    render(<GlobalSearch entries={getCatalogSearchEntries()} />);
+    const trigger = screen.getByRole("button", { name: "Search" });
+
+    await user.click(trigger);
+    await user.click(screen.getByRole("button", { name: "Close search" }));
+
+    await waitFor(() => expect(document.activeElement).toBe(trigger));
   });
 });

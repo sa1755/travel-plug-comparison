@@ -12,6 +12,7 @@ export interface SearchableCountry {
 }
 
 interface CountryComboboxProps {
+  readonly id?: string;
   readonly label: string;
   readonly value: string;
   readonly countries: readonly SearchableCountry[];
@@ -20,7 +21,7 @@ interface CountryComboboxProps {
   readonly errorId?: string;
 }
 
-export function CountryCombobox({ label, value, countries, onChange, invalid = false, errorId }: CountryComboboxProps) {
+export function CountryCombobox({ id, label, value, countries, onChange, invalid = false, errorId }: CountryComboboxProps) {
   const selected = countries.find(({ slug }) => slug === value);
   const [query, setQuery] = useState(selected?.name ?? "");
   const [open, setOpen] = useState(false);
@@ -87,6 +88,7 @@ export function CountryCombobox({ label, value, countries, onChange, invalid = f
       <div className="country-combobox__control">
         <Search aria-hidden="true" />
         <input
+          id={id}
           type="search"
           role="combobox"
           aria-label={label}

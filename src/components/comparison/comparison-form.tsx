@@ -61,10 +61,6 @@ export function ComparisonForm({
 
     startTransition(() => {
       trackEvent("comparison_started", { entry_point: "comparison_form" });
-      trackEvent("comparison_completed", {
-        origin_country: result.data.fromCountry,
-        destination_country: result.data.toCountry,
-      });
       router.push(`/compare/${result.data.fromCountry}/${result.data.toCountry}`);
     });
   };

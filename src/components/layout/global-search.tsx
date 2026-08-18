@@ -47,9 +47,10 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
     };
   }, [isOpen]);
 
-  const close = () => {
+  const close = (restoreFocus = false) => {
     setIsOpen(false);
     setQuery("");
+    if (restoreFocus) window.setTimeout(() => buttonRef.current?.focus(), 0);
   };
 
   return (
@@ -92,7 +93,7 @@ export function GlobalSearch({ entries }: GlobalSearchProps) {
                 className="min-h-12 w-full rounded-2xl border border-border-strong bg-surface-muted py-3 pl-12 pr-4 text-base"
               />
             </div>
-            <button type="button" onClick={close} className="flex size-11 shrink-0 items-center justify-center rounded-full text-muted hover:bg-surface-muted" aria-label="Close search">
+            <button type="button" onClick={() => close(true)} className="flex size-11 shrink-0 items-center justify-center rounded-full text-muted hover:bg-surface-muted" aria-label="Close search">
               <X className="size-5" aria-hidden="true" />
             </button>
           </div>

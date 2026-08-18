@@ -23,7 +23,11 @@ function subscribe(onStoreChange: () => void) {
 function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme;
   document.documentElement.style.colorScheme = theme;
-  localStorage.setItem(STORAGE_KEY, theme);
+  try {
+    localStorage.setItem(STORAGE_KEY, theme);
+  } catch {
+    // The selected theme still applies when persistent storage is blocked.
+  }
   document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')?.setAttribute(
     "content",
     theme === "dark" ? "#181613" : "#f4efe6",
