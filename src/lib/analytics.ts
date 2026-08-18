@@ -18,6 +18,40 @@ export type AnalyticsEventName =
 
 export const GOOGLE_ANALYTICS_CONSENT_KEY = "travelplug-ga-consent";
 
+export const isValidGoogleMeasurementId = (value: string | undefined) =>
+  /^G-[A-Z0-9]+$/i.test(value?.trim() ?? "");
+
+export function readGoogleAnalyticsConsent() {
+  try {
+    return localStorage.getItem(GOOGLE_ANALYTICS_CONSENT_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function writeGoogleAnalyticsConsent(value: "accepted" | "declined") {
+  try {
+    localStorage.setItem(GOOGLE_ANALYTICS_CONSENT_KEY, value);
+  } catch {
+    // Storage can be unavailable in hardened or private browser contexts.
+  }
+}
+
+export function clearGoogleAnalyticsConsent() {
+  try {
+    localStorage.removeItem(GOOGLE_ANALYTICS_CONSENT_KEY);
+  } catch {
+    // A blocked storage API must not prevent the preference UI from working.
+  }
+}
+
+export function sanitizeAnalyticsUrl(url: string, origin: string) {
+  const sanitized = new URL(url, origin);
+  sanitized.search = "";
+  sanitized.hash = "";
+  return sanitized.toString();
+}
+
 declare global {
   interface Window {
     dataLayer?: unknown[];
@@ -31,8 +65,7 @@ export function analyticsAllowed() {
 }
 
 const googleAnalyticsAllowed = () =>
-  typeof localStorage !== "undefined" &&
-  localStorage.getItem(GOOGLE_ANALYTICS_CONSENT_KEY) === "accepted";
+  typeof localStorage !== "undefined" && readGoogleAnalyticsConsent() === "accepted";
 
 export function trackEvent(name: AnalyticsEventName, properties?: AnalyticsProperties) {
   if (!analyticsAllowed()) return;

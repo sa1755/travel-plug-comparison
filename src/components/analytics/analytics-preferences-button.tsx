@@ -1,9 +1,10 @@
 "use client";
 
 import { openAnalyticsPreferences } from "@/components/analytics/analytics-provider";
+import { isValidGoogleMeasurementId } from "@/lib/analytics";
 
 export function AnalyticsPreferencesButton() {
-  if (!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) return null;
+  if (!isValidGoogleMeasurementId(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID)) return null;
 
   return (
     <button

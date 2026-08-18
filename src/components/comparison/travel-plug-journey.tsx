@@ -4,7 +4,7 @@ import { ArrowLeftRight, CircleCheck, Compass, LocateFixed, RotateCcw, ShieldChe
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 
 import { PlugIllustration } from "@/components/comparison/plug-illustration";
 import { TripResult } from "@/components/comparison/trip-result";
@@ -20,7 +20,7 @@ const GlobeExplorer = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="globe-loading" role="dialog" aria-modal="true" aria-label="Loading globe explorer">
+      <div className="globe-loading" role="status" aria-live="polite" aria-label="Loading globe explorer">
         <div className="globe-loading__orb" aria-hidden="true" />
         <p><strong>Opening the world…</strong><span>Loading the interactive globe and major cities.</span></p>
       </div>
@@ -51,6 +51,23 @@ interface TravelPlugJourneyProps {
 
 const HOME_KEY = "travelplug-home-country";
 
+const readRememberedHome = () => {
+  try {
+    return localStorage.getItem(HOME_KEY) ?? "";
+  } catch {
+    return "";
+  }
+};
+
+const rememberHome = (slug: string) => {
+  try {
+    if (slug) localStorage.setItem(HOME_KEY, slug);
+    else localStorage.removeItem(HOME_KEY);
+  } catch {
+    // Remembering a preference is optional; selection must still work.
+  }
+};
+
 export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, mode = "home" }: TravelPlugJourneyProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -65,7 +82,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-    const storedHome = initialFrom ? "" : localStorage.getItem(HOME_KEY) ?? "";
+    const storedHome = initialFrom ? "" : readRememberedHome();
     const requestedDestination = initialTo ? "" : query.get("to") ?? "";
     // Browser-only preferences are intentionally restored after hydration.
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -100,6 +117,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
 
   useEffect(() => {
     if (!result || !origin || !destination) return;
+    if (pathname !== `/compare/${origin.slug}/${destination.slug}`) return;
     const comparisonKey = `${origin.slug}:${destination.slug}`;
     if (lastCompletedComparisonRef.current === comparisonKey) return;
     lastCompletedComparisonRef.current = comparisonKey;
@@ -107,11 +125,11 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
       origin_country: origin.slug,
       destination_country: destination.slug,
       origin_plug_type: origin.plugTypes.join("/"),
-      destination_socket_type: destination.plugTypes.join("/"),
+      destination_plug_type: destination.plugTypes.join("/"),
       adapter_required: result.plug.status !== "not-required",
       converter_required: result.voltage.status === "converter-may-be-required",
     });
-  }, [destination, origin, result]);
+  }, [destination, origin, pathname, result]);
 
   const markComparisonStarted = () => {
     if (comparisonStartedRef.current) return;
@@ -126,8 +144,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     }
     setFromSlug(slug);
     setLocationStatus("");
-    if (slug) localStorage.setItem(HOME_KEY, slug);
-    else localStorage.removeItem(HOME_KEY);
+    rememberHome(slug);
     if (slug === toSlug) setToSlug("");
   };
 
@@ -159,7 +176,7 @@ export function TravelPlugJourney({ countries, devices, initialFrom, initialTo, 
     });
     setFromSlug(destination.slug);
     setToSlug(origin.slug);
-    localStorage.setItem(HOME_KEY, destination.slug);
+    rememberHome(destination.slug);
   };
 
   const detectLocation = () => {
@@ -313,12 +330,14 @@ function CountryPanel({ eyebrow, label, value, countries, country, onChange, chi
   readonly onChange: (value: string) => void;
   readonly children: React.ReactNode;
 }) {
+  const inputId = useId();
+
   return (
     <article className={`country-panel${country ? " country-panel--selected" : ""}`}>
       <p className="country-panel__eyebrow">{eyebrow}</p>
       <div className="country-select-label">
-        <span>{label}</span>
-        <CountryCombobox label={label} value={value} countries={countries} onChange={onChange} />
+        <label htmlFor={inputId}>{label}</label>
+        <CountryCombobox id={inputId} label={label} value={value} countries={countries} onChange={onChange} />
       </div>
       <div className="plug-stage">
         {country ? (

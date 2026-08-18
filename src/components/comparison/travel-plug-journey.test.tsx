@@ -10,9 +10,13 @@ import { getFeaturedDeviceProfiles } from "@/services/device-service";
 
 const pushMock = vi.hoisted(() => vi.fn());
 const replaceMock = vi.hoisted(() => vi.fn());
+const trackEventMock = vi.hoisted(() => vi.fn());
+const navigationState = vi.hoisted(() => ({ pathname: "/compare/united-kingdom/japan" }));
+
+vi.mock("@/lib/analytics", () => ({ trackEvent: trackEventMock }));
 
 vi.mock("next/navigation", () => ({
-  usePathname: () => "/compare/united-kingdom/japan",
+  usePathname: () => navigationState.pathname,
   useRouter: () => ({ push: pushMock, replace: replaceMock }),
 }));
 
@@ -34,6 +38,8 @@ describe("travel plug journey", () => {
     localStorage.clear();
     pushMock.mockClear();
     replaceMock.mockClear();
+    trackEventMock.mockClear();
+    navigationState.pathname = "/compare/united-kingdom/japan";
   });
 
   it("leads a dangerous result with a visible voltage warning and all featured devices", () => {
@@ -110,6 +116,34 @@ describe("travel plug journey", () => {
     expect(screen.getByRole("heading", { name: "Check the label before you plug in." })).toBeTruthy();
     expect(screen.getByText(/plug adapter only changes the plug shape/i)).toBeTruthy();
     expect(screen.getByRole("link", { name: "Check a specific device" }).getAttribute("href")).toBe("/device-checker");
+  });
+
+  it("records a completed comparison only after its result route is displayed", async () => {
+    const user = userEvent.setup();
+    navigationState.pathname = "/";
+    const home = render(<TravelPlugJourney countries={countries} devices={getFeaturedDeviceProfiles()} />);
+
+    const fields = screen.getAllByRole("combobox");
+    await user.type(fields[0], "United Kingdom");
+    await user.click(screen.getByRole("option", { name: /United Kingdom GB/ }));
+    await user.type(fields[1], "Japan");
+    await user.click(screen.getByRole("option", { name: /Japan JP/ }));
+
+    expect(trackEventMock.mock.calls.filter(([name]) => name === "comparison_completed")).toHaveLength(0);
+    home.unmount();
+
+    navigationState.pathname = "/compare/united-kingdom/japan";
+    render(
+      <TravelPlugJourney
+        countries={countries}
+        devices={getFeaturedDeviceProfiles()}
+        initialFrom="united-kingdom"
+        initialTo="japan"
+        mode="result"
+      />,
+    );
+
+    expect(trackEventMock.mock.calls.filter(([name]) => name === "comparison_completed")).toHaveLength(1);
   });
 
   it("offers Globe view from the hero", () => {

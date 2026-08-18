@@ -8,7 +8,7 @@ depend on analytics, and provider failures are deliberately ignored.
 | Provider | Purpose | Activation |
 | --- | --- | --- |
 | Vercel Web Analytics | Aggregate visitors, page views, referrers, countries, devices, popular pages, and product events | Enabled in production unless `NEXT_PUBLIC_ANALYTICS_ENABLED=false` |
-| Vercel Speed Insights | Real-user Core Web Vitals and mobile/desktop performance | Enabled with the same analytics switch |
+| Vercel Speed Insights | Real-user Core Web Vitals and mobile/desktop performance | Root-layout component; enabled with the same analytics switch |
 | Google Analytics 4 | Optional session, acquisition, funnel, and deeper event reporting | Loaded only when a valid measurement ID is configured **and** the visitor explicitly opts in |
 
 Vercel remains the primary low-overhead provider. GA4 adds session and funnel
@@ -46,7 +46,7 @@ strings and fragments removed.
 | `destination_country_selected` | `destination_country` |
 | `countries_swapped` | `origin_country`, `destination_country` |
 | `comparison_started` | `entry_point` |
-| `comparison_completed` | `origin_country`, `destination_country`, `origin_plug_type`, `destination_socket_type`, `adapter_required`, `converter_required` |
+| `comparison_completed` | `origin_country`, `destination_country`, `origin_plug_type`, `destination_plug_type`, `adapter_required`, `converter_required` |
 | `device_checker_opened` | None |
 | `device_checked` | `device_category`, `compatibility_result`, origin and destination identifiers |
 | `adapter_recommendation_viewed` | Route, adapter type, retailer, and product ID |
@@ -113,3 +113,14 @@ not imply that real visitor data already exists.
 4. Add the event and parameter purpose to this document and the privacy notice
    if the data category changes.
 5. Test with providers blocked to confirm the feature still works.
+
+## Implementation locations
+
+- `src/components/analytics/analytics-provider.tsx` renders Vercel Web
+  Analytics once and owns the optional GA4 consent lifecycle.
+- `src/components/analytics/speed-insights-provider.tsx` wraps the official
+  `@vercel/speed-insights/next` component so the environment switch and browser
+  Do Not Track preference remain effective.
+- `src/app/layout.tsx` renders both providers once at the root without changing
+  the theme-init script or structured data.
+- `src/lib/analytics.ts` is the only product-event API used by features.

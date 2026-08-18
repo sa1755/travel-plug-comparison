@@ -8,18 +8,22 @@ import { useEffect, useRef, useState } from "react";
 
 import {
   analyticsAllowed,
-  GOOGLE_ANALYTICS_CONSENT_KEY,
+  clearGoogleAnalyticsConsent,
+  isValidGoogleMeasurementId,
+  readGoogleAnalyticsConsent,
+  sanitizeAnalyticsUrl,
   trackEvent,
   trackPageView,
+  writeGoogleAnalyticsConsent,
 } from "@/lib/analytics";
 
 const OPEN_PREFERENCES_EVENT = "travelplug-open-analytics-preferences";
-const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
-const hasGoogleAnalytics = /^G-[A-Z0-9]+$/i.test(measurementId);
 
 type ConsentChoice = "accepted" | "declined" | "unknown";
 
 export function AnalyticsProvider() {
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+  const hasGoogleAnalytics = isValidGoogleMeasurementId(measurementId);
   const pathname = usePathname();
   const [consent, setConsent] = useState<ConsentChoice>("unknown");
   const [googleReady, setGoogleReady] = useState(false);
@@ -32,7 +36,7 @@ export function AnalyticsProvider() {
       setConsent("declined");
       return;
     }
-    const saved = localStorage.getItem(GOOGLE_ANALYTICS_CONSENT_KEY);
+    const saved = readGoogleAnalyticsConsent();
     // Local consent is intentionally restored after hydration.
     setConsent(saved === "accepted" || saved === "declined" ? saved : "unknown");
   }, []);
@@ -45,7 +49,7 @@ export function AnalyticsProvider() {
 
   useEffect(() => {
     const openPreferences = () => {
-      localStorage.removeItem(GOOGLE_ANALYTICS_CONSENT_KEY);
+      clearGoogleAnalyticsConsent();
       window.gtag?.("consent", "update", { analytics_storage: "denied" });
       setConsent("unknown");
     };
@@ -60,7 +64,7 @@ export function AnalyticsProvider() {
   if (process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "false") return null;
 
   const saveConsent = (choice: Exclude<ConsentChoice, "unknown">) => {
-    localStorage.setItem(GOOGLE_ANALYTICS_CONSENT_KEY, choice);
+    writeGoogleAnalyticsConsent(choice);
     if (choice === "declined") {
       window.gtag?.("consent", "update", { analytics_storage: "denied" });
       document.cookie.split(";").forEach((cookie) => {
@@ -97,10 +101,7 @@ export function AnalyticsProvider() {
         beforeSend={(event) => {
           if (!analyticsAllowed()) return null;
 
-          const url = new URL(event.url, window.location.origin);
-          url.search = "";
-          url.hash = "";
-          return { ...event, url: url.toString() };
+          return { ...event, url: sanitizeAnalyticsUrl(event.url, window.location.origin) };
         }}
       />
       {hasGoogleAnalytics && consent === "accepted" ? (

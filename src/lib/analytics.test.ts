@@ -8,6 +8,9 @@ vi.mock("@vercel/analytics", () => ({ track: vercelTrack }));
 
 import {
   GOOGLE_ANALYTICS_CONSENT_KEY,
+  isValidGoogleMeasurementId,
+  readGoogleAnalyticsConsent,
+  sanitizeAnalyticsUrl,
   trackEvent,
   trackPageView,
 } from "@/lib/analytics";
@@ -62,5 +65,34 @@ describe("analytics", () => {
 
     expect(vercelTrack).not.toHaveBeenCalled();
     expect(window.gtag).not.toHaveBeenCalled();
+  });
+
+  it("accepts only GA4 web-stream measurement IDs", () => {
+    expect(isValidGoogleMeasurementId("G-ABC123XYZ")).toBe(true);
+    expect(isValidGoogleMeasurementId("  G-TEST123  ")).toBe(true);
+    expect(isValidGoogleMeasurementId("UA-1234-1")).toBe(false);
+    expect(isValidGoogleMeasurementId("")).toBe(false);
+  });
+
+  it("removes query strings and fragments from provider URLs", () => {
+    expect(sanitizeAnalyticsUrl("/country/japan?from=email#details", "https://travelplug.test"))
+      .toBe("https://travelplug.test/country/japan");
+  });
+
+  it("treats blocked browser storage as no Google consent", () => {
+    const storage = vi.spyOn(Storage.prototype, "getItem").mockImplementationOnce(() => {
+      throw new DOMException("Blocked", "SecurityError");
+    });
+
+    expect(readGoogleAnalyticsConsent()).toBeNull();
+    storage.mockRestore();
+  });
+
+  it("never interrupts the product when the Vercel client is unavailable", () => {
+    vercelTrack.mockImplementationOnce(() => {
+      throw new Error("analytics unavailable");
+    });
+
+    expect(() => trackEvent("comparison_started")).not.toThrow();
   });
 });
